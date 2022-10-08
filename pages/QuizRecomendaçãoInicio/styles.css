@@ -1,0 +1,262 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.principal{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 375px;
+    height: 812px;
+}
+
+/* ToolBar */
+.caixaCatalogo {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botoesCaixaCatalogo{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.botoesCaixaCatalogo:active{
+    background-color: #8CBEFF;
+}
+
+#menuIcon{
+    justify-content: center;
+    align-items: center;
+    margin-left: 13.5px;
+    margin-top: 4.5px;
+}
+
+#Texto{
+    margin-left: 50px;
+    display: flex;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#Texto h1{
+    font-family: 'Chenla', sans-serif;
+    font-weight: 400;
+    color: #83A5B7
+}
+
+#shoppingcartaccountIcon{
+    margin-right: 10px;
+    align-items: flex-end;
+}
+.icons{
+    margin:1em;
+}
+
+
+#quiz{
+
+    font-family: 'Chenla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 37px;
+    margin-left: 2.5em;
+    text-align: center;
+
+    color: #83A5B7;
+}
+
+.title{
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #1646EE;
+
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.question{
+    width: 338px;
+    height: 48px;
+    left: 18px;
+    top: 129px;
+    margin-bottom: 1em;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#pergunta{
+    margin-top: 1em;
+}
+
+.text{
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    text-align: center;
+
+    color: #A7A8AA;
+}
+
+.options{
+    width: 138px;
+    height: 48px;
+    left: 213px;
+    top: 222px;
+    margin:1em;
+
+    border:none;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#option{
+    display: flex;
+    justify-content:space-between ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:0.5em;
+}
+
+#setas{
+
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    
+}
+
+#next{
+    display: flex;
+    align-content: flex-end;
+    margin: 1.5em;
+    align-items: center;
+}
+
+#prox{
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #1830A8;
+}
+
+#foto{
+    width: 314px;
+    height: 278.75px;
+    left: 43px;
+    top: 497px;
+    margin:2em;
+
+}
+
+/* Side Bar */
+.sidebar{
+    height: 100vh;
+    width: 200px;
+    background-color: #FFFFFF;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    left: -200px;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+
+.sidebar .sidebarTitulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 70px;
+    position: absolute;
+    height: 60px;
+    width: 30%;
+}
+
+.sidebar .sidebarTitulo img{
+    width: 60px;
+    height: 60px;
+}
+
+.sidebar .sidebarTitulo p{
+    white-space: nowrap;
+}
+
+.sidebar .sidebarMenu{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+
+.sidebar .sidebarMenu .sideBarOptions{
+    margin-top: 40px;
+}
+
+.sidebar .sidebarMenu li{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+   
+    padding: 14px 15px;
+    border-radius: 10px;
+    align-items: center;
+}
+.sidebar .sidebarMenu .logoutIcon{
+    position: absolute;
+    top: 600px;
+}
+
+.sidebar .sidebarMenu li:hover{
+    background-color: rgba(0, 0, 0, 0.1);;
+}
+
+.sidebar .sidebarMenu img{
+    padding-right: 8px;
+}
+
+.sidebar .sidebarMenu a{
+    color: black;
+    font-family: 'Chenla', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.sidebar .botaoFechar{
+    position: absolute;
+    line-height: 60px;
+    left: 160px;
+}
+
+.botoesSideBar{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}

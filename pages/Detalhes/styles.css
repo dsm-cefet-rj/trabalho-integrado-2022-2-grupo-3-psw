@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chenla&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C5DFFF;
+}
+
+/* Side Bar */
+.sidebar {
+    height: 100vh;
+    width: 200px;
+    background-color: #FFFFFF;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    left: -200px;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+
+.sidebar .sidebarTitulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 70px;
+    position: absolute;
+    height: 60px;
+    width: 30%;
+}
+
+.sidebar .sidebarTitulo img {
+    width: 60px;
+    height: 60px;
+}
+
+.sidebar .sidebarTitulo p {
+    white-space: nowrap;
+}
+
+.sidebar .sidebarMenu {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+
+.sidebar .sidebarMenu .sideBarOptions {
+    margin-top: 40px;
+}
+
+.sidebar .sidebarMenu li {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    padding: 14px 15px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.sidebar .sidebarMenu .logoutIcon {
+    position: absolute;
+    top: 600px;
+}
+
+.sidebar .sidebarMenu li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    ;
+}
+
+.sidebar .sidebarMenu img {
+    padding-right: 8px;
+}
+
+.sidebar .sidebarMenu a {
+    color: black;
+    font-family: 'Chenla', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.sidebar .botaoFechar {
+    position: absolute;
+    line-height: 60px;
+    left: 160px;
+}
+
+.botoesSideBar {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+
+/* ToolBar */
+.caixaCatalogo {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botoesCaixaCatalogo {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.botoesCaixaCatalogo:active {
+    background-color: #8CBEFF;
+}
+
+#menuIcon {
+    justify-content: center;
+    align-items: center;
+    margin-left: 13.5px;
+    margin-top: 4.5px;
+}
+
+#Texto {
+    margin-left: 50px;
+    display: flex;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#Texto h1 {
+    font-family: 'Chenla', sans-serif;
+    font-weight: 400;
+    color: #83A5B7
+}
+
+#shoppingcartaccountIcon {
+    margin-right: 10px;
+    align-items: flex-end;
+}
+
+/* Caixa de Pesquisa */
+.pesquisar {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.pesquisar .lupa {
+    margin-left: 3px;
+}
+
+.pesquisar h2 {
+    color: #1E1E1E;
+    margin-left: 20px;
+    font-size: 16px;
+    width: 1000px;
+    opacity: 0.6;
+}
+
+.pesquisar input {
+    width: 100%;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+}
+
+/*Caixa de detalhe*/
+
+.detalhe {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+#foto {
+    margin: 20px 0px;
+}
+
+#info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#nome {
+    margin-bottom: 5px;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+#preco {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+
+    color: rgba(30, 30, 30, 0.81);
+}
+
+/* Barra de Opcoes*/
+
+.opcoes {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+#favCarrinho {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 1px;
+}
+
+#coracao {
+    display: flex;
+    margin: 3px;
+    padding-right: 15px;
+}
+
+#addCar {
+    display: flex;
+    background: #1052A8;
+    border: none;
+    padding: 7px;
+    padding-left: 30px;
+
+}
+
+#addCar p {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #FFFFFF;
+}
+
+#detalhes {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 260px;
+    margin: 5px 0px;
+    border-top: 1.5px solid #000000;
+
+}
+
+#detalhes p {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+    margin-top: 10px;
+    color: #3F3F3F;
+
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #000000;
+}
+
+/*Produtos Semelhantes*/
+
+#prodSemelhantes {
+    margin: 20px 23px;
+}
+
+#titleSemelhantes {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+
+    color: #000000;
+
+}
+
+.produtos {
+    margin: 5px;
+    display: flex;
+    overflow-x: auto;
+}
+
+.produtos::-webkit-scrollbar {
+    width: 0;
+}
+
+.produto {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.produto img:active {
+    background-color: #8CBEFF;
+}
+
+.produto p {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+
+    color: rgba(30, 30, 30, 0.81);
+}
