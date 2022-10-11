@@ -1,0 +1,95 @@
+/* Gerais */
+
+.row{
+    margin: 0;
+}
+
+.container{
+    padding: 70px 0;
+}
+
+p, li{
+    font-size: 14px;
+}
+
+/* Carrosel de imagens (Slider) */
+
+#mainSlider .carousel-inner, #mainSlider .carousel-item{
+    height: 90vh;
+}
+
+.carousel-indicators .active{
+    background-color: #915bbd;;
+}
+
+/* Sobre a Deep Sleep */
+#aboutArea{
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+
+.mainTitle {
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+.aboutTitle{
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#copyArea{
+    background-color: #f1f1f1;
+}
+
+#copyArea .container{
+    padding: 10px 0;
+    text-align: center;
+}
+
+#copyArea .container p{
+    margin-bottom: 0;
+}
+
+#copyArea .container a{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#navbar{
+    background-color: #915bbd;
+}
+
+#navbarTitle{
+    color: #fff;
+}
+
+#navbarLinks{
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+#navbarIcons{
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+#logo{
+    width: 90px;
+}
+
+#navbarSearchButton{
+    background-color: #5c367c;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+}
+
+#navbarInputSearch{
+    border-radius: 0px;
+}
