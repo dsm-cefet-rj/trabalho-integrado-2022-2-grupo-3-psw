@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
-          <img id="logo" src="../../img/DeepSleepLogo.png" alt="Logo Deep Sleep">
+          <img id="logo" src="../../img/DeepSleepLogo.png" class="img-fluid" alt="Logo Deep Sleep">
         </a>Deep Sleep
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,17 +44,20 @@
               <a class="nav-link active" id="navbarLinks" aria-current="page" href="#">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="navbarLinks" href="#aboutArea">Sobre</a>
+              <a class="nav-link" id="navbarLinks" href="#servicos">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbarLinks" href="#contato">Contato</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" id="navbarInputSearch"
-            type="search" placeholder="Pesquisar..." aria-label="Search">
+            <input class="form-control me-2" id="navbarInputSearch" type="search" placeholder="Pesquisar..."
+              aria-label="Search">
             <button class="btn btn-outline-success" id="navbarSearchButton" type="submit">Pesquisar</button>
           </form>
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a href="#" id="navbarIcons"><i class="fa-solid fa-user"></i></a>
+              <a href="#" id="navbarIcons"><i id="icon" class="fa-solid fa-user"></i></a>
             </li>
             <li class="nav-item">
               <a href="#" id="navbarIcons"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -71,12 +74,16 @@
       <div id="aboutArea">
         <div class="container">
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6 col-sm-12" id="sobreEsquerdo">
               <h3 class="aboutTitle">O produto certo para você</h3>
               <h1>O que fazemos?</h1>
-              <p> O Deep Sleep indica um artigo de sono que leva em consideração suas preferências de sono. Combinaremos com você o colchão perfeito com base no tamanho do seu corpo, hábitos de sono e estilo de vida para ajudá-lo adormecer mais rápido e dormir melhor.</p>
-            </div>    
-            <div class="col-md-6">
+              <p> O Deep Sleep indica um artigo de sono que leva em consideração suas preferências de sono. Combinaremos
+                com você o artigo perfeito com base no tamanho do seu corpo, hábitos de sono e estilo de vida para
+                ajudá-lo adormecer mais rápido e dormir melhor.</p>
+              <button type="button" class="btn btn-primary" id="botoesSobreQuiz">Fazer Quiz</button>
+              <button type="button" class="btn btn-primary" id="botoesSobreCatalogo">Ir para o catálogo</button>
+            </div>
+            <div class="col-md-6 col-sm-12">
               <img class="img-fluid" src="../../img/folded-towels-on-the-bed.jpg" alt="Cama de Luxo">
             </div>
           </div>
@@ -84,6 +91,67 @@
       </div>
     </div>
 
+
+
+    <!-- Serviçios -->
+    <div id="servicos" class="block">
+      <div class="container">
+        <h2 class="title text-center">Nossos serviços</h2>
+        <h4 class="subtitleServicos text-center mb-4">
+          Pensando nas especificidades de cada um!
+        </h4>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-4">
+            <a href="#" class="servico">
+              <div class="img-container mb-3">
+                <img src="../../img/beautiful-luxury-hotel-bedroom.jpg" class="img-fluid" />
+              </div>
+              <h5 class="text-uppercase">Serviço 1</h5>
+              <p class="mb-0">
+                Descrição bem bacana do serviço 1
+              </p>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-4">
+            <a href="#" class="servico">
+              <div class="img-container mb-3">
+                <img src="../../img/beautiful-luxury-hotel-bedroom.jpg" class="img-fluid" />
+              </div>
+              <h5 class="text-uppercase">Serviço 2</h5>
+              <p class="mb-0">
+                Descrição bem bacana do serviço 2
+              </p>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-4">
+            <a href="#" class="servico">
+              <div class="img-container mb-3">
+                <img src="../../img/beautiful-luxury-hotel-bedroom.jpg" class="img-fluid" />
+              </div>
+              <h5 class="text-uppercase">Serviço 3</h5>
+              <p class="mb-0">
+                Descrição bem bacana do serviço 3
+              </p>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-4">
+            <a href="#" class="servico">
+              <div class="img-container mb-3">
+                <img src="../../img/beautiful-luxury-hotel-bedroom.jpg" class="img-fluid" />
+              </div>
+              <h5 class="text-uppercase">Serviço 4</h5>
+              <p class="mb-0">
+                Descrição bem bacana do serviço 4
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--
     <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active" aria-current="true"
@@ -111,10 +179,51 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+  -->
 
   </main>
 
   <footer>
+    <div class="container pt-2 pb-2" id="contato">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-6 col-sm-6">
+          <img src="../../img/Emails-amico.svg">
+        </div>
+        <div class="col-md-6 col-sm-6" id="areaEmail">
+          <h2 class="text-center" id="tituloContato">Fique por dentro das novidades</h2>
+          <h4 class="mb-4 text-center" id="subtituloContato">Receba mensalmente alertas de promoções e ofertas!</h4>
+          <form>
+            <div class="mb-2">
+              <label for="email" class="sr-only">Email</label>
+              <input type="email" class="form-control w100" id="emailInput" placeholder="Seu email...">
+            </div>
+            <div>
+              <button type="submit" class="btn btn-light button mb-3 d-md-inline d-block w-100" id="botaoContato">
+                Cadastre-se
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <a href="#">
+            <i class="fa-brands fa-facebook" id="redesIcons"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-twitter" id="redesIcons"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram" id="redesIcons"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-linkedin" id="redesIcons"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
     <div id="copyArea">
       <div class="container">
         <div class="row">
@@ -123,7 +232,7 @@
           </div>
         </div>
       </div>
-      </div>
+    </div>
   </footer>
 </body>
 
