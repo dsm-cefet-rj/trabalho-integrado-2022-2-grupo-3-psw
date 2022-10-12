@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap%27');
+
+/* Geral */
+
+*{
+    margin:0;
+    padding:0;
+}
+
+.row{
+    margin:0;
+}
+
+/*Navbar*/
+
+#navbar {
+    background-color: #1052A8;;
+}
+
+#navbarTitle {
+    color: #fff;
+}
+
+#navbarLinks {
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+#navbarIcons {
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+#logo {
+    width: 90px;
+}
+
+#navbarSearchButton {
+    background-color: #0f3464;;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+}
+
+#navbarInputSearch {
+    border-radius: 0px;
+}
+
+/*Copyright*/
+
+#copyArea {
+    background-color: #f1f1f1;
+}
+
+#copyArea .container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#copyArea .container p {
+    margin-bottom: 0;
+}
+
+#copyArea .container a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*main*/
+#title {
+    margin-top: 140px;
+    background-color: #ffffff;
+}
+
+#title h2 {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #1646EE;
+}
+
+#question {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+#question p {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 40px;
+
+    text-align: center;
+
+    color: #A7A8AA;
+}
+
+.option {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    margin: 10px;
+    border: none;
+    align-items: center;
+
+    width: 90%;
+
+}
+
+.option p {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 30px;
+
+    margin: 5px;
+
+    text-align: center;
+    color: #A7A8AA;
+}
+
+#next {
+    display: flex;
+    background-color: #ffffff;
+    border: none;
+
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#next i {
+    color: #1646EE;
+    margin: 4px;
+    margin-left:9px;
+    font-size: 30px;
+}
+
+#next p {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 30px;
+
+    text-align: center;
+    margin-top:4px;
+    color: #1830A8;
+}
+
+#prev{
+    display: flex;
+    background-color: #ffffff;
+    border: none;
+
+    margin-top: 20px;
+}
+
+#prev i{
+    color: #1646EE;
+    margin: 4px;
+    margin-right:9px;
+    font-size: 30px;
+}
+
+#prev p{
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 30px;
+
+    text-align: center;
+    margin-top:4px;
+    color: #1830A8;
+}
+
+#image{
+    display:flex;
+    justify-content: center;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
