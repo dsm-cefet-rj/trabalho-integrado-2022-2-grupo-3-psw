@@ -90,7 +90,7 @@
     <div class="container" id="cep">
         <div class="row">
             <div class="col-12">
-            <h5>*Informe seu cep:</h5>
+                <h5>*Informe seu cep:</h5>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input type="text" id="cepArea">
@@ -105,24 +105,30 @@
     </div>
     <div class="container" id="payment">
         <div class="row">
-            <h5>Formas de pagamento:</h5>
+            <div class="col-12">
+                <h5>Formas de pagamento:</h5>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <img src="../../img/Pix.png" id="pix">
+                <input type="radio">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <img src="../../img/Credit Card.png" id="creditCard">
+                <input type="radio">
+            </div>
+            <div class="col-sm-12 col-md-6" id="installment">
+                <p>1x sem juros</p>
+                <input type="image" src="../../img/Down Button.png" id="downButton">
+            </div>
         </div>
-        <div class="col-sm-12 col-md-6">
-            <img src="../../img/Pix.png" id="pix">
-            <input type="radio">
-        </div>
-        <div class="col-sm-12 col-md-6">
-            <img src="../../img/Credit Card.png" id="creditCard">
-            <input type="radio">
-        </div>
-        <div class="col-sm-12 col-md-6" id="installment">
-            <p>1x sem juros</p>
-            <input type="image" src="../../img/Down Button.png" id="downButton">
-        </div>
+    </div> 
+    <div class="container" id="checkout">
+        <p>Finalizar Compra</p>
+        <input type="image" src="../../img/Shopping Bag Full.png" id="shoppingBag">
     </div>
-
 </main>
-    
+</body>
+
 <footer>
     <div id="copyArea">
         <div class="container">
@@ -134,7 +140,4 @@
         </div>
     </div>
 </footer>
-
-</body>
-    
 </html>
