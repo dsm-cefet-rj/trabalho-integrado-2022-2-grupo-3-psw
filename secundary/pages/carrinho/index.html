@@ -29,7 +29,7 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
           <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="../home/index.html">
               <img id="logo" src="../../img/DeepSleepLogo.png" class="img-fluid" alt="Logo Deep Sleep">
             </a>Deep Sleep
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -58,7 +58,7 @@
                   <a href="#" id="navbarIcons"><i id="icon" class="fa-solid fa-user"></i></a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" id="navbarIcons"><i class="fa-solid fa-cart-shopping"></i></a>
+                  <a href="../carrinho/index.html" id="navbarIcons"><i class="fa-solid fa-cart-shopping"></i></a>
                 </li>
               </ul>
             </div>
@@ -77,13 +77,13 @@
                 <img src="../../img/image 4.png">
                 <p id="itemDescription">Kit Difusor + Velas Aromáticas - Coleção Sono Profundo</p>
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-12">
                 <p id="price">R$ 89.99</p>
             </div>
             <div class="col-sm-12 col-md-6" id="itemQtd">
-                <input type="image" src="../../img/MinusButton.png"> 
+                <input type="image" src="../../img/MinusButton.png" id="item-qtd"> 
                 <input type="text" value="1" style="width:8%; text-align: center; margin-left: 3px; margin-right: 3px;">
-                <input type="image" src="../../img/PlusButton.png"> 
+                <input type="image" src="../../img/PlusButton.png" id="item-qtd"> 
             </div>
         </div>
     </div>
@@ -95,8 +95,8 @@
             <div class="col-sm-12 col-md-6">
                 <input type="text" id="cepArea">
             </div>
-            <div class="col-sm-12 col-md-6">
-                <p style="margin-top: 13px;">Frete a ser calculado:</p>
+            <div class="col-12" style="margin-top: 10px;">
+              <h5>*Frete a ser calculado:</h5>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input type="text" id="shipping" placeholder="R$">
@@ -110,11 +110,11 @@
             </div>
             <div class="col-sm-12 col-md-6">
                 <img src="../../img/Pix.png" id="pix">
-                <input type="radio">
+                <input type="radio" name="paymentMethod">
             </div>
             <div class="col-sm-12 col-md-6">
                 <img src="../../img/Credit Card.png" id="creditCard">
-                <input type="radio">
+                <input type="radio" name="paymentMethod">
             </div>
             <div class="col-sm-12 col-md-6" id="installment">
                 <p>1x sem juros</p>
@@ -122,9 +122,10 @@
             </div>
         </div>
     </div> 
-    <div class="container" id="checkout">
-        <p>Finalizar Compra</p>
-        <input type="image" src="../../img/Shopping Bag Full.png" id="shoppingBag">
+    <div class="container col-sm-12 col-md-6" id="checkout">
+          <a href="../../pages/quizInicialSatis/index.html">
+            <img src="../../img/CheckOutButton.png">
+          </a>
     </div>
 </main>
 </body>

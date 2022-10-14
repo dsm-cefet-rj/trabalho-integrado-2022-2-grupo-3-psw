@@ -121,6 +121,7 @@ div > p {
 
 input[type="image"]:hover {
     background-color: #83A5B7;
+    border-radius: 6px;
 }
 
 input[type="text"]:focus {
@@ -148,6 +149,8 @@ input[type="text"]:focus {
 /* Cep e Frete */
 
 #cep {
+    display: flex;
+    align-items: center;
     padding-top: 18px;
     margin: 0;
 }
@@ -163,7 +166,7 @@ div > h5 {
 }
 
 #cepArea {
-    width: 26%;
+    width: 30%;
     border-radius: 15px; 
     border-color:rgba(0, 0, 0, 0.384);
 }
@@ -171,7 +174,7 @@ div > h5 {
 #shipping {
     padding-left: 3px;
     text-align: left;
-    width: 15%;
+    width: 18%;
     border-radius: 15px; 
     border-color:rgba(0, 0, 0, 0.384);
 }
@@ -212,10 +215,6 @@ input[type="radio"] {
     height: 30px;
 }
 
-input[type="radio"]:hover{
-    background-color: lightblue;
-}
-
 #installment {
     display: flex;
     text-align: start;
@@ -249,26 +248,12 @@ input[type="radio"]:hover{
 
 #checkout {
     display: flex;
-    text-align: start;
     margin-top: 30px;
+    margin-bottom: 30px;
     width: 259px;
     height: 47px;
     left: 48px;
     top: 707px;
     
-    background: #1052A8;
-    border-radius: 10px
-}
-
-#checkout > p {
-    padding-left: 26px;
-    padding-top: 13px;
-    font-family: 'GFS Neohellenic';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-
-    color: #FFFFFF;
 }
 
