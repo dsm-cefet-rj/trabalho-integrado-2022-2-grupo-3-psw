@@ -217,33 +217,28 @@ input[type="radio"] {
 
 #installment {
     display: flex;
+    justify-content: end;
+    align-items: end;
     text-align: start;
     margin-top: 20px;
     width: 330px;
     height: 39px;
-    border-style: solid;
-    border-color: rgba(34, 34, 34, 0.555);
-    border-radius: 20px;
-    padding: 0px;
+    padding-right: 5px;
+    padding-top: 1px;
 }
 
-#installment > p {
+#installmentOptions
+,#installmentOptions > option{
+    border-radius: 20px; 
+    width: 330px;
+    height: 35px;
     padding-left: 6px;
-    padding-right: 190px;
-    padding-top: 5px;
-    margin: 0;
     font-family: 'GFS Neohellenic';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 23px;
-
     color: rgba(0, 0, 0, 0.78);
-}
-
-#downButton:hover{
-    background-color:lightblue;
-    border-radius: 50px;
 }
 
 #checkout {
