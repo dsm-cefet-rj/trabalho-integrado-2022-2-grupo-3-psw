@@ -12,6 +12,27 @@ body{
     background-repeat: no-repeat;
 }
 
+/*Copyright*/
+
+#copyArea {
+    background-color: #f1f1f100;
+}
+
+#copyArea .container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#copyArea .container p {
+    color:rgba(255, 255, 255, 0.356);
+    margin-bottom: 0;
+}
+
+#copyArea .container a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
 /* Tela de Login */
 
 #loginScreen {
@@ -79,3 +100,4 @@ body{
 #confirmButton {
     width: 30vw;
 }
+
