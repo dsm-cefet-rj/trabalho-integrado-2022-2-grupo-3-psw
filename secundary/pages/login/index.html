@@ -31,22 +31,39 @@
         <div class="container-fluid" id="loginScreen">
             <div class="container" id="loginBox">
                 <div class="row" id="loginForm">
-                    <img src="../../img/DeepSleepLogo.png" class="img-fluid">
-                    <button class="col-6 btn btn-primary">Login
-
-                    </button>
-                    <button class="col-6 btn btn-primary">Registrar
-
-                    </button>
-                    <input class="col-12 formInput" type="email" name="email" id="formEmail" 
-                     placeholder="Email">
-                    <input class="col-12 formInput" type="password" name="password" id="formPassword"
-                    placeholder="Senha">
+                    <img src="../../img/DeepSleepLogo.png" class="col-12 img-fluid" style="width: 300px;">
+                    <a href="../login/index.html" class="col-12 container mx-3 my-4">
+                      <button class="btn btn-primary loginButtons ">Login</button>
+                    </a>
+                    <a href="#" class="col-12 container mx-3 my-4">
+                      <button class="btn btn-primary loginButtons ">Registrar</button>
+                    </a>
+                    <div class="col-12 container-fluid mb-4" id="formBox">
+                      <input class="formInput" type="email" name="email" id="formEmail"
+                      placeholder="picole123@gmail.com">
+                    </div>
+                    <div class="col-12 container-fluid mb-4" id="formBox">
+                      <input class="col-12 formInput" type="password" name="password" id="formPassword"
+                      placeholder="Senha">
+                    </div>
+                    <button class="col-12 btn btn-danger mt-4" id="confirmButton">Confirmar</button>
                 </div>
             </div>
         </div>
 
     </main>
     
+    <footer>
+        <div id="copyArea">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>Desenvolvido por <a>Os crias</a> &copy;2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

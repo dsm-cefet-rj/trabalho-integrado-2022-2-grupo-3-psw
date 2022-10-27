@@ -36,13 +36,27 @@ body{
     justify-content: center;
 }
 
+/* Botões de Login e Registrar */
 
+#loginForm > a {
+    padding: 0;
+    max-width: 100px;
+    min-width: 20px;
+}
+
+.loginButtons {
+    width: 100px;
+    min-width: 20px;
+}
+
+/* Espaço para Email e Senha */
 .formInput::placeholder {
     color:rgba(255, 255, 255, 0.582);
 }
 
 .formInput:focus {
     color:#fff;
+    outline: none;
 }
 
 .formInput {
@@ -52,5 +66,16 @@ body{
     border-bottom-color: rgba(248, 237, 237, 0.445);
     border-bottom-style: solid;
     width: 28vw;
-    height: 35px;
+    height: 40px;
+}
+
+#formBox {
+    display: flex;
+    justify-content: center;
+}
+
+/* Botão de Confirmação */
+
+#confirmButton {
+    width: 30vw;
 }
