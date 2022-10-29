@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../img/DeepSleepIcon.ico">
 
-    <title>Deep Sleep - Login</title>
+    <title>Deep Sleep - Cadastro</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -38,13 +38,21 @@
                     <button class="btn btn-primary loginButtons ">Registrar</button>
                     </a>
                     <form action="" method="post">
+                        <div class="col-12 container-fluid mb-4" id="formBox">
+                            <input class="formInput" type="text" name="userName" id="formEmail"
+                             placeholder="Nome de usuário">
+                          </div>
                       <div class="col-12 container-fluid mb-4" id="formBox">
                         <input class="formInput" type="email" name="email" id="formEmail"
-                         placeholder="picole123@gmail.com">
+                         placeholder="Email">
                       </div>
                       <div class="col-12 container-fluid mb-4" id="formBox">
                         <input class="col-12 formInput" type="password" name="password" id="formPassword"
                         placeholder="Senha">
+                      </div>
+                      <div class="col-12 container-fluid mb-4" id="formBox">
+                        <input class="col-12 formInput" type="password" name="password" id="formPassword"
+                        placeholder="Confirmar Senha">
                       </div>
                       <div class="col-12 container my-5" style="width: 23vw; padding: 0;">
                         <button type="submit" class="btn btn-danger" id="confirmButton">
