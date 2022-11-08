@@ -1,0 +1,313 @@
+/* Gerais */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+hr{
+    margin-left: 15px;
+}
+
+/*Navbar*/
+
+#navbar {
+    background-color: #1052A8;
+    ;
+}
+
+#navbarTitle {
+    color: #fff;
+}
+
+#navbarLinks {
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+#navbarIcons {
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+#logo {
+    width: 90px;
+}
+
+#navbarSearchButton {
+    background-color: #0f3464;
+    ;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+}
+
+#navbarInputSearch {
+    border-radius: 0px;
+}
+
+/*Copyright*/
+
+#copyArea {
+    background-color: #f1f1f1;
+}
+
+#copyArea .container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#copyArea .container p {
+    margin-bottom: 0;
+}
+
+#copyArea .container a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*Suporte de alinhamento*/
+
+#espacoHeader {
+    padding: 60px;
+}
+
+/*Main*/
+
+
+#local {
+    margin-top: 0;
+    padding: 0;
+    margin-left: 5%;
+}
+
+#local a {
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+/*Area do produto*/
+
+#produto {
+    background-color: #C5DFFF;
+
+}
+
+#carousel {
+    margin-top: 15px;
+    margin-bottom: 5%;
+    min-width: 20px;
+    min-height: 20px;
+    margin-left: 1%;
+}
+
+#carousel img {
+    border-radius: 5%;
+}
+
+/*carrossel menor*/
+
+#carouselExampleIndicators {
+    min-width: 100px;
+    min-height: 100px;
+}
+
+#index img {
+    border-radius: 5%;
+}
+
+#index button {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#index {
+    margin-top: 5px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+/*Descricao e dados*/
+
+#text {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+#text h2 {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
+
+    color: #000000;
+    margin-bottom: 0;
+}
+
+#simpleText {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+
+    color: #000000;
+    margin-left: 5px;
+    margin-bottom: 25px;
+}
+
+#precoNovo {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: #13131f;
+    margin-left: 5px;
+}
+
+#preco {
+    text-decoration: line-through;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 10px;
+    color: #00000079;
+
+    margin-left: 8px;
+    margin-bottom: 2px;
+}
+
+/* Paleta de Cores */
+
+#color button {
+    border-radius: 100%;
+    border-width: 1px;
+    border: #00000049;
+
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+}
+
+#color p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+
+    color: #000000;
+    margin-left: 5px;
+}
+
+#color{
+    margin-left: 10px;
+}
+
+#white{
+    background-color: white; 
+}
+
+#white:active{
+    background-color: rgb(133, 133, 133); 
+}
+
+#lightBlue{
+    background-color: rgb(77, 169, 200);
+}
+
+#lightBlue:active{
+    background-color: rgb(52, 115, 136);
+}
+
+#darkBlue{
+    background-color: darkblue;
+}
+
+#darkBlue:active{
+    background-color: rgb(0, 0, 85)
+}
+
+/*Adicionar ao Carrinho*/
+
+#buyButton{
+    display: flex;
+    justify-content: center;
+}
+
+#buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    margin-top: 20px;
+    padding:10px;
+
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+
+    border-color:#00000010;
+}
+
+#buy:active{
+    background-color: #4a73a7;
+}
+
+#buy p{
+    align-items: center;
+    margin:0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+
+    color: #000000;
+}
+
+/* Details */
+
+#details{
+    margin-left:15px;
+}
+
+#details p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+
+    color: #000000ae;
+}
+
+/* favs */
+
+#favs{
+    margin-left: 15px;
+    justify-content: space-between;
+}
+
+#favs button{
+    background-color: transparent;
+    border: none;
+}
+
+#favs p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+
+    color: #000000ae;
+}

@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Chenla&display=swap%27');
+
+/* Gerais */
+:root {
+    --azulEscuro: #1052A8;
+    --azulMedioForte: #173CF0;
+    --azulClaro: #C5DFFF;
+    --azulMedio: #8CBEFF;
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+p,
+li {
+    font-size: 14px;
+}
+/* Fim - Gerais */
+
+/* Navbar */
+#navbar {
+    background-color: var(--azulEscuro);
+}
+
+#navbarTitle {
+    color: #fff;
+}
+
+#navbarLinks {
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+#navbarIcons {
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+#logo {
+    width: 90px;
+}
+
+#navbarSearchButton {
+    background-color: #0f3464;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+}
+
+#navbarInputSearch {
+    border-radius: 0px;
+}
+/* Fim - Navbar */
+
+
+/* Sobre */
+#aboutArea {
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.mainTitle {
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.aboutTitle {
+    font-family: 'Jost', sans-serif;
+    color: var(--azulMedioForte);
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#botoesSobreQuiz {
+    background-color: var(--azulEscuro);
+    border: none;
+}
+
+#botoesSobreCatalogo {
+    border-width: 1px;
+    background-color: transparent;
+    color: var(--azulEscuro);
+    border-color: var(--azulEscuro);
+}
+
+#sobreEsquerdo {
+    align-self: center;
+}
+
+#sobreEsquerdo p {
+    font-family: 'Chenla', sans-serif;
+}
+
+#sobreEsquerdo h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 35px;
+}
+/* Fim - Sobre */
+
+/* Serviços */
+#servicos a:hover {
+    background: var(--azulClaro);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
+}
+
+#servicos p {
+    color: var(--dark);
+}
+
+#servicos a.servico .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+#servicos a.servico .img-container img {
+    max-height: 160px;
+}
+
+.subtitleServicos {
+    font-size: 15px;
+    font-family: 'Jost', sans-serif;
+}
+#servicos a {
+    display: block;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    color: #000;
+    text-decoration: none;
+    transition: all ease-out 0.2s;
+}
+/* Fim - Serviços */
+
+/* Contato */
+.email{
+    border-radius: 10px;
+    background-color: var(--azulClaro);
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 30px;
+}
+
+.email img{
+    width: 30%;
+}
+
+.email form{
+    width: 60%;
+}
+
+#areaEmail{
+    border-width: 2px;
+    border-color: var(--azulEscuro);
+    border-radius: 10px;
+}
+
+#emailInput{
+    background-color: transparent;
+    border-color: var(--azulMedioForte);
+    color: #000;
+}
+
+#botaoContato{
+    background-color: var(--azulEscuro);
+    color: #fff;
+}
+
+#botaoContato:hover{
+    background-color: var(--azulMedioForte);
+}
+
+#redesIcons{
+    margin: 20px;
+    font-size: 25px;
+    color: #0f3464;
+    transition: all ease-out 0.1s;
+}
+
+#redesIcons:hover{
+    color: var(--azulEscuro);
+    transform: scale(1.2);
+}
+
+#tituloContato{
+    font-family: 'Chenla', sans-serif;
+}
+
+#subtituloContato{
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    color: var(--azulMedioForte);
+}
+/* Fim - Contato */
+
+/* Copryght */
+#copyArea {
+    background-color: #f1f1f1;
+}
+
+#copyArea .container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#copyArea .container p {
+    margin-bottom: 0;
+}
+
+#copyArea .container a {
+    font-weight: bold;
+    text-decoration: none;
+}
+/* Fim - Copryght */

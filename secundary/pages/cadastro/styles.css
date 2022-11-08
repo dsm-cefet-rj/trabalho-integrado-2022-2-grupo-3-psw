@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Chenla&display=swap%27');
+
+/* Gerais */
+
+body{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('../../img/Night_Sky.jpg');
+    background-repeat: no-repeat;
+}
+
+/*Copyright*/
+
+#copyArea {
+    background-color: #f1f1f100;
+}
+
+#copyArea .container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#copyArea .container p {
+    color:rgba(255, 255, 255, 0.356);
+    margin-bottom: 0;
+}
+
+#copyArea .container a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Tela de Login */
+
+#loginScreen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgba(rgb(37, 37, 37), 0.3)
+}
+
+#loginBox {
+   background-color: rgba(53, 52, 52, 0.397);
+   width: 40vw;
+   height: 85vh;
+}
+
+#loginForm{
+    font-family: 'Jost';
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botões de Login e Registrar */
+
+#loginForm > a {
+    padding: 0;
+    max-width: 100px;
+    min-width: 20px;
+}
+
+.loginButtons {
+    width: 100px;
+    min-width: 20px;
+}
+
+/* Espaço para Email e Senha */
+.formInput::placeholder {
+    color:rgba(255, 255, 255, 0.582);
+}
+
+.formInput:focus {
+    color:#fff;
+    outline: none;
+}
+
+.formInput {
+    border-style: none;
+    background-color: rgba(114, 113, 113, 0);
+    color:rgba(255, 255, 255, 0.582);
+    border-bottom-color: rgba(248, 237, 237, 0.445);
+    border-bottom-style: solid;
+    width: 28vw;
+    height: 40px;
+}
+
+#formBox {
+    display: flex;
+    justify-content: center;
+}
+
+/* Botão de Confirmação */
+
+#confirmButton {
+    width: 23vw;
+}
