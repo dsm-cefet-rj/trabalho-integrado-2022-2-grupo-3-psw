@@ -1,10 +1,10 @@
 import React from "react";
+import "./styleBotaoProximo.css";
 
 function BotaoProximoQuiz() {
     return(
     <div>
         <div className="row">
-            <div className="col-6 d-flex justify-content-center"></div>
             <div className="col-6 d-flex justify-content-end" >
                 <a href="../quizMeioSatis/index.html" className="text-decoration-none">
                     <button id="next">

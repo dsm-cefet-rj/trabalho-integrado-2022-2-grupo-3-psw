@@ -1,4 +1,5 @@
 import React from "react";
+import "./styleOpcoesQuiz.css";
 
 function OpcoesQuiz(){
     return (
