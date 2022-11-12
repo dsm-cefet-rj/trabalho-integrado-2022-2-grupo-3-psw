@@ -1,4 +1,5 @@
 import React from "react";
+import "./stylePerguntas.css/";
 
 function PerguntasQuiz() {
     return(
