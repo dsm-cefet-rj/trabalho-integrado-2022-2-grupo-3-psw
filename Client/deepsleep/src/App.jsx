@@ -5,8 +5,7 @@ import DetalhesPage from "./pages/Detalhes"
 function App() {
   return (
     <div>
-      <Home />
-      <DetalhesPage />
+      <Home/>
     </div>
   )
 }
