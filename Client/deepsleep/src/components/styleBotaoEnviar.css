@@ -4,36 +4,21 @@
     margin:0;
     padding:0;
 }
-
 .row{
     margin:0;
 }
-#title {
-    margin-top: 140px;
-    background-color: #ffffff;
-}
-
-#title h2 {
-    font-family: 'GFS Neohellenic';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 28px;
-    text-align: center;
-
-    color: #1646EE;
-}
-#question {
+#enviar{
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
-    margin-top: 40px;
-    margin-bottom: 40px;
-
+    margin-top: 30px;
+    
+    border:none;
+    width:100%;
 }
 
-#question p {
+#enviar p{
     font-family: 'GFS Neohellenic';
     font-style: normal;
     font-weight: 700;
@@ -41,6 +26,6 @@
     line-height: 40px;
 
     text-align: center;
-
+    margin:0;
     color: #A7A8AA;
 }

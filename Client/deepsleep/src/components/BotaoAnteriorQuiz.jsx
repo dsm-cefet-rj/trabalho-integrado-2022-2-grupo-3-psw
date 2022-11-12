@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./styleBotaoAnterior.css"
 function BotaoAnteriorQuiz() {
     return(
     <div>

@@ -4,11 +4,10 @@
     margin:0;
     padding:0;
 }
-
 .row{
     margin:0;
 }
-#next {
+#prev{
     display: flex;
     background-color: #ffffff;
     border: none;
@@ -16,20 +15,19 @@
     margin-top: 20px;
 }
 
-#next i {
+#prev i{
     color: #1646EE;
     margin: 4px;
-    margin-left:9px;
+    margin-right:9px;
     font-size: 30px;
 }
 
-#next p {
+#prev p{
     font-family: 'GFS Neohellenic';
     font-style: normal;
     font-weight: 700;
     font-size: 23px;
     line-height: 30px;
-    /* identical to box height */
 
     text-align: center;
     margin-top:4px;
