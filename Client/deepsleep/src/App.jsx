@@ -1,9 +1,13 @@
 import React from "react"
 import Home from "./pages/Home"
+import DetalhesPage from "./pages/Detalhes"
 
 function App() {
   return (
-    <Home/>
+    <div>
+      <Home />
+      <DetalhesPage />
+    </div>
   )
 }
 
