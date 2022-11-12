@@ -1,7 +1,7 @@
 import React from "react";
 
 function Footer() {
-    return
+    return(
     <div>
         <div id="copyArea">
             <div class="container">
@@ -12,7 +12,7 @@ function Footer() {
                 </div>
             </div>
         </div>
-    </div>;
+    </div>)
 }
 
 export default Footer;

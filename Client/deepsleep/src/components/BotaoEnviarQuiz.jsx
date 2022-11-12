@@ -1,7 +1,7 @@
 import React from "react";
 
 function BotaoEnviarQuiz() {
-    return
+    return(
     <div>
         <div className="container">
             <a href="../catalogo/" class="text-decoration-none">
@@ -10,7 +10,7 @@ function BotaoEnviarQuiz() {
                 </button>
             </a>
         </div>
-    </div >;
+    </div >)
 }
 
 export default BotaoEnviarQuiz;

@@ -1,7 +1,7 @@
 import React from "react";
 
 function OpcoesQuiz(){
-    return 
+    return (
     <div>
         <div className="container-fluid">
             <div className="row">
@@ -29,7 +29,7 @@ function OpcoesQuiz(){
                 </div>
             </div>
         </div>
-    </div>;
+    </div>)
 }
 
 export default OpcoesQuiz;

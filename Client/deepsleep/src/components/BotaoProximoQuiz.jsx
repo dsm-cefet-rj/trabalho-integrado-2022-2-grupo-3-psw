@@ -1,7 +1,7 @@
 import React from "react";
 
 function BotaoProximoQuiz() {
-    return
+    return(
     <div>
         <div className="row">
             <div className="col-6 d-flex justify-content-center"></div>
@@ -14,7 +14,7 @@ function BotaoProximoQuiz() {
                 </a>
             </div>
         </div>
-    </div>;
+    </div>)
 }
 
 export default BotaoProximoQuiz;

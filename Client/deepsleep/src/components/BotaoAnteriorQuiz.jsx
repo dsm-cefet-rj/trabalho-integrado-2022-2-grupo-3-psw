@@ -1,7 +1,7 @@
 import React from "react";
 
 function BotaoAnteriorQuiz() {
-    return
+    return(
     <div>
         <div className="row">
             <div className="col-6 d-flex justify-content-start">
@@ -13,7 +13,7 @@ function BotaoAnteriorQuiz() {
                 </a>
             </div>
         </div>
-    </div>;
+    </div>)
 }
 
 export default BotaoAnteriorQuiz;
