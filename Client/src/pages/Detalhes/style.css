@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+#local {
+    margin-top: 130px;
+    padding: 0;
+    margin-left: 5%;
+}
+
+#local a {
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+#produto {
+    background-color: #C5DFFF;
+
+}
+
+#carousel {
+    margin-top: 15px;
+    margin-bottom: 5%;
+    min-width: 20px;
+    min-height: 20px;
+    margin-left: 1%;
+}
+
+#carousel img {
+    border-radius: 5%;
+}
+
+#text {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+#text h2 {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
+
+    color: #000000;
+    margin-bottom: 0;
+}
+
+#simpleText {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+
+    color: #000000;
+    margin-left: 5px;
+    margin-bottom: 25px;
+}
+
+#precoNovo {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: #13131f;
+    margin-left: 5px;
+}
+
+#preco {
+    text-decoration: line-through;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 10px;
+    color: #00000079;
+
+    margin-left: 8px;
+    margin-bottom: 2px;
+}
+
+
+#color button {
+    border-radius: 100%;
+    border-width: 1px;
+    border: #00000049;
+
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#color p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+
+    color: #000000;
+    margin-left: 5px;
+}
+
+#color{
+    margin-left: 10px;
+}
+
+#white{
+    background-color: white; 
+}
+
+#white:active{
+    background-color: rgb(133, 133, 133); 
+
+}
+
+#lightBlue{
+    background-color: rgb(77, 169, 200);
+    margin-left: 10px;
+}
+
+#lightBlue:active{
+    background-color: rgb(52, 115, 136);
+}
+
+#darkBlue{
+    background-color: darkblue;
+    margin-left: 10px;
+
+}
+
+#darkBlue:active{
+    background-color: rgb(0, 0, 85)
+}
+
+/*Adicionar ao Carrinho*/
+
+.buyButton{
+    display: flex;
+    justify-content: center;
+
+}
+
+.buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    padding:10px;
+
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+
+    border-color:#00000010;
+
+    background-color: white;
+}
+
+.buy:active{
+    background-color: #4a73a7;
+}
+
+.buy p{
+    align-items: center;
+    margin:0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+
+    color: #000000;
+}
+
+/* Details */
+
+#details{
+    margin-left:15px;
+}
+
+
+/* favs */
+
+#favs{
+    margin-left: 15px;
+    justify-content: space-between;
+}
+
+#favs button{
+    background-color: transparent;
+    border: none;
+
+}
+
+#favs p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    
+    color: #000000ae;
+}
