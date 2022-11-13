@@ -4,7 +4,7 @@
 
 /* Gerais */
 
-body{
+#skyBackground{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -48,7 +48,7 @@ body{
 #loginBox {
    background-color: rgba(53, 52, 52, 0.397);
    width: 40vw;
-   height: 77vh;
+   height: 75vh;
 }
 
 #loginForm{

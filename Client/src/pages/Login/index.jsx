@@ -10,7 +10,7 @@ function LoginPage () {
       <html lang="pt-br">
         <ImportaBootstrap/>
 
-       <body>
+       <body id="skyBackground">
           <main>
 
             <div className="container-fluid" id="loginScreen">
