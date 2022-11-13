@@ -9,6 +9,10 @@ function LoginInputs () {
                 <input className="formInput" type="password" name="password" id="formPassword"
                 placeholder="Senha do Usuário"/>
             </div>
+            <div className="col-12 container my-4" style={{width: "23vw", padding:"0"}}>
+                <button type="submit" className="btn btn-danger" id="confirmButton">
+                Confirmar</button>
+            </div>
         </form>
     );
 }

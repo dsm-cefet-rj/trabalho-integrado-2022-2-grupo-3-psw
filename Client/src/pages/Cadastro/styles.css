@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
 }
 
-/* CopyRight */
+/*Copyright*/
 
 #copyArea {
     background-color: #f1f1f100;
@@ -48,7 +48,7 @@
 #loginBox {
    background-color: rgba(53, 52, 52, 0.397);
    width: 40vw;
-   height: 75vh;
+   height: 100vh;
 }
 
 #loginForm{
@@ -98,4 +98,10 @@
 
 #confirmButton {
     width: 23vw;
+}
+
+/* CheckList */
+
+.passwordCheckList {
+    color:rgba(255, 255, 255, 0.582);
 }
