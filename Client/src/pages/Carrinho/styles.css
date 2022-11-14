@@ -27,11 +27,11 @@
     padding-bottom: 0;
 }
 
-#tittle h2{
+#tittle h1{
     font-family: 'Chenla';
     font-style: normal;
     font-weight: 600;
-    font-size: 38px;
+    font-size: 45px;
     line-height: 37px;
     color: #83A5B7;
 }
@@ -94,3 +94,40 @@ div > h5 {
     border-radius: 15px; 
     border-color:rgba(0, 0, 0, 0.384);
 }
+
+/* Pagamento */
+
+#pix {
+    padding-right: 15px;
+    padding-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input[type="radio"] {
+    width: 24px;;
+    height: 30px;
+}
+
+#installmentOptions
+,#installmentOptions > option{
+    border-radius: 20px; 
+    width: 330px;
+    height: 35px;
+    padding-left: 6px;
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.78);
+}
+
+#checkOutButton {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: 20px;
+}
+

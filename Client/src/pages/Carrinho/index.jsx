@@ -4,6 +4,12 @@ import NavbarComp from "../../components/NavbarComp";
 import ImportaBootstrap from "../../components/ImportsBootStrap";
 import Footer from "../../components/Footer";
 import pix from "../../img/pix.png";
+import ItemCounter from "./ItemCounter";
+import CartItens from "./CartItens";
+import { FiShoppingBag } from "react-icons/fi";
+import { FiShoppingCart } from "react-icons/fi";
+import { FiTruck } from "react-icons/fi";
+import { FaBuilding } from "react-icons/fa";
 
 function CartPage () {
     return (
@@ -17,19 +23,20 @@ function CartPage () {
                 <main>
                     <div className="container-fluid" id="suport">
                         <div className="container" id="tittle">
-                            <h2>Meu Carrinho</h2>
+                            <h1>Meu Carrinho <FiShoppingCart/> </h1>
                         </div>
                         <div className="container-fluid" id="cartItens">
-
+                            <CartItens/>
                         </div>
+                        <form action="" method="post">
                         <div className="container" id="cep">
                             <div className="row">
                                 <div className="col-12 mt-3" >
-                                    <h5>*Informe seu Cep:</h5>
+                                    <h5><FaBuilding/> Informe seu Cep:</h5>
                                     <input type="text" id="cepArea"/>
                                 </div>
                                 <div className="col-12 mt-4">
-                                    <h5>*Frete a ser calculado:</h5>
+                                    <h5><FiTruck/> Frete a ser calculado:</h5>
                                     <input type="text" id="shipping"></input>
                                 </div>
                             </div>
@@ -38,12 +45,28 @@ function CartPage () {
                             <div className="row">
                                 <div className="col-12 mt-4">
                                     <h5>Formas de Pagamento:</h5>
-                                    <img src={pix}/>
-                                    
+                                    <img src={pix} className="me-3 "/>
+                                    <input type="radio" name="paymentMethod"></input>
+                                </div>
+                                <div className="col-12 mt-4" id="installment">
+                                    <select id="installmentOptions">
+                                        <option>À vista sem juros</option>
+                                        <option>2x sem juros</option>
+                                        <option>3x sem juros</option>
+                                        <option>4x sem juros</option>
+                                        <option>5x sem juros</option>
+                                        <option>6x sem juros</option>
+                                    </select>
                                 </div>
                             </div>
-
                         </div>
+                        <div className="col-6 ms-3 mt-4">
+                            <h5>Valor a ser pago: <output name="totalValue" for="shipping cartItens"></output> </h5>
+                        </div>
+                        <div className="col-6 ms-3 mt-4">
+                            <button className="btn btn-primary" id="checkOutButton"><FiShoppingBag/> Finalizar Compra</button>
+                        </div>  
+                        </form>
                     </div>
                 </main>
 
