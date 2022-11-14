@@ -1,11 +1,12 @@
 import React from "react";
 import  "./stylePerguntas.css";
+import {perguntasSatisfacao} from "./perguntasSatisfacao"
 
 function Perguntas() {
     return(
     <div>
         <div className="container" id="question">
-            <p>Pergunta 1</p>
+            <input id ="questionID " placeholder ={perguntasSatisfacao[0].pergunta} />
         </div>
     </div>)
 }
