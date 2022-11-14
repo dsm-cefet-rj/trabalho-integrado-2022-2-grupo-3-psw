@@ -12,7 +12,6 @@ import QuizSatisfacaoI from "../pages/Quizes/QuizSatisfacaoInicial"
 import QuizSatisfacaoM from "../pages/Quizes/QuizSatisfacaoM"
 import QuizSatisfacaoF from "../pages/Quizes/QuizSatisfacaoFinal"
 import WishList from "../pages/Favoritos"
-import UserPage from "../pages/UserSpace";
 
 export function AppRoutes(){
     return(
@@ -27,7 +26,6 @@ export function AppRoutes(){
             <Route path="/quizSM" element={<QuizSatisfacaoM />} />
             <Route path="/quizSF" element={<QuizSatisfacaoF />} />
             <Route path="/wishlist" element={<WishList/>} />
-            <Route path = "/usuario" element = {<UserPage/>} />
         </Routes>
     )
 }
