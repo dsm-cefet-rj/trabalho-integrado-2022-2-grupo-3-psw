@@ -16,6 +16,7 @@ function DetalhesPage() {
 
 
     const produto2 = itens.filter(item => item.id == id);
+    console.log(produto2);
 
     const produto = {
         nome: "Travesseiro Ortopédico",
@@ -78,14 +79,14 @@ function DetalhesPage() {
             <div className="container-fluid" id="produto">
                 <div className="row">
                     <div className="col-md-5 col-sm-12" id="carousel">
-                        <NoTransitionExample imgagemTeste={produto2[0].foto}></NoTransitionExample>
+                        <NoTransitionExample produto={produto2[0].fotos} ></NoTransitionExample>
                     </div>
                     <div className="col-md-6 col-sm-12">
                         <div id="text">
                             <h2>{produto2.nome}</h2>
-                            <p id="simpleText">{produto2[0].nome}</p> {/* Descrição*/}
-                            <p id="preco">{produto.valorAntigo}</p> {/* Valor antigo*/}
-                            <h3 id="precoNovo">{produto2[0].preco}</h3> {/* Valor atual */}
+                            <p id="simpleText">{produto2[0].descricao}</p>
+                            <p id="preco">{produto.valorAntigo}</p>
+                            <h3 id="precoNovo">{produto2[0].preco}</h3>
                         </div>
 
                         <div id="color">
@@ -110,7 +111,7 @@ function DetalhesPage() {
                     </div>
                     <hr></hr>
                     <div id="details">
-                        <BasicExample medidas={produto.detalhes.medidas} material={produto.detalhes.material} fabricante={produto.detalhes.fabricante} ></BasicExample>
+                        <BasicExample medidas={produto2[0].detalhes.medidas} material={produto2[0].detalhes.material} fabricante={produto2[0].detalhes.fabricante} ></BasicExample>
                     </div>
                     <hr></hr>
                 </div>

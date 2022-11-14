@@ -16,7 +16,7 @@ function CatalogoItens({ itens }) {
                                     <a href="#" className="text-decoration-none"><AiOutlineHeart size={20} /></a>
                                     <a href="#" className="text-decoration-none"><AiOutlineShoppingCart size={20} /></a>
                                 </div>
-                                <img src={`src/img${item.foto}`} classNameName="img-fluid" />
+                                <img src={`src/img${item.fotos.foto1}`} classNameName="img-fluid" />
                             </div>
                             <div className="product-info">
                                 <div className="product-name">
