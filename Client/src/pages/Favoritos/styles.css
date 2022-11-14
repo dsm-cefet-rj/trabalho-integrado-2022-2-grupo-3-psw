@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Chenla&display=swap%27');
+
+#suport {
+    margin: 0;
+    margin-top: 60px;
+    padding: 0;
+}
+
+#tittle > h1 { 
+    font-family: 'Chenla';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 37px;
+    color: #5eadd8
+}
