@@ -13,6 +13,7 @@ function UserPage(){
                 <NavbarComp/>
                 <main>
                     <div className = "container" id = "caixa">
+                        <p id = "title">Meu Espaço</p>
                         <i><FaUserCircle/></i>
                         <div id = "texto">
                             <p>Olá, {nomesUsuario[0].nome}</p> 

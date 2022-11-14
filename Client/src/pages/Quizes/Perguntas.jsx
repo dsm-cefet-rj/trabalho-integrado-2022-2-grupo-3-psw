@@ -1,12 +1,12 @@
 import React from "react";
 import  "./stylePerguntas.css";
-import {perguntas} from "./perguntasQuiz"
+import {opcoes} from "./opcoes"
 
 function Perguntas() {
     return(
     <div>
         <div className="container" id="question">
-            <p>{perguntas[0].perguntaSatisfacao}</p>
+            <p>{opcoes[0].perguntaSatisfacao}</p>
         </div>
     </div>)
 }

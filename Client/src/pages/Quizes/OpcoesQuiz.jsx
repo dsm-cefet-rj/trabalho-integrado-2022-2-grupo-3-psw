@@ -14,19 +14,19 @@ function OpcoesQuiz(){
                 </div>
                 <div className="col-6 d-flex justify-content-center">
                     <button className="option">
-                        <p>Opção</p>
+                        <p>{opcoes[1].opcaoSatisfacao}</p>
                     </button>
                 </div>
             </div>
             <div className="row">
                 <div className="col-6 d-flex justify-content-center">
                     <button className="option">
-                        <p>Opção</p>
+                        <p>{opcoes[2].opcaoSatisfacao}</p>
                     </button>
                 </div>
                 <div className="col-6 d-flex justify-content-center">
                     <button className="option">
-                        <p>Opção</p>
+                        <p>{opcoes[3].opcaoSatisfacao}</p>
                     </button>
                 </div>
             </div>
