@@ -4,9 +4,8 @@ import ItemCounter from "./ItemCounter";
 import { itens } from "./Itens";
 
 
-function CartItens () {
+function CartItens ({valorItem}) {
     const result = itens.filter(item => item.carrinho == "true");
-
     return (
         <>
         {result.map((item) => {
@@ -15,10 +14,10 @@ function CartItens () {
                     <div className="col-5 my-5 mx-3">
                         <img src={`src/img${item.foto}`} className="img-fluid"/>
                             <h3 className="mt-2">{item.nome}</h3>
-                        <div className="col-12">
+                        {/* <div className="col-12">
                              <span>{item.preco}</span>
-                        </div>
-                        <ItemCounter/>
+                        </div> */}
+                        <ItemCounter valorItem={item.preco}/>
                     </div>
                 </div>
             )
