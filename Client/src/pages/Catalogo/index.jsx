@@ -21,7 +21,7 @@ function Catalogo() {
 
     const [itensC, setItensC] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [itensPerPage] = useState(4);
+    const [itensPerPage] = useState(16);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -29,7 +29,7 @@ function Catalogo() {
         setItensC(itens);
     }, [])
 
-    const indexOfLastItem = (currentPage + 1) * itensPerPage;
+    const indexOfLastItem = currentPage * itensPerPage;
     const indexOfFirstItem = indexOfLastItem - itensPerPage;
     console.log(itensC)
     const currentItens = itensC.slice(indexOfFirstItem, indexOfLastItem);

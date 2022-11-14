@@ -4,7 +4,7 @@ const Pagination = ({ itensPerPage, totalItens, paginate}) => {
 
     const pageNumbers = [];
 
-    for(let i = 1; i < Math.ceil(totalItens / itensPerPage); i++){
+    for(let i = 1; i < Math.ceil((totalItens / itensPerPage) + 1); i++){
         pageNumbers.push(i);
     }
 
@@ -13,7 +13,7 @@ const Pagination = ({ itensPerPage, totalItens, paginate}) => {
         <ul className="pagination">
             {pageNumbers.map(number => (
                 <li key={number} className="page-item">
-                    <a href="!#" className="page-link" onClick={() => paginate(number)}>
+                    <a className="page-link" onClick={() => paginate(number)}>
                         {number}
                     </a>
                 </li>
