@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 293px;
+    height: 610px;
+    left: 39px;
+    top: 100px;
+
+    background: #FFFDFD;
+    border: 1px solid #739BD0;
+
+
+}
+
+.opcao {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    margin: 10px;
+    border: none;
+    align-items: center;
+
+    width: 90%;
+
+}
+
+.opcao:hover {
+    background-color: rgba(236, 214, 196, 0.53);
+}
+
+.opcao:active {
+    border-style: outset;
+    border-color: #1646EE;
+}
+
+.opcao p {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 30px;
+
+    margin: 5px;
+
+    text-align: center;
+    color: #0b3ea5;
+}

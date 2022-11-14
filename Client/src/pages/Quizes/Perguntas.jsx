@@ -6,7 +6,7 @@ function Perguntas() {
     return(
     <div>
         <div className="container" id="question">
-            <input id ="questionID " placeholder ={perguntasSatisfacao[0].pergunta} />
+            <p>{perguntasSatisfacao[0].pergunta}</p>
         </div>
     </div>)
 }

@@ -8,11 +8,14 @@ import Detalhes from "./pages/Detalhes"
 import SatisfacaoPageI from "./pages/Quizes/QuizSatisfacaoInicial/SatisfacaoPageI"
 import SatisfacaoPageM from "./pages/Quizes/QuizSatisfacaoM/SatisfacaoPageM"
 import SatisfacaoPageF from "./pages/Quizes/QuizSatisfacaoFinal/SatisfacaoPageF"
+import UserPage from "./pages/UserSpace"
+
 import { AppRoutes } from "./routes/Routes"
 function App() {
   
   return (
     <AppRoutes/>
+    
   )
 }
 

@@ -12,24 +12,23 @@ function UserPage(){
             <body>
                 <NavbarComp/>
                 <main>
-                    <div class = "container" id = "caixa">
+                    <div className = "container" id = "caixa">
                         <i><FaUserCircle/></i>
                         <div id = "texto">
-                            <p>Olá, </p>
-                            <input id = "name" placeholder={nomesUsuario[0].nome} />
+                            <p>Olá, {nomesUsuario[0].nome}</p> 
                         </div>
                         
                         <div className = "col-6 d-flex justify-content-center" id = "botoes">
-                            <button className = "option">
+                            <button className = "opcao">
                                 <p>Lista de Favoritos</p>
                             </button>
-                            <button className = "option">
+                            <button className = "opcao">
                                 <p>Lista de Desejos</p>
                             </button>
-                            <button className = "option">
+                            <button className = "opcao">
                                 <p>Quiz Satisfação</p>
                             </button>
-                            <button className = "option">
+                            <button className = "opcao">
                                 <p>Meu Carrinho</p>
                             </button>
                         </div>
