@@ -4,7 +4,6 @@ import NavbarComp from "../../components/NavbarComp";
 import ImportaBootstrap from "../../components/ImportsBootStrap";
 import Footer from "../../components/Footer";
 import pix from "../../img/pix.png";
-import ItemCounter from "./ItemCounter";
 import CartItens from "./CartItens";
 import { FiShoppingBag } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";

@@ -3,11 +3,13 @@ import "./styles.css";
 import ItemCounter from "./ItemCounter";
 import { itens } from "./Itens";
 
+
 function CartItens () {
-    
+    const result = itens.filter(item => item.carrinho == "true");
+
     return (
         <>
-        {itens.map((item) => {
+        {result.map((item) => {
             return (
                 <div className="row">
                     <div className="col-5 my-5 mx-3">
