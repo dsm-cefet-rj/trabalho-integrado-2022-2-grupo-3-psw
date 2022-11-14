@@ -2,10 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Chenla&display=swap%27');
 
+/* Títula da página */
+
 #suport {
+    margin-top: 140px;
+    padding: 0px;
+}
+
+#tittle {
     margin: 0;
-    margin-top: 60px;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 #tittle > h1 { 
@@ -15,4 +24,20 @@
     font-size: 45px;
     line-height: 37px;
     color: #5eadd8
+}
+
+#tittle > h1 > i {
+    color: rgba(240, 25, 25, 0.74);
+}
+
+/* Lista dos itens */
+
+#wishListItems {
+    border-top-style: solid;
+    border-top-width: 1px ;
+    border-top-color: #5eadd8 ;
+}
+
+#wishListItem {
+    margin-left: 350px;
 }
