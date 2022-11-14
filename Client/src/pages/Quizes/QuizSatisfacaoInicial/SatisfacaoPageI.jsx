@@ -6,10 +6,10 @@ import BotaoProximoQuiz from "../BotaoProximoQuiz";
 import Footer from "../../../components/Footer";
 import "./style.css";
 import smile from "../../../img/smile.png";
-import logo from "../../../img/DeepSleepLogo.png";
 import ImportaBootstrap from "../../../components/ImportsBootStrap";
 
 function SatisfacaoPageI() {
+    
     return (
         <html lang="pt-br">
             <ImportaBootstrap />

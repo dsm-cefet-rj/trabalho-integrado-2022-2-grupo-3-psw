@@ -1,3 +1,3 @@
-import SatisfacaoPageI from "./SatisfacaoPageF"
+import SatisfacaoPageF from "./SatisfacaoPageF"
 
 export default SatisfacaoPageF;
