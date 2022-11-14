@@ -17,10 +17,10 @@
     border:none;
     width:100%;
 }
-.enviar:hover{
+#enviar:hover{
     background-color: rgba(236, 214, 196, 0.53);
 }
-.enviar:active{
+#enviar:active{
     border-style:outset;
     border-color:#1646EE;
 }
