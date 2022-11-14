@@ -7,7 +7,8 @@ function App() {
   
   return (
     <div>
-      <CartPage/>
+      <LoginPage/>
+      <RegisterPage/>
     </div>
     
   )

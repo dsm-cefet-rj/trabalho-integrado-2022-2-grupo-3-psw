@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import logo from "../../img/DeepSleepLogo.png";
 import ImportaBootstrap from "../../components/ImportsBootStrap";
-import Footer from "../../components/Footer";
+import RegisterFooter from "./RegisterFooter";
 import RegisterInputs from "./RegisterInputs";
 
 function RegisterPage () {
@@ -25,9 +25,9 @@ function RegisterPage () {
             </div>
 
           </main>
+      <RegisterFooter/>
 
        </body> 
-      <Footer/>
       
       </html>
     );
