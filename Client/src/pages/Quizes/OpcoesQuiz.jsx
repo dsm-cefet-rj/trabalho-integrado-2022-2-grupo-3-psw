@@ -1,6 +1,6 @@
 import React from "react";
 import "./styleOpcoesQuiz.css";
-
+import {opcoes} from "./opcoes"
 
 function OpcoesQuiz(){
     return( 
@@ -9,7 +9,7 @@ function OpcoesQuiz(){
             <div className="row">
                 <div className="col-6 d-flex justify-content-center">
                     <button class="option">
-                        <p>Opção</p>
+                        <p>{opcoes[0].opcaoSatisfacao}</p>
                     </button>
                 </div>
                 <div className="col-6 d-flex justify-content-center">

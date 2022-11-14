@@ -1,4 +1,4 @@
-export const opcoesQuiz =[
+export const opcoes =[
     {
         "opcaoSatisfacao": "Muito satisfeito",
         "opcaoRecomendacao": "Gosto"
