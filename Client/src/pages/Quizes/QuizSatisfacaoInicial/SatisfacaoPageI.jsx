@@ -13,14 +13,8 @@ function SatisfacaoPageI() {
     return (
         <html lang="pt-br">
             <ImportaBootstrap />
-
-
             <body>
-
-
                 <NavbarComp />
-
-
                 <main>
 
                     <div class="container" id="title">
