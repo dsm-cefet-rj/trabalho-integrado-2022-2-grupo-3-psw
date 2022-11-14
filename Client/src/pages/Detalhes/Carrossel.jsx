@@ -1,39 +1,32 @@
+import { useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import img1 from "../../img/product-image-1668102033.jpg";
-import img2 from "../../img/travesseiro-ortopedico-durma-bem-984312.jpg";
-import img3 from "../../img/travesseiro-orto.jpg";
+import "./CarroselIndicators.css"
 
-function NoTransitionExample() {
+function NoTransitionExample(props) {
+
+  const fotos = { ...props.produto };
+  const fotosA = Object.values(fotos);
+  useEffect(() => {
+    const indicators = document.querySelectorAll(".carousel-indicators button");
+    for (let i = 0; i < fotosA.length; i++) {
+        indicators[i].setAttribute("style", `background-image: url('./src/img${fotosA[i]}')`);
+    }
+  }, [])
+
+
   return (
     <Carousel slide={false} className="">
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={img1}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={img2}
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={img3}
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-        </Carousel.Caption>
-      </Carousel.Item>
+      {Object.keys(fotos).map((item) => {
+        return (
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={`src/img${fotos[item]}`}
+              alt="First slide"
+            />
+          </Carousel.Item>
+        )
+      })}
     </Carousel>
   );
 }
