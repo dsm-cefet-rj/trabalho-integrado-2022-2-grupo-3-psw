@@ -2,7 +2,7 @@ import Accordion from 'react-bootstrap/Accordion';
 
 function BasicExample({medidas, material, fabricante}) {
   return (
-    <Accordion defaultActiveKey="0">
+    <Accordion>
       <Accordion.Item eventKey="0">
         <Accordion.Header>Detalhes</Accordion.Header>
         <Accordion.Body>

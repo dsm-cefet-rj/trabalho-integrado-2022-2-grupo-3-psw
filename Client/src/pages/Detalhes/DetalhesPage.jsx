@@ -5,9 +5,17 @@ import NoTransitionExample from "./Carrossel";
 import NavbarComp from "../../components/NavbarComp";
 import { CiHeart } from "react-icons/ci";
 import BasicExample from "./Informacoes";
+import { Link, useParams } from "react-router-dom";
+
+import { itens } from "../Catalogo/itens";
 
 
 function DetalhesPage() {
+
+    const { id } = useParams();
+
+
+    const produto2 = itens.filter(item => item.id == id);
 
     const produto = {
         nome: "Travesseiro Ortopédico",
@@ -61,8 +69,8 @@ function DetalhesPage() {
 
             <div className="container" id="local">
                 <p>
-                    <a href="../catalogo/index.html"> Catálogo / </a>
-                    {produto.nome}
+                    <Link to={"/catalogue"}> Catálogo / </Link>
+                    {produto2[0].nome}
                 </p>
             </div>
 
@@ -70,14 +78,14 @@ function DetalhesPage() {
             <div className="container-fluid" id="produto">
                 <div className="row">
                     <div className="col-md-5 col-sm-12" id="carousel">
-                        <NoTransitionExample></NoTransitionExample>
+                        <NoTransitionExample imgagemTeste={produto2[0].foto}></NoTransitionExample>
                     </div>
                     <div className="col-md-6 col-sm-12">
                         <div id="text">
-                            <h2>{produto.nome}</h2>
-                            <p id="simpleText">{produto.descricao}</p>
-                            <p id="preco">{produto.valorAntigo}</p>
-                            <h3 id="precoNovo">{produto.valorAtual}</h3>
+                            <h2>{produto2.nome}</h2>
+                            <p id="simpleText">{produto2[0].nome}</p> {/* Descrição*/}
+                            <p id="preco">{produto.valorAntigo}</p> {/* Valor antigo*/}
+                            <h3 id="precoNovo">{produto2[0].preco}</h3> {/* Valor atual */}
                         </div>
 
                         <div id="color">

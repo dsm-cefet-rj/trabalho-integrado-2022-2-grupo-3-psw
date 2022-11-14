@@ -11,21 +11,20 @@ import EmailArea from "./EmailArea";
 import Servicos from "./Servicos";
 
 import Teste from "../../components/ImportsBootStrap";
+import { Link } from "react-router-dom";
 
 
-function Home(){
-    return( 
+function Home() {
+  return (
     <html lang="pt-br">
 
-      <Teste/>
+      <Teste />
 
       <body>
-          
-          <NavbarComp/>
+
+        <NavbarComp />
 
         <main>
-
-
           <div className="container-fluid">
             <div id="aboutArea">
               <div className="container">
@@ -36,8 +35,16 @@ function Home(){
                     <p> O Deep Sleep indica um artigo de sono que leva em consideração suas preferências de sono. Combinaremos
                       com você o artigo perfeito com base no tamanho do seu corpo, hábitos de sono e estilo de vida para
                       ajudá-lo adormecer mais rápido e dormir melhor.</p>
-                    <a href="../quizInicialReco/index.html" className="text-decoration-none"><button type="button" className="btn btn-primary" id="botoesSobreQuiz">Fazer Quiz</button></a>
-                    <a href="../catalogo/index.html" className="text-decoration-none"><button type="button" className="btn btn-primary" id="botoesSobreCatalogo">Ir para o catálogo</button></a>
+                    <a href="../quizInicialReco/index.html" className="text-decoration-none">
+                      <button type="button" className="btn btn-primary" id="botoesSobreQuiz">
+                        Fazer Quiz
+                      </button>
+                    </a>
+                    <Link to={"/catalogue"} className="text-decoration-none">
+                      <button type="button" className="btn btn-primary" id="botoesSobreCatalogo">
+                        Ir para o catálogo
+                      </button>
+                    </Link>
                   </div>
                   <div className="col-md-6 col-sm-12">
                     <img className="img-fluid" src={camaLuxo2} alt="Cama de Luxo" />
@@ -47,18 +54,18 @@ function Home(){
             </div>
           </div>
 
-
-          <Servicos/>
+          <Servicos />
 
         </main>
-          <EmailArea/>
 
-          <Footer/>
+        <EmailArea />
+
+        <Footer />
 
       </body>
 
     </html>
-    )
+  )
 }
 
 export default Home;
