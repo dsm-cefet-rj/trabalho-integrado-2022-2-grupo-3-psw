@@ -17,6 +17,13 @@
     border:none;
     width:100%;
 }
+.enviar:hover{
+    background-color: rgba(236, 214, 196, 0.53);
+}
+.enviar:active{
+    border-style:outset;
+    border-color:#1646EE;
+}
 
 #enviar p{
     font-family: 'GFS Neohellenic';

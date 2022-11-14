@@ -5,7 +5,7 @@ function BotaoEnviarQuiz() {
     return(
     <div>
         <div className="container">
-            <a href="../catalogo/" class="text-decoration-none">
+            <a class="text-decoration-none">
                 <button id="enviar">
                     <p>Enviar</p>
                 </button>
