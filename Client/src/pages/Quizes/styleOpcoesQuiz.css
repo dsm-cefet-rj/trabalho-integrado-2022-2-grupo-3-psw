@@ -19,6 +19,14 @@
 
 }
 
+.option:hover{
+    background-color: rgba(236, 214, 196, 0.53);
+}
+.option:active{
+    border-style:outset;
+    border-color:#1646EE;
+}
+
 .option p {
     font-family: 'GFS Neohellenic';
     font-style: normal;

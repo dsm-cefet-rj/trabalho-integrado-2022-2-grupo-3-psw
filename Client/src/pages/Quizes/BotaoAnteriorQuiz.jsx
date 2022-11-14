@@ -1,7 +1,6 @@
 import React from "react";
-import { icons } from "react-icons/lib";
 import "./styleBotaoAnterior.css";
-import BsFillArrowLeftCircleFill from "@react-icons/all-files/bs/BsFillArrowLeftCircleFill";
+import {BsFillArrowLeftCircleFill} from "react-icons/bs";
 
 function BotaoAnteriorQuiz() {
     return(
@@ -10,7 +9,7 @@ function BotaoAnteriorQuiz() {
             <div className="col-6 d-flex justify-content-start">
                 <a className="text-decoration-none">
                     <button id="prev">
-                        <i BsFillArrowLeftCircleFill></i>
+                        <i> <BsFillArrowLeftCircleFill/></i>
                         <p>Anterior</p>
                     </button>
                 </a>

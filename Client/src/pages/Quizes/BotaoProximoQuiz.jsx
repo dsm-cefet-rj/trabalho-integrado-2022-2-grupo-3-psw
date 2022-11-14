@@ -11,7 +11,7 @@ function BotaoProximoQuiz() {
                     <a className="text-decoration-none">
                         <button id="next">
                             <p>Próximo</p>
-                            {/* <i BsFillArrowRightCircleFill /> */}
+                            <i><BsFillArrowRightCircleFill/></i>
                         </button>
                     </a>
                 </div>
