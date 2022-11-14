@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Chenla&display=swap%27');
+
+/* Gerais */
+:root {
+    --azulEscuro: #1052A8;
+    --azulMedioForte: #173CF0;
+    --azulClaro: #C5DFFF;
+    --azulMedio: #8CBEFF;
+}
+
+.row {
+    margin: 0;
+}
+
+#corFundo {
+    background-color: white;
+}
+
+/* Fim - Gerais */
+
+/* Navbar */
+#navbar {
+    background-color: var(--azulEscuro);
+}
+
+#navbarTitle {
+    color: #fff;
+}
+
+#navbarLinks {
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+#navbarIcons {
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+#logo {
+    width: 90px;
+}
+
+#navbarSearchButton {
+    background-color: #0f3464;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+}
+
+#navbarInputSearch {
+    border-radius: 0px;
+}
+
+#espace{
+    padding: 42px;
+}
+
+/* Fim - Navbar */
+
+
+/* Carrosel de Imagens - Slider */
+#mainSlider .carousel-inner,
+#mainSlider .carousel-item {
+    max-height: 90vh;
+}
+
+.carousel-indicators .active {
+    background-color: #915bbd;
+}
+
+/* Fim - Carrosel de Imagens - Slider */
+
+/* Listagem de produtos */
+#formOrdenacao {
+    margin-left: 10px;
+}
+
+#containerCategory h2 {
+    text-align: start;
+    font-family: 'Jost', sans-serif;
+    font-size: 25px;
+}
+
+#containerCategory .buttonsCategory {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#containerCategory button {
+    border: none;
+    margin-top: 7px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: #000;
+}
+
+#containerCategory button:hover {
+    color: #fff;
+    background: var(--azulMedio)
+}
+  
+
+/* Fim - Listagem de produtos */
+
+
+/* Copryght Foooter */
+#copyArea {
+    background-color: #f1f1f1;
+}
+
+#copyArea .container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#copyArea .container p {
+    margin-bottom: 0;
+}
+
+#copyArea .container a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Fim - Copryght Foooter */
+
+
+
+.product-inner-box .iconsProduct {
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    top: -3%;
+    transition: all 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.product-inner-box .iconsProduct a {
+    color: var(--azulEscuro);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.product-inner-box .promotion .cardPromotion {
+    background: var(--azulEscuro);
+    font-size: 12px;
+    padding: 5px 14px;
+    top: 0px;
+    position: absolute;
+}
+
+.promotion span {
+    color: #fff;
+}
+
+.product-inner-box .promotion .cardPromotion::before {
+    border-width: 10px 0px 0px 10px;
+    border-color: transparent transparent transparent var(--azulEscuro);
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 0;
+    bottom: 0;
+    border-style: solid;
+}
+
+.product-inner-box .promotion .cardPromotion::after {
+    border-width: 10px 8px 0px 10px;
+    border-color: var(--azulEscuro) transparent transparent;
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 0;
+    top: 0;
+    border-style: solid;
+}
+
+.product-inner-box img {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-inner-box:hover .iconsProduct {
+    transform: rotateY(-3%);
+    top: 3%;
+    opacity: 1;
+}
+
+.product-name h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.product-price span {
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+}
