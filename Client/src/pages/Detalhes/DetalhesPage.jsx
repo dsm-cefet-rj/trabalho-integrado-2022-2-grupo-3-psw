@@ -7,15 +7,20 @@ import { CiHeart } from "react-icons/ci";
 import BasicExample from "./Informacoes";
 import { Link, useParams } from "react-router-dom";
 
+import useCartItem from "../../Estados/useItemStore";
+
 import { itens } from "../Catalogo/itens";
 
 
 function DetalhesPage() {
 
     const { id } = useParams();
+    const additem = useCartItem(state => state.addCartItem);
 
 
     const produto2 = itens.filter(item => item.id == id);
+
+    const cores = Object.values(produto2[0].cores);
 
 
     return (
@@ -74,24 +79,23 @@ function DetalhesPage() {
                         <div id="color">
                             <p>Cor</p>
                             <div>
-                                <label>
-                                    <input type="radio" name="test" value="1"></input>
-                                    <img src="https://via.placeholder.com/40x40/ffffff/fff&text=."  alt="Option 1"/>
-                                </label>
-                                <label>
-                                    <input type="radio" name="test" value="2"></input>
-                                    <img src="https://via.placeholder.com/40x40/4db1d8/4db1d8&text=."  alt="Option 2"/>
-                                </label>
-                                <label>
-                                    <input type="radio" name="test" value="3"></input>
-                                    <img src="https://via.placeholder.com/40x40/2d5b9b/2d5b9b&text=."  alt="Option 3"/>
-                                </label>
+                                {cores.map((item) => {
+                                    return (
+                                        <label>
+                                            <input type="radio" name="test" value="1"></input>
+                                            <img src={`https://via.placeholder.com/40x40/${item}/${item}&text=.`}/>
+                                        </label>
+                                    )
+                                })}
                             </div>
                         </div>
 
 
                         <div className="buyButton">
-                            <button className="buy">
+                            <button className="buy" onClick={() => {
+                                additem(produto2[0]);
+                                alert("Adicionado ao carrinho de compras!")
+                            }}>
                                 <p>Adicionar ao Carrinho</p>
                             </button>
                         </div>
