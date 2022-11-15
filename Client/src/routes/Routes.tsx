@@ -8,14 +8,15 @@ import Catalogo from "../pages/Catalogo";
 import DetalhesPage from "../pages/Detalhes";
 import Home from "../pages/Home";
 import LoginPage from "../pages/Login";
+import QuizRecomendacaoInicio from "../pages/Quizes/QuizRecomendacaoInicio";
 import QuizSatisfacaoI from "../pages/Quizes/QuizSatisfacaoInicial"
 import QuizSatisfacaoM from "../pages/Quizes/QuizSatisfacaoM"
 import QuizSatisfacaoF from "../pages/Quizes/QuizSatisfacaoFinal"
 import WishList from "../pages/Favoritos"
 import UserPage from "../pages/UserSpace";
 
-export function AppRoutes(){
-    return(
+export function AppRoutes() {
+    return (
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/catalogue" element={<Catalogo />} />
@@ -23,11 +24,12 @@ export function AppRoutes(){
             <Route path="/detail:id" element={<DetalhesPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/quizRI" element={<QuizRecomendacaoInicio />} />
             <Route path="/quizSI" element={<QuizSatisfacaoI />} />
             <Route path="/quizSM" element={<QuizSatisfacaoM />} />
             <Route path="/quizSF" element={<QuizSatisfacaoF />} />
-            <Route path="/wishlist" element={<WishList/>} />
-            <Route path="/user" element = {<UserPage/>} />
+            <Route path="/wishlist" element={<WishList />} />
+            <Route path="/user" element={<UserPage />} />
         </Routes>
     )
 }

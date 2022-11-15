@@ -35,11 +35,11 @@ function Home() {
                     <p> O Deep Sleep indica um artigo de sono que leva em consideração suas preferências de sono. Combinaremos
                       com você o artigo perfeito com base no tamanho do seu corpo, hábitos de sono e estilo de vida para
                       ajudá-lo adormecer mais rápido e dormir melhor.</p>
-                    <a href="../quizInicialReco/index.html" className="text-decoration-none">
+                    <Link to={"/quizRI"} className="text-decoration-none">
                       <button type="button" className="btn btn-primary" id="botoesSobreQuiz">
                         Fazer Quiz
                       </button>
-                    </a>
+                    </Link>
                     <Link to={"/catalogue"} className="text-decoration-none">
                       <button type="button" className="btn btn-primary" id="botoesSobreCatalogo">
                         Ir para o catálogo
