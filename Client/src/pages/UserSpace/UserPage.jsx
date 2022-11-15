@@ -19,14 +19,18 @@ function UserPage() {
                         <div id="texto">
                             <p>Olá, <b>{nomesUsuario[0].nome}</b></p>
                         </div>
-
+                            
                             <button className="opcao">
                                 <p>Lista de Desejos</p>
                             </button>
+                            
                             <button className="opcao">
                                 <p>Meu Carrinho</p>
                             </button>
 
+                            <button className="opcao">
+                                <p>Catálogo</p>
+                            </button>
                     </div>
 
                 </main>

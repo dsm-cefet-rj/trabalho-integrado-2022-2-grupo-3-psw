@@ -22,6 +22,7 @@ function SatisfacaoPageI() {
                     <div className="container" id="title">
                         <h2>Conte-nos o que achou!</h2>
                     </div>
+
                     <Perguntas />
                     <OpcoesQuiz />
                     <div className = "container-fluid" id ="botoes">
