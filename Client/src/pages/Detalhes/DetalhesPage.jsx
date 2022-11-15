@@ -83,7 +83,7 @@ function DetalhesPage() {
                     </div>
                     <div className="col-md-6 col-sm-12">
                         <div id="text">
-                            <h2>{produto2.nome}</h2>
+                            <h2>{produto2[0].nome}</h2>
                             <p id="simpleText">{produto2[0].descricao}</p>
                             <p id="preco">{produto.valorAntigo}</p>
                             <h3 id="precoNovo">{produto2[0].preco}</h3>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import emailImagem from "../../img/Emails-amico.svg";
 
 import {AiOutlineFacebook} from "react-icons/ai";
@@ -9,6 +9,9 @@ import {AiOutlineInstagram} from "react-icons/ai";
 import "./styles.css";
 
 function EmailArea(){
+  const [email, setEmail] = useState("");
+  console.log(email);
+
     return (
         <div className="container pt-2 pb-2" id="contato">
             <div className="row d-flex align-items-center">
@@ -21,7 +24,9 @@ function EmailArea(){
                 <form>
                   <div className="mb-2">
                     <label for="email" className="sr-only">Email</label>
-                    <input type="email" className="form-control w100" id="emailInput" placeholder="Seu email..." />
+                    <input type="email" className="form-control w100" id="emailInput" placeholder="Seu email..." 
+                    onChange={(e) => setEmail(e.target.value)}
+                    />
                   </div>
                   <div>
                     <button type="submit" className="btn btn-light button mb-3 d-md-inline d-block w-100" id="botaoContato">
