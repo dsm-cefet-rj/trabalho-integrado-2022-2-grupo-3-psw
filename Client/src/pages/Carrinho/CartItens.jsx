@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import ItemCounter from "./ItemCounter";
+import useCartItem from "../../Estados/useItemStore";
 import { itens } from "./Itens";
 
 

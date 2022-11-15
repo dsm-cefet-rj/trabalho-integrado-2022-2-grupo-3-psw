@@ -4,6 +4,7 @@ import { FaRegMinusSquare } from "react-icons/fa";
 import "./styles.css";
 import ItemPrice from "./ItemPrice";
 import { BsFillTrashFill } from "react-icons/bs"
+import useCartItem from "../../Estados/useItemStore";
 
 function ItemCounter (props) {
     const [valor, setValor] = useState(1);
@@ -11,7 +12,6 @@ function ItemCounter (props) {
 
     const aumentaValor = () => {
         setValor(valor + 1);
-        // if(props.valorItem >= (props.va))
     }
 
     const diminuiValor = () => {
@@ -35,7 +35,7 @@ function ItemCounter (props) {
                 <FaRegPlusSquare size={18}/></button>  
         </div>
         <div className="col-12 mt-3">
-            <button className="btn btn-danger">Remover Item <BsFillTrashFill size={18}/></button>  
+            <button className="btn btn-danger" onClick>Remover Item <BsFillTrashFill size={18}/></button>  
         </div>
         </>
     );
