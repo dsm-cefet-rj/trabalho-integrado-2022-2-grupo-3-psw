@@ -49,7 +49,7 @@ function NavbarComp() {
                     </Form>
                     <Nav>
                         <Nav.Link href="#action1" style={{ color: "#fff" }}>
-                            <Link to = {"/user"}><MdAccountCircle size={25} /></Link>
+                            <Link to = {"/user"} className="text-decoration-none" style={{ color: "inherit" }}><MdAccountCircle size={25} /></Link>
                         </Nav.Link>
                         <Nav.Link href="#action3" style={{ color: "#fff" }}>
                             <Link className="text-decoration-none" style={{ color: "inherit" }} to={"/cart"}>
