@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Chenla&display=swap%27');
+
+/* Geral */
+*{
+    margin:0;
+    padding:0;
+}
+
+.row{
+    margin:0;
+}
+
+#suport {
+    padding: 0;
+    padding-top: 60px;
+    margin: 0;
+}
+
+/* Títula da página */
+
+#tittle {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+#tittle h1{
+    font-family: 'Chenla';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 37px;
+    color: #83A5B7;
+}
+
+/* Itens do carrinho */
+
+#cartItens {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-top: solid;
+    border-top-width: 2px;
+    border-top-color: #83A5B7;
+    border-bottom: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #83A5B7;
+}
+
+/* Área do CEP e do frete */
+
+#cep {
+    display: flex;
+    align-items: center;
+    padding-top: 18px;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+div > h5 {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 17px;
+    color: #000000;
+}
+
+#cepArea {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.733);
+    height: 30px;
+    width: 30%;
+    border-radius: 15px; 
+    border-color:rgba(0, 0, 0, 0.384);
+}
+
+#shipping {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.733);
+    padding-left: 3px;
+    width: 30%;
+    height: 30px;
+    border-radius: 15px; 
+    border-color:rgba(0, 0, 0, 0.384);
+}
+
+/* Pagamento */
+
+#pix {
+    padding-right: 15px;
+    padding-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input[type="radio"] {
+    width: 24px;;
+    height: 30px;
+}
+
+#installmentOptions
+,#installmentOptions > option{
+    border-radius: 20px; 
+    width: 330px;
+    height: 35px;
+    padding-left: 6px;
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.78);
+}
+
+#checkOutButton {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+
+/* Input do valor do item */
+
+

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap%27');
+
+*{
+    margin:0;
+    padding:0;
+}
+.row{
+    margin:0;
+}
+#prev{
+    display: flex;
+    background-color: #ffffff;
+    border: none;
+
+    margin-top: 20px;
+}
+
+#prev i{
+    color: #1646EE;
+    margin: 4px;
+    margin-right:9px;
+    font-size: 30px;
+}
+
+#prev p{
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 30px;
+
+    text-align: center;
+    margin-top:4px;
+    color: #1830A8;
+}

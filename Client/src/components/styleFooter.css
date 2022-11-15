@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.row{
+    margin:0;
+}
+#copyArea {
+    background-color: #fff;
+}
+
+#copyArea .container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#copyArea .container p {
+    margin-bottom: 0;
+}
+
+#copyArea .container a {
+    font-weight: bold;
+    text-decoration: none;
+}
