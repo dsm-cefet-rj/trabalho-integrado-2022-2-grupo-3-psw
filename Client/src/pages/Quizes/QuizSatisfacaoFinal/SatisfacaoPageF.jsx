@@ -8,6 +8,7 @@ import "./style.css";
 import smile from "../../../img/smile.png";
 import logo from "../../../img/DeepSleepLogo.png";
 import ImportaBootstrap from "../../../components/ImportsBootStrap";
+import { Link } from "react-router-dom";
 
 function SatisfacaoPageI() {
     return (
@@ -28,7 +29,10 @@ function SatisfacaoPageI() {
                     </div>
                     <Perguntas />
                     <OpcoesQuiz />
+
+                    <Link to = {"/user"}>
                     <BotaoEnviarQuiz />
+                    </Link>
                     <div class="container" id="image">
                         <img src={smile} />
                     </div>

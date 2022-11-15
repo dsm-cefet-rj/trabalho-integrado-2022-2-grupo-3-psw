@@ -7,9 +7,10 @@ import Footer from "../../../components/Footer";
 import "./style.css";
 import smile from "../../../img/smile.png";
 import ImportaBootstrap from "../../../components/ImportsBootStrap";
+import { Link } from "react-router-dom";
 
 function SatisfacaoPageI() {
-    
+
     return (
         <html lang="pt-br">
             <ImportaBootstrap />
@@ -22,7 +23,11 @@ function SatisfacaoPageI() {
                     </div>
                     <Perguntas />
                     <OpcoesQuiz />
-                    <BotaoProximoQuiz />
+
+                    <Link to={"/quizSM"}>
+                        <BotaoProximoQuiz />
+                    </Link>
+
                     <div class="container" id="image">
                         <img src={smile} />
                     </div>
