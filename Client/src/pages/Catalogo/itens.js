@@ -72,7 +72,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -96,7 +96,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -252,7 +252,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -276,7 +276,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -369,7 +369,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -525,7 +525,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -549,7 +549,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -705,7 +705,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -798,7 +798,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -822,7 +822,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -978,7 +978,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -1002,7 +1002,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -1095,7 +1095,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -1251,7 +1251,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -1275,7 +1275,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -1431,7 +1431,7 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
+        "categoria": "Coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",

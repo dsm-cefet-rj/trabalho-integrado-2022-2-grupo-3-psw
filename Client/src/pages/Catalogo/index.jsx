@@ -53,11 +53,21 @@ function Catalogo() {
                         id="containerCategory">
                         <h2>Categorias</h2>
                         <div className="buttonsCategory">
-                            <button className="btn btn-primary">Tudo</button>
-                            <button className="btn btn-primary">Colchões</button>
-                            <button className="btn btn-primary">Camas</button>
-                            <button className="btn btn-primary">Acessórios</button>
-                            <button className="btn btn-primary">Roupa de cama</button>
+                            <button className="btn btn-primary" onClick={() => {
+                                setItensC(itens)
+                            }}>Tudo</button>
+                            <button className="btn btn-primary" onClick={() => {
+                                setItensC(itens.filter(item => item.categoria == "Cama"))
+                            }}>Cama</button>
+                            <button className="btn btn-primary"onClick={() => {
+                                setItensC(itens.filter(item => item.categoria == "Estrado"))
+                            }}>Estrado</button>
+                            <button className="btn btn-primary" onClick={() => {
+                                setItensC(itens.filter(item => item.categoria == "Toalha"))
+                            }}>Toalha</button>
+                            <button className="btn btn-primary" onClick={() => {
+                                setItensC(itens.filter(item => item.categoria == "Coco"))
+                            }}>Coco</button>
                         </div>
                     </div>
                     <div className="col-10">
@@ -71,7 +81,7 @@ function Catalogo() {
                     <div class="col-12 col-md-5"/>
                     <div class="col-12 col-md-7 mt-3 d-flex flex-row-reverse justify-content-center justify-content-md-start">
                     {itens.length && 
-                        <Pagination itensPerPage={itensPerPage} totalItens={itens.length} paginate={paginate}/>
+                        <Pagination itensPerPage={itensPerPage} totalItens={itensC.length} paginate={paginate}/>
                     }
                     </div>
                 </div>
