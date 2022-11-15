@@ -16,24 +16,6 @@ function DetalhesPage() {
 
 
     const produto2 = itens.filter(item => item.id == id);
-    console.log(produto2);
-
-    const produto = {
-        nome: "Travesseiro Ortopédico",
-        descricao: "Para um sono profundo e uma manhã sem dores no pescoço.",
-        valorAntigo: "459,99",
-        valorAtual: "359,99",
-        cor: {
-            cor1: "white",
-            cor2: "lightblue",
-            cor3: "darkblue"
-        },
-        detalhes: {
-            medidas: "50cm altura - 70cm largura - 24cm espessura ",
-            material: "100% Algodão",
-            fabricante: "Casas Bahia"
-        }
-    }
 
 
     return (
@@ -92,33 +74,42 @@ function DetalhesPage() {
                         <div id="color">
                             <p>Cor</p>
                             <div>
-                                <button id="white"> </button>
-                            <button id="darkBlue"> </button>
-                            <button id="lightBlue"> </button>
+                                <label>
+                                    <input type="radio" name="test" value="1" checked></input>
+                                    <img src="https://via.placeholder.com/40x40/ffffff/fff&text=."  alt="Option 1"/>
+                                </label>
+                                <label>
+                                    <input type="radio" name="test" value="2"></input>
+                                    <img src="https://via.placeholder.com/40x40/4db1d8/4db1d8&text=."  alt="Option 2"/>
+                                </label>
+                                <label>
+                                    <input type="radio" name="test" value="3"></input>
+                                    <img src="https://via.placeholder.com/40x40/2d5b9b/2d5b9b&text=."  alt="Option 3"/>
+                                </label>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div className="buyButton">
-                        <button className="buy">
-                            <p>Adicionar ao Carrinho</p>
-                        </button>
+                        <div className="buyButton">
+                            <button className="buy">
+                                <p>Adicionar ao Carrinho</p>
+                            </button>
+                        </div>
+                        <div className="buyButton">
+                            <button className="buy">
+                                <p>Adicionar aos Favoritos     <CiHeart size={25} ></CiHeart></p>
+                            </button>
+                        </div>
+                        <hr></hr>
+                        <div id="details">
+                            <BasicExample medidas={produto2[0].detalhes.medidas} material={produto2[0].detalhes.material} fabricante={produto2[0].detalhes.fabricante} ></BasicExample>
+                        </div>
+                        <hr></hr>
                     </div>
-                    <div className="buyButton">
-                        <button className="buy">
-                            <p>Adicionar aos Favoritos     <CiHeart size={25} ></CiHeart></p>
-                        </button>
-                    </div>
-                    <hr></hr>
-                    <div id="details">
-                        <BasicExample medidas={produto2[0].detalhes.medidas} material={produto2[0].detalhes.material} fabricante={produto2[0].detalhes.fabricante} ></BasicExample>
-                    </div>
-                    <hr></hr>
                 </div>
+                <Footer>
+                </Footer>
             </div>
-            <Footer>
-            </Footer>
-        </div>
 
         </div >
     );

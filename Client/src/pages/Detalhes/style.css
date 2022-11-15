@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -111,70 +111,67 @@
     margin-left: 5px;
 }
 
-#color{
+#color {
+    margin: 10px;
+}
+
+/*ColorButtons*/
+
+input[type=radio]{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
-#white{
-    background-color: white; 
-}
-
-#white:active{
-    background-color: rgb(133, 133, 133); 
+[type=radio] {
+    display: none;
 
 }
 
-#lightBlue{
-    background-color: rgb(77, 169, 200);
-    margin-left: 10px;
+[type=radio]+img {
+    cursor: pointer;
+    border-radius: 50%;
+    margin:10px;
 }
 
-#lightBlue:active{
-    background-color: rgb(52, 115, 136);
-}
-
-#darkBlue{
-    background-color: darkblue;
-    margin-left: 10px;
-
-}
-
-#darkBlue:active{
-    background-color: rgb(0, 0, 85)
+[type=radio]:checked+img {
+    outline: 1px solid rgb(0, 0, 0);
 }
 
 /*Adicionar ao Carrinho*/
 
-.buyButton{
+.buyButton {
     display: flex;
     justify-content: center;
 
 }
 
-.buy{
+.buy {
     display: flex;
     justify-content: center;
     align-items: center;
 
 
-    padding:10px;
+    padding: 10px;
 
     width: 100%;
     height: 100%;
     margin-left: 10px;
 
-    border-color:#00000010;
+    border-color: #00000010;
 
     background-color: white;
 }
 
-.buy:active{
+.buy:active {
     background-color: #4a73a7;
 }
 
-.buy p{
+.buy p {
     align-items: center;
-    margin:0;
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -185,29 +182,29 @@
 
 /* Details */
 
-#details{
-    margin-left:15px;
+#details {
+    margin-left: 15px;
 }
 
 
 /* favs */
 
-#favs{
+#favs {
     margin-left: 15px;
     justify-content: space-between;
 }
 
-#favs button{
+#favs button {
     background-color: transparent;
     border: none;
 
 }
 
-#favs p{
+#favs p {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 30px;
-    
+
     color: #000000ae;
 }
