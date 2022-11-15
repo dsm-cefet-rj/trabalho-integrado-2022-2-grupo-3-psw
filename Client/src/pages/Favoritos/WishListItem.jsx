@@ -3,18 +3,19 @@ import { itens } from "../Carrinho/Itens";
 import "./styles.css";
 import { BsFillTrashFill } from "react-icons/bs"
 import { BsFillCartPlusFill } from "react-icons/bs";
+import useWishList from "../../Estados/useWishList";
 
 
 function WishListItem () {
-    const filtro = itens.filter(item => item.favorito == "true");
-
+    // const filtro = itens.filter(item => item.favorito == "true");
+    const createWishList = useWishList(state => state.wishList);
     return (
         <>
-        {filtro.map((item) => {
+        {createWishList.map((item) => {
             return (
                 <div className="row">
                     <div className="col-8 my-5 mx-5">
-                        <img src={`src/img${item.foto}`} className="img-fluid"/> 
+                        <img src={`src/img${item.fotos.foto1}`} className="img-fluid"/> 
                             <h3 className="mt-2">{item.nome}</h3>
                         <div className="col-12">
                              <span>R${item.preco}</span>
