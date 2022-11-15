@@ -1,6 +1,11 @@
 export const itens = [
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "8B4513",
+            "cor2": "F5DEB3"
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -19,6 +24,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -37,6 +46,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -54,6 +69,10 @@ export const itens = [
     },
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -74,6 +93,10 @@ export const itens = [
 
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -91,6 +114,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -108,6 +137,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -125,6 +158,11 @@ export const itens = [
     },
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -145,6 +183,11 @@ export const itens = [
 
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -162,6 +205,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -179,6 +226,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -196,6 +249,10 @@ export const itens = [
     },
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -216,6 +273,10 @@ export const itens = [
     
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -233,6 +294,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -250,6 +317,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -267,6 +338,11 @@ export const itens = [
     },
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -290,6 +366,10 @@ export const itens = [
 
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -307,6 +387,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -324,6 +410,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -341,6 +431,11 @@ export const itens = [
     },
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -361,6 +456,11 @@ export const itens = [
 
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -378,6 +478,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -395,6 +499,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -412,6 +522,10 @@ export const itens = [
     },
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -432,6 +546,10 @@ export const itens = [
 
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -449,6 +567,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -466,6 +590,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -483,6 +611,11 @@ export const itens = [
     },
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -503,6 +636,11 @@ export const itens = [
 
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -520,6 +658,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -537,6 +679,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -554,6 +702,10 @@ export const itens = [
     },
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -577,6 +729,11 @@ export const itens = [
 
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -594,6 +751,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -611,6 +772,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -628,6 +795,10 @@ export const itens = [
     },
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -648,6 +819,10 @@ export const itens = [
 
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -665,6 +840,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -682,6 +863,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -699,6 +884,11 @@ export const itens = [
     },
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -719,6 +909,11 @@ export const itens = [
 
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -736,6 +931,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -753,6 +952,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -770,6 +975,10 @@ export const itens = [
     },
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -790,6 +999,10 @@ export const itens = [
     
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -807,6 +1020,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -824,6 +1043,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -841,6 +1064,11 @@ export const itens = [
     },
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -864,6 +1092,10 @@ export const itens = [
 
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -881,6 +1113,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -898,6 +1136,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -915,6 +1157,11 @@ export const itens = [
     },
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -935,6 +1182,11 @@ export const itens = [
 
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -952,6 +1204,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -969,6 +1225,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -986,6 +1248,10 @@ export const itens = [
     },
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -1006,6 +1272,10 @@ export const itens = [
 
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
@@ -1023,6 +1293,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -1040,6 +1316,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -1057,6 +1337,11 @@ export const itens = [
     },
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1077,6 +1362,11 @@ export const itens = [
 
     {
         "nome": "Cama de luxo",
+        "cores": {
+            "cor1": "",
+            "cor2": ""
+        },
+        "categoria" : "Cama",
         "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1094,6 +1384,10 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
+        "cores":{
+            "cor1": "DEB887"
+        },
+        "categoria": "Estrado",
         "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -1111,6 +1405,12 @@ export const itens = [
     },
     {
         "nome": "Toalha que seca bem",
+        "cores":{
+            "cor1" : "4B0082",
+            "cor2": "98FB98",
+            "cor3": "D3D3D3"
+        },
+        "categoria": "Toalha",
         "preco" : "76.00",
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
@@ -1128,6 +1428,10 @@ export const itens = [
     },
     {
         "nome": "Coco que ajuda a dormir",
+        "cores":{
+            "cor1": "A0522D"
+        },
+        "categoria": "coco",
         "preco" : "185.00",
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
