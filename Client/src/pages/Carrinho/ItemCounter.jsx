@@ -2,20 +2,22 @@ import React, {useState} from "react"
 import { FaRegPlusSquare } from "react-icons/fa";
 import { FaRegMinusSquare } from "react-icons/fa";
 import "./styles.css";
-import ItemPrice from "./ItemPrice";
 import { BsFillTrashFill } from "react-icons/bs"
 import useCartItem from "../../Estados/useItemStore";
 
 function ItemCounter (props) {
     const [valor, setValor] = useState(1);
-    const [qtd, setQtd] = useState(valor);
 
     const cartItemsList = useCartItem(state => state.cartItens);
-    const removeItens = useCartItem(state => state.removeCartItem)
+    const removeItens = useCartItem(state => state.removeCartItem);
+    const atualizaItens = useCartItem(state => state.updateItemQuantity);
 
-
+    const valorTotal = props.valorItem*valor;
+    
     const aumentaValor = () => {
         setValor(valor + 1);
+        atualizaItens(props.itemId, 'increase');
+         
     }
 
     const diminuiValor = () => {
@@ -23,11 +25,14 @@ function ItemCounter (props) {
         if (valor <= 1 ) {
             setValor(1);
         }
+        atualizaItens(props.itemId, 'decrease');
     }
-
+    
     return (
         <>
-        <ItemPrice itemQtd ={valor} valorDoItem={props.valorItem}></ItemPrice> 
+        <div className="col-9">
+            <input value={`R$${valorTotal}`} id="itemTotalValue"></input>
+        </div>
         <div className="col 12 mt-2">
             <button className="btn btn-primary" onClick={diminuiValor}>
                 <FaRegMinusSquare size={18}/></button>

@@ -20,7 +20,7 @@ export const itens = [
             "fabricante": "Casas Bahia"
         },
         "id": 1,
-        "quantidade": 0
+        
     },
     {
         "nome": "Estrado de cama bom",
@@ -42,7 +42,7 @@ export const itens = [
             "fabricante": "Árvore"
         },
         "id": 2,
-        "quantidade": 0
+        
     },
     {
         "nome": "Toalha que seca bem",
