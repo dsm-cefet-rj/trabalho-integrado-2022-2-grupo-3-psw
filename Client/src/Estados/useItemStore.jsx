@@ -1,7 +1,7 @@
 import create from "zustand";
 import { itens } from "../pages/Catalogo/itens";
 
-const useCartItem = create((set) => ({
+const useCartItem = create((set, get) => ({
     cartItens: [],
 
     addCartItem: (item) => {
@@ -9,18 +9,22 @@ const useCartItem = create((set) => ({
     },
 
     removeCartItem: (itemId) => {
-        set({cartItens: cartItens.filter(item => item.id !== itemId)})
+        set({cartItens: get().cartItens.filter(item => item.id !== itemId)});
+    },
+
+    updateItemQuantity: (itemId, action) => {
+        const cart = get().cartItens;
+        const findProduct = cart.find(p => p.id === itemId);
+
+        if(findProduct) {
+            if (action === 'decrease') {
+                findProduct.quantity = findProduct.quantity >= 1 ? findProduct.quantity - 1 : findProduct.quantity;
+            } else {
+                findProduct.quantity += 1;
+            }
+        }
+        set({cart});
     }
-
-    // updateItemQuantity: (itemId, action) => {
-    //     const findProduct = cartItens.find(p => p.id === itemId);
-
-    //     if(findProduct) {
-    //         if (action === 'decrease') {
-    //             findProduct.quan
-    //         }
-    //     }
-    // }
 }));
 
 
