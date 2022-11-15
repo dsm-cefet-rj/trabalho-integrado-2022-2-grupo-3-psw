@@ -31,12 +31,35 @@
     font-family: 'GFS Neohellenic';
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 45px;
     line-height: 28px;
     text-align: center;
+    padding-bottom: 12px;
 
     color: #1646EE;
     border-radius: #0b3ea5;
+}
+
+#caixa i{
+    font-size: 60px;
+    color: #6775aa;
+    align-items: center;
+}
+
+#texto{
+    margin-top: 12px;
+}
+
+#texto p{
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 28px;
+    text-align: center;
+    padding-bottom: 12px;
+
+    color: #112468;
 }
 
 .opcao {
@@ -58,7 +81,7 @@
 
 .opcao:active {
     border-style: outset;
-    border-color: #1646EE;
+    border-color: #879be4;
 }
 
 .opcao p {

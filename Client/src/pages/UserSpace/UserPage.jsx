@@ -17,25 +17,15 @@ function UserPage() {
 
                         <i><FaUserCircle /></i>
                         <div id="texto">
-                            <p>Olá, {nomesUsuario[0].nome}</p>
+                            <p>Olá, <b>{nomesUsuario[0].nome}</b></p>
                         </div>
 
-                        <div className="col-6 d-flex justify-content-center" id="botoes">
-                            <button className="opcao">
-                                <p>Lista de Favoritos</p>
-                            </button>
                             <button className="opcao">
                                 <p>Lista de Desejos</p>
-                            </button>
-                        </div>
-                        <div className="col-6 d-flex justify-content-center" id="botoes">
-                            <button className="opcao">
-                                <p>Quiz Satisfação</p>
                             </button>
                             <button className="opcao">
                                 <p>Meu Carrinho</p>
                             </button>
-                        </div>
 
                     </div>
 
