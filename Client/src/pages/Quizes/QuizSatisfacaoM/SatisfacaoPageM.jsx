@@ -8,6 +8,7 @@ import "./style.css";
 import smile from "../../../img/smile.png";
 import BotaoAnteriorQuiz from "../BotaoAnteriorQuiz";
 import ImportaBootstrap from "../../../components/ImportsBootStrap";
+import { Link } from "react-router-dom";
 
 function SatisfacaoPageI() {
     return (
@@ -25,23 +26,28 @@ function SatisfacaoPageI() {
 
                     <Perguntas />
                     <OpcoesQuiz />
-                    <div className = "container-fluid" id ="botoes">
-                        <BotaoAnteriorQuiz />
+                    <div className="container-fluid" id="botoes">
+                        <Link to={"/quizSI"}>
+                            <BotaoAnteriorQuiz />
+                        </Link>
+                        
+                        <Link to={"/quizSF"}>
                         <BotaoProximoQuiz />
-                    </div>
+                    </Link>
+                </div>
 
-                        <div class="container" id="image">
-                            <img src={smile} />
-                        </div>
-                </main>
+                <div class="container" id="image">
+                    <img src={smile} />
+                </div>
+            </main>
 
-                <footer>
-                    <Footer />
-                </footer>
+            <footer>
+                <Footer />
+            </footer>
 
-            </body>
+        </body>
 
-        </html>
+        </html >
     )
 }
 
