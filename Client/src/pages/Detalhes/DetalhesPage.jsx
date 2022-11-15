@@ -67,7 +67,7 @@ function DetalhesPage() {
                         <div id="text">
                             <h2>{produto2[0].nome}</h2>
                             <p id="simpleText">{produto2[0].descricao}</p>
-                            <p id="preco">{produto.valorAntigo}</p>
+                            <p id="preco">{produto2[0].preco}</p>
                             <h3 id="precoNovo">{produto2[0].preco}</h3>
                         </div>
 
@@ -75,7 +75,7 @@ function DetalhesPage() {
                             <p>Cor</p>
                             <div>
                                 <label>
-                                    <input type="radio" name="test" value="1" checked></input>
+                                    <input type="radio" name="test" value="1"></input>
                                     <img src="https://via.placeholder.com/40x40/ffffff/fff&text=."  alt="Option 1"/>
                                 </label>
                                 <label>
