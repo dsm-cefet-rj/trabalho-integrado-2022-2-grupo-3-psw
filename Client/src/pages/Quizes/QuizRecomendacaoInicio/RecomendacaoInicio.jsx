@@ -4,8 +4,9 @@ import ImportaBootstrap from "../../../components/ImportsBootStrap";
 import Container from "react-bootstrap/esm/Container";
 import Perguntas from "../Perguntas";
 import OpcoesQuiz from "../OpcoesQuiz";
-import BotaoEnviarQuiz from "../BotaoEnviarQuiz";
 import foto from "../../../img/bro.png";
+import BotaoProximoQuiz from "../BotaoProximoQuiz";
+import Footer from "../../../components/Footer";
 
 
 function RecomendacaoInicio() {
@@ -22,10 +23,12 @@ function RecomendacaoInicio() {
                 </Container>
                 <Perguntas/>
                 <OpcoesQuiz/>
-                <BotaoEnviarQuiz/>
+                <BotaoProximoQuiz/>
                 <div id="image">
                     <img src={foto}/>
                 </div>
+
+                <Footer/>
             </body>
         </div>
 
