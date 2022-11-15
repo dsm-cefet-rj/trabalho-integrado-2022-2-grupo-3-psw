@@ -5,8 +5,19 @@ const useCartItem = create((set, get) => ({
     cartItens: [],
 
     addCartItem: (item) => {
-        set(state => ({cartItens: [...state.cartItens, item] }))
+        const cart = get().cartItens;
+        const findProduct = cart.find(produto=> produto.id === item.id);
+
+        if (findProduct) {
+            findProduct.quantidade += 1;
+        } else {
+            cart.push({...item, quantitdade: 1 });
+        }
+        set({ cart });
     },
+    // addCartItem: (item) => {
+    //     set(state => ({cartItens: [...state.cartItens, item] }))
+    // },
 
     removeCartItem: (itemId) => {
         set({cartItens: get().cartItens.filter(item => item.id !== itemId)});
@@ -18,9 +29,9 @@ const useCartItem = create((set, get) => ({
 
         if(findProduct) {
             if (action === 'decrease') {
-                findProduct.quantity = findProduct.quantity >= 1 ? findProduct.quantity - 1 : findProduct.quantity;
+                findProduct.quantidade = findProduct.quantidade >= 1 ? findProduct.quantidade - 1 : findProduct.quantidade;
             } else {
-                findProduct.quantity += 1;
+                findProduct.quantidade += 1;
             }
         }
         set({cart});

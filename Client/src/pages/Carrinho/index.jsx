@@ -21,7 +21,7 @@ function CartPage () {
 
                 <main>
                     <div className="container-fluid" id="suport">
-                        <div className="container" id="tittle">
+                        <div className="container-fluid" id="tittle">
                             <h1>Meu Carrinho <FiShoppingCart/> </h1>
                         </div>
                         <div className="container-fluid" id="cartItens">

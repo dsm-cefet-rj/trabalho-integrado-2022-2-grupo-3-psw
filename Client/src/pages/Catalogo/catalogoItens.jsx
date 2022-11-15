@@ -32,7 +32,7 @@ function CatalogoItens({ itens }) {
                                 <h3>{item.nome}</h3>
                             </div>
                             <div className="product-price">
-                                <span>{item.preco}</span>
+                                <span>R${item.preco}</span>
                             </div>
                         </div>
                     </div>
