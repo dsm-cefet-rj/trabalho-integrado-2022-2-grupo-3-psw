@@ -10,6 +10,9 @@ function ItemCounter (props) {
     const [valor, setValor] = useState(1);
     const [qtd, setQtd] = useState(valor);
 
+    const cartItemsList = useCartItem(state => state.cartItens);
+    const removeItens = useCartItem(state => state.removeCartItem)
+
     const aumentaValor = () => {
         setValor(valor + 1);
     }
@@ -35,7 +38,10 @@ function ItemCounter (props) {
                 <FaRegPlusSquare size={18}/></button>  
         </div>
         <div className="col-12 mt-3">
-            <button className="btn btn-danger" onClick>Remover Item <BsFillTrashFill size={18}/></button>  
+            <button className="btn btn-danger" onClick={() => {
+                removeItens(itemId)
+            }}
+            >Remover Item <BsFillTrashFill size={18}/></button>  
         </div>
         </>
     );

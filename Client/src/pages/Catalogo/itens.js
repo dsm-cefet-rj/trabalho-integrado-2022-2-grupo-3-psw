@@ -1,7 +1,7 @@
 export const itens = [
     {
         "nome": "Cama de luxo",
-        "preco" : "R$786,00",
+        "preco" : "786.00",
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -18,7 +18,7 @@ export const itens = [
     },
     {
         "nome": "Estrado de cama bom",
-        "preco" : "R$235,00",
+        "preco" : "235.00",
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
