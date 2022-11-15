@@ -14,6 +14,7 @@ import QuizSatisfacaoM from "../pages/Quizes/QuizSatisfacaoM"
 import QuizSatisfacaoF from "../pages/Quizes/QuizSatisfacaoFinal"
 import WishList from "../pages/Favoritos"
 import UserPage from "../pages/UserSpace";
+import AcompanharPedido from "../pages/AcompanharPedido";
 
 export function AppRoutes() {
     return (
@@ -30,6 +31,7 @@ export function AppRoutes() {
             <Route path="/quizSF" element={<QuizSatisfacaoF />} />
             <Route path="/wishlist" element={<WishList />} />
             <Route path="/user" element={<UserPage />} />
+            <Route path = "/entrega" element={<AcompanharPedido />} />
         </Routes>
     )
 }

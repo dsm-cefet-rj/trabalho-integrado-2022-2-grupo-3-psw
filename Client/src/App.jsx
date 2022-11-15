@@ -9,6 +9,7 @@ import SatisfacaoPageI from "./pages/Quizes/QuizSatisfacaoInicial/SatisfacaoPage
 import SatisfacaoPageM from "./pages/Quizes/QuizSatisfacaoM/SatisfacaoPageM"
 import SatisfacaoPageF from "./pages/Quizes/QuizSatisfacaoFinal/SatisfacaoPageF"
 import UserPage from "./pages/UserSpace"
+import AcompanharPedido from "./pages/AcompanharPedido"
 
 import { AppRoutes } from "./routes/Routes"
 function App() {

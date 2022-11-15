@@ -37,6 +37,11 @@ function UserPage() {
                             <p>Catálogo</p>
                         </button>
                         </Link>
+                        <Link to={"/entrega"}>
+                        <button className="opcao">
+                            <p>Acompanhar Pedido</p>
+                        </button>
+                        </Link>
                     </div>
 
                 </main>
