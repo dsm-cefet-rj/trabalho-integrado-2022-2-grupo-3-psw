@@ -85,7 +85,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 5
+        "id": 4
     },
     {
         "nome": "Toalha que seca bem",
@@ -102,7 +102,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 6
+        "id": 3
     },
     {
         "nome": "Estrado de cama bom",
@@ -119,7 +119,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 7
+        "id": 2
     },
     {
         "nome": "Cama de luxo",
@@ -136,7 +136,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 8
+        "id": 1
     },
 
     //------------------------------------------------------------------------//
@@ -156,7 +156,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 9
+        "id": 1
     },
     {
         "nome": "Estrado de cama bom",
@@ -173,7 +173,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 10
+        "id":  2
     },
     {
         "nome": "Toalha que seca bem",
@@ -190,7 +190,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 11
+        "id": 1
     },
     {
         "nome": "Coco que ajuda a dormir",
@@ -207,7 +207,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 12
+        "id":  4
     },
 
     //------------------------------------------------------------------------//
@@ -227,7 +227,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 13
+        "id":  4
     },
     {
         "nome": "Toalha que seca bem",
@@ -244,7 +244,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 14
+        "id": 3
     },
     {
         "nome": "Estrado de cama bom",
@@ -261,7 +261,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 15
+        "id":  2
     },
     {
         "nome": "Cama de luxo",
@@ -278,7 +278,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 16
+        "id":  1
     },   
 
     //------------------------------------------------------------------------//
@@ -301,7 +301,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 17
+        "id":  4
     },
     {
         "nome": "Toalha que seca bem",
@@ -318,7 +318,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 18
+        "id": 3
     },
     {
         "nome": "Estrado de cama bom",
@@ -335,7 +335,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 19
+        "id":  2
     },
     {
         "nome": "Cama de luxo",
@@ -352,7 +352,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 20
+        "id":  1
     },  
 
     //------------------------------------------------------------------------//
@@ -372,7 +372,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 21
+        "id":  1
     },
     {
         "nome": "Estrado de cama bom",
@@ -389,7 +389,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 22
+        "id":  2
     },
     {
         "nome": "Toalha que seca bem",
@@ -406,7 +406,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 23
+        "id": 3
     },
     {
         "nome": "Coco que ajuda a dormir",
@@ -423,7 +423,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 24
+        "id":  4
     },
 
     //------------------------------------------------------------------------//
@@ -443,7 +443,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 25
+        "id":  4
     },
     {
         "nome": "Toalha que seca bem",
@@ -460,7 +460,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 26
+        "id": 3
     },
     {
         "nome": "Estrado de cama bom",
@@ -477,7 +477,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 27
+        "id":  2
     },
     {
         "nome": "Cama de luxo",
@@ -494,7 +494,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 28
+        "id":  1
     },  
 
     //------------------------------------------------------------------------//
@@ -514,7 +514,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 29
+        "id":  1
     },
     {
         "nome": "Estrado de cama bom",
@@ -531,7 +531,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 30
+        "id":  2
     },
     {
         "nome": "Toalha que seca bem",
@@ -548,7 +548,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 31
+        "id": 3
     },
     {
         "nome": "Coco que ajuda a dormir",
@@ -565,7 +565,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 32
+        "id":  4
     },
 
     //------------------------------------------------------------------------//
@@ -588,7 +588,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 33
+        "id":  1
     },
     {
         "nome": "Estrado de cama bom",
@@ -605,7 +605,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 34
+        "id":  2
     },
     {
         "nome": "Toalha que seca bem",
@@ -622,7 +622,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 35
+        "id": 3
     },
     {
         "nome": "Coco que ajuda a dormir",
@@ -639,7 +639,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 36
+        "id":  4
     },
 
     //------------------------------------------------------------------------//
@@ -659,7 +659,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 37
+        "id":  4
     },
     {
         "nome": "Toalha que seca bem",
@@ -676,7 +676,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 38
+        "id": 3
     },
     {
         "nome": "Estrado de cama bom",
@@ -693,7 +693,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 39
+        "id":  2
     },
     {
         "nome": "Cama de luxo",
@@ -710,7 +710,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 40
+        "id":  1
     },
 
     //------------------------------------------------------------------------//
@@ -730,7 +730,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 41
+        "id":  1
     },
     {
         "nome": "Estrado de cama bom",
@@ -747,7 +747,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 42
+        "id":  2
     },
     {
         "nome": "Toalha que seca bem",
@@ -764,7 +764,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 43
+        "id": 3
     },
     {
         "nome": "Coco que ajuda a dormir",
@@ -781,7 +781,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 44
+        "id":  4
     },
 
     //------------------------------------------------------------------------//
@@ -801,7 +801,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 45
+        "id":  4
     },
     {
         "nome": "Toalha que seca bem",
@@ -818,7 +818,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 46
+        "id": 3
     },
     {
         "nome": "Estrado de cama bom",
@@ -835,7 +835,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 47
+        "id":  2
     },
     {
         "nome": "Cama de luxo",
@@ -852,7 +852,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 48
+        "id":  1
     },   
 
     //------------------------------------------------------------------------//
@@ -875,7 +875,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 49
+        "id":  4
     },
     {
         "nome": "Toalha que seca bem",
@@ -892,7 +892,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 50
+        "id": 3
     },
     {
         "nome": "Estrado de cama bom",
@@ -909,7 +909,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 51
+        "id":  2
     },
     {
         "nome": "Cama de luxo",
@@ -926,7 +926,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 52
+        "id":  1
     },  
 
     //------------------------------------------------------------------------//
@@ -946,7 +946,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 53
+        "id":  1
     },
     {
         "nome": "Estrado de cama bom",
@@ -963,7 +963,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 54
+        "id":  2
     },
     {
         "nome": "Toalha que seca bem",
@@ -980,7 +980,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 55
+        "id": 3
     },
     {
         "nome": "Coco que ajuda a dormir",
@@ -997,7 +997,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 56
+        "id":  4
     },
 
     //------------------------------------------------------------------------//
@@ -1017,7 +1017,7 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 57
+        "id":  4
     },
     {
         "nome": "Toalha que seca bem",
@@ -1034,7 +1034,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 58
+        "id": 3
     },
     {
         "nome": "Estrado de cama bom",
@@ -1051,7 +1051,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 59
+        "id":  2
     },
     {
         "nome": "Cama de luxo",
@@ -1068,7 +1068,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 60
+        "id":  1
     },  
 
     //------------------------------------------------------------------------//
@@ -1088,7 +1088,7 @@ export const itens = [
             "material": "100% Algodão",
             "fabricante": "Casas Bahia"
         },
-        "id": 61
+        "id":  1
     },
     {
         "nome": "Estrado de cama bom",
@@ -1105,7 +1105,7 @@ export const itens = [
             "material": "100% Madeira",
             "fabricante": "Árvore"
         },
-        "id": 62
+        "id":  2
     },
     {
         "nome": "Toalha que seca bem",
@@ -1122,7 +1122,7 @@ export const itens = [
             "material": "100% Pano bom",
             "fabricante": "ToalhaMaker"
         },
-        "id": 63
+        "id": 3
     },
     {
         "nome": "Coco que ajuda a dormir",
@@ -1139,6 +1139,6 @@ export const itens = [
             "material": "100% Fruta de sono",
             "fabricante": "Coqueiro"
         },
-        "id": 64
+        "id":  4
     },
 ]
