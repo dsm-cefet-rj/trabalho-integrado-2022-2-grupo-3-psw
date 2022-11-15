@@ -7,6 +7,7 @@ import OpcoesQuiz from "../OpcoesQuiz";
 import foto from "../../../img/bro.png";
 import BotaoProximoQuiz from "../BotaoProximoQuiz";
 import Footer from "../../../components/Footer";
+import "./style.css";
 
 
 function RecomendacaoInicio() {
@@ -18,7 +19,7 @@ function RecomendacaoInicio() {
 
             <body>
                 <NavbarComp />
-                <Container>
+                <Container id="title">
                     <h2>Bem vindo ao quiz do sono!</h2>
                 </Container>
                 <Perguntas/>

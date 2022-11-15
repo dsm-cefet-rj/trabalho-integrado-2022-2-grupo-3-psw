@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap%27');
+
+/* Geral */
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+/* Titulo */
+#title {
+    display: flex;
+    margin-top: 140px;
+    background-color: #ffffff;
+    margin-top: 150px;
+    justify-content: center;
+}
+
+#title h2 {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #1646EE;
+}
+
+/* Imagem */
+
+#image{
+    display:flex;
+    justify-content: center;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
