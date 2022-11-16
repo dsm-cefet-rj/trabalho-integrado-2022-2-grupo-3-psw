@@ -6,6 +6,7 @@ import NavbarComp from "../../components/NavbarComp";
 import { CiHeart } from "react-icons/ci";
 import BasicExample from "./Informacoes";
 import { Link, useParams } from "react-router-dom";
+import useWishList from "../../Estados/useWishList";
 
 import useCartItem from "../../Estados/useItemStore";
 
@@ -16,6 +17,8 @@ function DetalhesPage() {
 
     const { id } = useParams();
     const additem = useCartItem(state => state.addCartItem);
+
+    const addWishList = useWishList(state => state.addWishListItem);
 
 
     const produto2 = itens.filter(item => item.id == id);
@@ -100,7 +103,10 @@ function DetalhesPage() {
                             </button>
                         </div>
                         <div className="buyButton">
-                            <button className="buy">
+                            <button className="buy" onClick={()=>{
+                                addWishList(produto2[0]);
+                                alert("Adicionado a lista de desejos!")
+                            }}>
                                 <p>Adicionar aos Favoritos     <CiHeart size={25} ></CiHeart></p>
                             </button>
                         </div>
