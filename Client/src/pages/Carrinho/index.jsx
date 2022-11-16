@@ -3,7 +3,7 @@ import "./styles.css"
 import NavbarComp from "../../components/NavbarComp";
 import ImportaBootstrap from "../../components/ImportsBootStrap";
 import Footer from "../../components/Footer";
-import pix from "../../img/pix.png";
+import pix from "../../img/Pix.png";
 import CartItens from "./CartItens";
 import { FiShoppingBag } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";
