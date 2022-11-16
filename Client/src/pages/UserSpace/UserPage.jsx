@@ -18,7 +18,7 @@ function UserPage() {
 
                         <i><FaUserCircle /></i>
                         <div id="texto">
-                            <p>Olá, <b>{nomesUsuario[0].nome}</b></p>
+                            <p>Olá, <b>{nomesUsuario[2].nome}</b></p>
                         </div>
 
                         <Link to={"/wishlist"}>
