@@ -4,8 +4,6 @@ import {opcoes} from "./opcoes"
 
 function OpcoesQuiz(props){
 
-    console.log(props);
-    console.log(props.opcoes);
     return( 
     <div>
         <div className="container-fluid">
