@@ -8,7 +8,7 @@ import useOrderItem from "../../Estados/useOrderPrice";
 
 function ItemCounter (props) {
     
-    const [valor, setValor] = useState(1);
+    const [valor, setValor] = useState(0);
     
     const addOrderValue = useOrderItem(state => state.addOrderItemValue);
     const removeOrderValue = useOrderItem(state => state.removeOrderItemValue);
@@ -27,8 +27,8 @@ function ItemCounter (props) {
 
     const diminuiValor = () => {
         setValor(valor - 1);
-        if (valor <= 1 ) {
-            setValor(1);
+        if (valor <= 0 ) {
+            setValor(0);
         }
         atualizaItens(props.itemId, 'decrease');
         removeOrderValue(props.valorItem);
@@ -51,7 +51,7 @@ function ItemCounter (props) {
         </div>
         <div className="col-12 mt-3">
             <button className="btn btn-danger" onClick={() => {
-                removeSameItems(props.itemId)
+                removeSameItems(props.valorItem)
                 removeItens(props.itemId) 
             }}
             >Remover Item <BsFillTrashFill size={18}/></button>  

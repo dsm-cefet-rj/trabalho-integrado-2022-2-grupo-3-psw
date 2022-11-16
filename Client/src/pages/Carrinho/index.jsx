@@ -12,7 +12,7 @@ import { FaBuilding } from "react-icons/fa";
 import useOrderItem from "../../Estados/useOrderPrice";
 
 function CartPage () {
-    const cartValue = useOrderItem(state => state.orderItemsList);
+    const orderList = useOrderItem(state => state.totalValue);
  
     return (
         <html lang="pt-br">
@@ -65,7 +65,7 @@ function CartPage () {
                             </div>
                         </div>
                         <div className="col-6 ms-3 mt-4">
-                            <h5>Valor a ser pago: R${cartValue}</h5>
+                            <h5>Valor a ser pago: R${orderList}</h5>
                         </div>
                         <div className="col-6 ms-3 mt-4">
                             <button className="btn btn-primary" id="checkOutButton"><FiShoppingBag/> Finalizar Compra</button>
