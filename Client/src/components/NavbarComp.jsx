@@ -17,7 +17,8 @@ import useCartItem from "../Estados/useItemStore"
 
 function NavbarComp() {
 
-    const cartItem = useCartItem(state => state.cartItens);
+    const cartItem = useCartItem(state => state.quantityCartItens);
+    console.log(cartItem);
 
     return (
         <Navbar style={{ backgroundColor: "#1052A8" }} fixed="top" expand="lg">
@@ -49,12 +50,12 @@ function NavbarComp() {
                         </Nav.Link>
                         <Nav.Link style={{ color: "#fff" }}>
                             <Link className="text-decoration-none" style={{ color: "inherit" }} to={"/cart"}>
-                                {cartItem.length == 0 
+                                {cartItem == 0 
                                 ?
                                 <MdShoppingCart size={25} />
                                 :
                                 <div>
-                                    <MdShoppingCart size={25} /><Badge bg="danger">{cartItem.length}</Badge>
+                                    <MdShoppingCart size={25} /><Badge bg="danger">{cartItem}</Badge>
                                 </div>
                                 }
 
