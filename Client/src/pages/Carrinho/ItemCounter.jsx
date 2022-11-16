@@ -51,7 +51,7 @@ function ItemCounter (props) {
         </div>
         <div className="col-12 mt-3">
             <button className="btn btn-danger" onClick={() => {
-                removeSameItems(props.valorItem)
+                removeSameItems(props.valorItem, valor)
                 removeItens(props.itemId) 
             }}
             >Remover Item <BsFillTrashFill size={18}/></button>  

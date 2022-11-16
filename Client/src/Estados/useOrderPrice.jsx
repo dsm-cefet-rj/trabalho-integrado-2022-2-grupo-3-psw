@@ -20,9 +20,11 @@ const useOrderItem = create((set, get) => ({
         set(state => ({totalValue: state.totalValue -= valor}));
     },
 
-    removeAllSameItems: (valor) => {
-        set({orderItemsList: get().orderItemsList.filter(item => item !== valor)});
-        
+    removeAllSameItems: (valor, qtd) => {
+        const orderItems = get().orderItemsList;
+
+        set({orderItems: orderItems.filter(item => item !== valor)});
+        set(state => ({totalValue: state.totalValue -= valor*qtd}));
     },
 
 
