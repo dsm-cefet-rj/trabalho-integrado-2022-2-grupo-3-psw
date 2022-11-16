@@ -210,3 +210,31 @@
     font-family: 'Jost', sans-serif;
     font-size: 15px;
 }
+
+.dropdown-menu .show{
+    justify-content: center;
+    align-items: center;
+   display: flex;
+}
+
+.dropdown button{
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    background: none;
+    color: #000;
+    border: none;
+}
+
+.dropdown button:hover{
+    background-color: var(--azulClaro);
+    color: #000;
+    border-radius: 0px;
+}
+
+.dropdown button:focus{
+    background-color: var(--azulClaro);
+    color: #000;
+    border-radius: 0px;
+}
+
