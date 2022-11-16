@@ -1,12 +1,12 @@
 import React from "react";
 import  "./stylePerguntas.css";
-import {opcoes} from "./opcoes"
 
-function Perguntas() {
+function Perguntas(props) {
+
     return(
     <div>
         <div className="container" id="question">
-            <p>{opcoes[0].perguntaSatisfacao}</p>
+            <p>{props.pergunta}</p>
         </div>
     </div>)
 }

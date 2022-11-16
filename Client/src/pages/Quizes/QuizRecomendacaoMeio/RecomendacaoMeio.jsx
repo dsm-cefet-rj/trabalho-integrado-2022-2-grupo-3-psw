@@ -9,6 +9,7 @@ import BotaoProximoQuiz from "../BotaoProximoQuiz";
 import BotaoAnteriorQuiz from "../BotaoAnteriorQuiz";
 import Footer from "../../../components/Footer";
 import { Link } from "react-router-dom";
+import { opcoes } from "../opcoes";
 import "./style.css";
 
 function RecomendacaoMeio() {
@@ -22,7 +23,7 @@ function RecomendacaoMeio() {
                 <Container id="title">
                     <h2>Bem vindo ao quiz do sono!</h2>
                 </Container>
-                <Perguntas />
+                <Perguntas pergunta={opcoes[1].perguntaRecomendacao} />
                 <OpcoesQuiz />
                 <Link to={"/quizRI"}>
                     <BotaoAnteriorQuiz />
