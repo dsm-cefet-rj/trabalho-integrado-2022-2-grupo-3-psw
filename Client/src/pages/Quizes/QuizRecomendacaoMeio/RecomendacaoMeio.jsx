@@ -24,7 +24,7 @@ function RecomendacaoMeio() {
                     <h2>Bem vindo ao quiz do sono!</h2>
                 </Container>
                 <Perguntas pergunta={opcoes[1].perguntaRecomendacao} />
-                <OpcoesQuiz />
+                <OpcoesQuiz opcoes={opcoes[1].opcoesRecomendacao}/>
                 <Link to={"/quizRI"}>
                     <BotaoAnteriorQuiz />
                 </Link>
