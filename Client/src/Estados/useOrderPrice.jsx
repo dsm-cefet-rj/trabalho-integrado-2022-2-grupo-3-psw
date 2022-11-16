@@ -14,7 +14,6 @@ const useOrderItem = create((set, get) => ({
         const orderItems = get().orderItemsList;
         const index = orderItems.lastIndexOf(valor);
         set({orderItems: get().orderItemsList.splice(index, 1)});
-        set({orderItems});
     },
 
     showValue: () => {

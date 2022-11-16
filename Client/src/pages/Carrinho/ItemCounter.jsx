@@ -4,16 +4,16 @@ import { FaRegMinusSquare } from "react-icons/fa";
 import "./styles.css";
 import { BsFillTrashFill } from "react-icons/bs"
 import useCartItem from "../../Estados/useItemStore";
-// import useOrderItem from "../../Estados/useOrderPrice";
+import useOrderItem from "../../Estados/useOrderPrice";
 
 function ItemCounter (props) {
     
     const [valor, setValor] = useState(1);
     
-    // const addOrderValue = useOrderItem(state => state.addOrderItemValue);
-    // const removeOrderValue = useOrderItem(state => state.removeOrderItemValue);
+    const addOrderValue = useOrderItem(state => state.addOrderItemValue);
+    const removeOrderValue = useOrderItem(state => state.removeOrderItemValue);
     const removeItens = useCartItem(state => state.removeCartItem);
-    // const removeSameItems = useOrderItem(state => state.removeAllSameItems);
+    const removeSameItems = useOrderItem(state => state.removeAllSameItems);
     const atualizaItens = useCartItem(state => state.updateItemQuantity);
 
     const valorTotal = props.valorItem*valor;
@@ -21,7 +21,7 @@ function ItemCounter (props) {
     const aumentaValor = () => {
         setValor(valor + 1);
         atualizaItens(props.itemId, 'increase');
-        // addOrderValue(props.valorItem);
+        addOrderValue(props.valorItem);
         
     }
 
@@ -31,7 +31,7 @@ function ItemCounter (props) {
             setValor(1);
         }
         atualizaItens(props.itemId, 'decrease');
-        // removeOrderValue(props.valorItem);
+        removeOrderValue(props.valorItem);
     }
     
     return (
@@ -51,8 +51,7 @@ function ItemCounter (props) {
         </div>
         <div className="col-12 mt-3">
             <button className="btn btn-danger" onClick={() => {
-                // removeSameItems(props.itemId)
-                props.valorPedido = valorTotal
+                removeSameItems(props.itemId)
                 removeItens(props.itemId) 
             }}
             >Remover Item <BsFillTrashFill size={18}/></button>  
