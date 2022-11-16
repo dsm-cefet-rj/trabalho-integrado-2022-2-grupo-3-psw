@@ -9,7 +9,7 @@ import useOrderItem from "../../Estados/useOrderPrice";
 function CartItens ({props}) {
     const createCartList = useCartItem(state => state.cartItens);
     // const [valorPedido, setValorPedido] = useState("");
-    // const addValue = useOrderItem(state => state.addOrderItemValue);
+    const addValue = useOrderItem(state => state.addOrderItemValue);
 
     // const addItens = useCartItem(state => 
     //     state.addCartItem 
