@@ -43,15 +43,6 @@ function NavbarComp() {
                             </Link>
                         </Nav.Link>
                     </Nav>
-                    <Form className="d-flex">
-                        <Form.Control
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Search"
-                        />
-                        <Button variant="outline-success">Pesquisar</Button>
-                    </Form>
                     <Nav>
                         <Nav.Link style={{ color: "#fff" }}>
                             <Link to = {"/user"} className="text-decoration-none" style={{ color: "inherit" }}><MdAccountCircle size={25} /></Link>
