@@ -12,10 +12,8 @@ import { FaBuilding } from "react-icons/fa";
 import useOrderItem from "../../Estados/useOrderPrice";
 
 function CartPage () {
-    // const cartValue = useOrderItem(state => state.orderItems);
-    const [valorPedido, setValorPedido] = useState(0);
-    
-
+    const cartValue = useOrderItem(state => state.orderItemsList);
+ 
     return (
         <html lang="pt-br">
             <ImportaBootstrap/>
@@ -30,7 +28,7 @@ function CartPage () {
                             <h1>Meu Carrinho <FiShoppingCart/> </h1>
                         </div>
                         <div className="container-fluid" id="cartItens">
-                            <CartItens valorTotal={setValorPedido}/>
+                            <CartItens />
                         </div>
                         <form action="" method="post">
                         <div className="container" id="cep">
@@ -67,7 +65,7 @@ function CartPage () {
                             </div>
                         </div>
                         <div className="col-6 ms-3 mt-4">
-                            <h5>Valor a ser pago: R${valorPedido}</h5>
+                            <h5>Valor a ser pago: R${cartValue}</h5>
                         </div>
                         <div className="col-6 ms-3 mt-4">
                             <button className="btn btn-primary" id="checkOutButton"><FiShoppingBag/> Finalizar Compra</button>
