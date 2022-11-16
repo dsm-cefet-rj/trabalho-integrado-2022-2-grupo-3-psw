@@ -19,14 +19,18 @@ function PasswordInput ()  {
                 type={passwordShown ? "text" : "password"}
                 onChange={e => setPassword(e.target.value)} 
                 name="password" id="formPassword"
-                placeholder="Senha"/>
+                placeholder="Senha"
+                required
+                pattern="(?=.*\d).{5,12}"/>
             </div>
             <div className="col-12 container-fluid mb-3" id="formBox">
                 <input className="formInput" 
                 type={passwordShown ? "text" : "password"} 
                 onChange={e => setPasswordAgain(e.target.value)}
                 name="password" id="formPassword"
-                placeholder="Confirmar Senha"/>
+                placeholder="Confirmar Senha"
+                required
+                pattern="(?=.*\d).{5,12}"/>
             </div>   
 
             <div className="col-6 container-fluid mb-3 d-flex justify-content-start passwordCheckList">

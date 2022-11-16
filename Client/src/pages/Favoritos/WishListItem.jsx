@@ -1,5 +1,4 @@
 import React from "react";
-import { itens } from "../Carrinho/Itens";
 import "./styles.css";
 import { BsFillTrashFill } from "react-icons/bs"
 import { BsFillCartPlusFill } from "react-icons/bs";
