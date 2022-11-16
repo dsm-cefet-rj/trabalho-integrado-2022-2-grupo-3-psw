@@ -8,26 +8,24 @@ import "./style.css";
 import smile from "../../../img/smile.png";
 import ImportaBootstrap from "../../../components/ImportsBootStrap";
 import { Link } from "react-router-dom";
+import {opcoes} from "../opcoes";
 
 function SatisfacaoPageI() {
     return (
         <html lang="pt-br">
             <ImportaBootstrap />
 
-
             <body>
 
-
                 <NavbarComp />
-
 
                 <main>
 
                     <div class="container" id="title">
                         <h2>Conte-nos o que achou!</h2>
                     </div>
-                    <Perguntas />
-                    <OpcoesQuiz />
+                    <Perguntas pergunta={opcoes[2].perguntaSatisfacao}/>
+                    <OpcoesQuiz opcoes = {opcoes[2].opcoesSatisfacao}/>
 
                     <Link to = {"/user"}>
                     <BotaoEnviarQuiz />

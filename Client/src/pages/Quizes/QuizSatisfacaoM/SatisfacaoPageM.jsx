@@ -9,6 +9,7 @@ import smile from "../../../img/smile.png";
 import BotaoAnteriorQuiz from "../BotaoAnteriorQuiz";
 import ImportaBootstrap from "../../../components/ImportsBootStrap";
 import { Link } from "react-router-dom";
+import {opcoes} from "../opcoes";
 
 function SatisfacaoPageI() {
     return (
@@ -24,11 +25,11 @@ function SatisfacaoPageI() {
                         <h2>Conte-nos o que achou!</h2>
                     </div>
 
-                    <Perguntas />
-                    <OpcoesQuiz />
+                    <Perguntas pergunta={opcoes[1].perguntaSatisfacao}/>
+                    <OpcoesQuiz  opcoes={opcoes[1].opcoesSatisfacao}/>
                     <div className="container-fluid" id="botoes">
                         <Link to={"/quizSI"}>
-                            <BotaoAnteriorQuiz />
+                            <BotaoAnteriorQuiz/>
                         </Link>
                         
                         <Link to={"/quizSF"}>
