@@ -3,11 +3,14 @@ import "./styles.css";
 import { BsFillTrashFill } from "react-icons/bs"
 import { BsFillCartPlusFill } from "react-icons/bs";
 import useWishList from "../../Estados/useWishList";
+import useCartItem from "../../Estados/useItemStore";
 
 
 function WishListItem () {
-    // const filtro = itens.filter(item => item.favorito == "true");
     const createWishList = useWishList(state => state.wishList);
+    const removeFromWishList = useWishList(state => state.removeWishListItem);
+    const addToCart = useCartItem(state => state.addCartItem);
+    
     return (
         <>
         {createWishList.map((item) => {
@@ -20,9 +23,10 @@ function WishListItem () {
                              <span>R${item.preco}</span>
                         </div>
                         <div className="col-12 mt-2">
-                       <button className="btn btn-danger">
+                       <button className="btn btn-danger" onClick={() => {
+                        removeFromWishList(item.id)}}>
                             <BsFillTrashFill size={30}/></button>
-                        <button className="btn btn-success ms-4">
+                        <button className="btn btn-success ms-4" onClick={() => {addToCart(item)}}>
                             <BsFillCartPlusFill size={25} style={{marginRight: "10px"}}/>
                             Adicionar ao Carrinho</button>
                         </div>

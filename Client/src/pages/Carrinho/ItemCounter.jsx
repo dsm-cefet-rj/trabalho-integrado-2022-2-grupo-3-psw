@@ -26,12 +26,14 @@ function ItemCounter (props) {
     }
 
     const diminuiValor = () => {
-        setValor(valor - 1);
-        if (valor <= 0 ) {
-            setValor(0);
+        if (valor > 1 ) {
+            setValor(valor - 1);
+            removeOrderValue(props.valorItem);
+            atualizaItens(props.itemId, 'decrease');
+        } else {
+            setValor(1);
         }
-        atualizaItens(props.itemId, 'decrease');
-        removeOrderValue(props.valorItem);
+        
     }
     
     return (
