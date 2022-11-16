@@ -7,6 +7,7 @@ import OpcoesQuiz from "../OpcoesQuiz";
 import foto from "../../../img/bro.png";
 import BotaoEnviarQuiz from "../BotaoEnviarQuiz";
 import Footer from "../../../components/Footer";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 
@@ -23,7 +24,9 @@ function RecomendacaoFinal() {
                 </Container>
                 <Perguntas />
                 <OpcoesQuiz />
-                <BotaoEnviarQuiz/>
+                <Link to={"/catalogue"}>
+                    <BotaoEnviarQuiz/>
+                </Link>
                 <div id="image">
                     <img src={foto} />
                 </div>

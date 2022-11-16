@@ -8,6 +8,7 @@ import foto from "../../../img/bro.png";
 import BotaoProximoQuiz from "../BotaoProximoQuiz";
 import BotaoAnteriorQuiz from "../BotaoAnteriorQuiz";
 import Footer from "../../../components/Footer";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function RecomendacaoMeio() {
@@ -23,8 +24,12 @@ function RecomendacaoMeio() {
                 </Container>
                 <Perguntas />
                 <OpcoesQuiz />
-                <BotaoAnteriorQuiz/>
-                <BotaoProximoQuiz />
+                <Link to={"/quizRI"}>
+                    <BotaoAnteriorQuiz />
+                </Link>
+                <Link to={"/quizRF"}>
+                    <BotaoProximoQuiz />
+                </Link>
                 <div id="image">
                     <img src={foto} />
                 </div>

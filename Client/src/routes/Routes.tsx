@@ -9,6 +9,8 @@ import DetalhesPage from "../pages/Detalhes";
 import Home from "../pages/Home";
 import LoginPage from "../pages/Login";
 import QuizRecomendacaoInicio from "../pages/Quizes/QuizRecomendacaoInicio";
+import QuizRecomendacaoMeio from "../pages/Quizes/QuizRecomendacaoMeio";
+import QuizRecomendacaoFinal from "../pages/Quizes/QuizRecomendacaoFinal";
 import QuizSatisfacaoI from "../pages/Quizes/QuizSatisfacaoInicial"
 import QuizSatisfacaoM from "../pages/Quizes/QuizSatisfacaoM"
 import QuizSatisfacaoF from "../pages/Quizes/QuizSatisfacaoFinal"
@@ -26,6 +28,8 @@ export function AppRoutes() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/quizRI" element={<QuizRecomendacaoInicio />} />
+            <Route path="/quizRM" element={<QuizRecomendacaoMeio />} />
+            <Route path="/quizRF" element={<QuizRecomendacaoFinal />} />
             <Route path="/quizSI" element={<QuizSatisfacaoI />} />
             <Route path="/quizSM" element={<QuizSatisfacaoM />} />
             <Route path="/quizSF" element={<QuizSatisfacaoF />} />
