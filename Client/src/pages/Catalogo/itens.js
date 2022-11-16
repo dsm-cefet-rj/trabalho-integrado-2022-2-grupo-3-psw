@@ -6,7 +6,7 @@ export const itens = [
             "cor2": "F5DEB3"
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -28,7 +28,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -52,7 +52,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -72,8 +72,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -96,8 +96,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -120,7 +120,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -141,7 +141,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -163,7 +163,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -188,7 +188,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -209,7 +209,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -232,7 +232,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -252,8 +252,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -276,8 +276,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -300,7 +300,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -321,7 +321,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -343,7 +343,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -369,8 +369,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -393,7 +393,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -414,7 +414,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -436,7 +436,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -461,7 +461,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -482,7 +482,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -505,7 +505,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -525,8 +525,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -549,8 +549,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -573,7 +573,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -594,7 +594,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -616,7 +616,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -641,7 +641,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -662,7 +662,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -685,7 +685,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -705,8 +705,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -734,7 +734,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -755,7 +755,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -778,7 +778,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -798,8 +798,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -822,8 +822,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -846,7 +846,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -867,7 +867,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -889,7 +889,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -914,7 +914,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -935,7 +935,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -958,7 +958,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -978,8 +978,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1002,8 +1002,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1026,7 +1026,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1047,7 +1047,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1069,7 +1069,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -1095,8 +1095,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1119,7 +1119,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1140,7 +1140,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1162,7 +1162,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -1187,7 +1187,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -1208,7 +1208,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1231,7 +1231,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1251,8 +1251,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1275,8 +1275,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1299,7 +1299,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1320,7 +1320,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1342,7 +1342,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -1367,7 +1367,7 @@ export const itens = [
             "cor2": ""
         },
         "categoria" : "Cama",
-        "preco" : "786.00",
+        "preco" : 786.00,
         "fotos":{
             "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
             "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
@@ -1388,7 +1388,7 @@ export const itens = [
             "cor1": "DEB887"
         },
         "categoria": "Estrado",
-        "preco" : "235.00",
+        "preco" : 235.00,
         "fotos":{
             "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1411,7 +1411,7 @@ export const itens = [
             "cor3": "D3D3D3"
         },
         "categoria": "Toalha",
-        "preco" : "76.00",
+        "preco" : 76.00,
         "fotos":{
             "foto1" : "../../img/folded-towels-on-the-bed.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
@@ -1431,8 +1431,8 @@ export const itens = [
         "cores":{
             "cor1": "A0522D"
         },
-        "categoria": "coco",
-        "preco" : "185.00",
+        "categoria": "Coco",
+        "preco" : 185.00,
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",

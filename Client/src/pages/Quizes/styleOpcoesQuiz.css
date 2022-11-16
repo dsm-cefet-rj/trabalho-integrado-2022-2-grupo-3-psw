@@ -6,36 +6,35 @@
 .row{
     margin:0;
 }
-.option {
+
+#opcoes{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-group{
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+.btn-group label{
+
+    background-color: #FFFFFF;
     background: #FFFFFF;
+    color: #A7A8AA;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
     border-radius: 10px;
-
-    margin: 10px;
     border: none;
-    align-items: center;
+    margin: 10px;
+    width: 100%;
+    text-align: center;
 
-    width: 90%;
 
-}
-
-.option:hover{
-    background-color: rgba(236, 214, 196, 0.53);
-}
-.option:active{
-    border-style:outset;
-    border-color:#1646EE;
-}
-
-.option p {
     font-family: 'GFS Neohellenic';
     font-style: normal;
     font-weight: 700;
     font-size: 23px;
     line-height: 30px;
 
-    margin: 5px;
-
-    text-align: center;
-    color: #A7A8AA;
 }

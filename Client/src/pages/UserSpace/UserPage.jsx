@@ -4,6 +4,7 @@ import ImportaBootstrap from "../../components/ImportsBootStrap";
 import "./style.css";
 import { FaUserCircle } from "react-icons/fa";
 import { nomesUsuario } from "./nomesUsuario";
+import { Link } from "react-router-dom";
 
 function UserPage() {
     return (
@@ -17,20 +18,30 @@ function UserPage() {
 
                         <i><FaUserCircle /></i>
                         <div id="texto">
-                            <p>Olá, <b>{nomesUsuario[0].nome}</b></p>
+                            <p>Olá, <b>{nomesUsuario[2].nome}</b></p>
                         </div>
-                            
+
+                        <Link to={"/wishlist"}>
                             <button className="opcao">
                                 <p>Lista de Desejos</p>
                             </button>
-                            
-                            <button className="opcao">
-                                <p>Meu Carrinho</p>
-                            </button>
+                        </Link>
 
-                            <button className="opcao">
-                                <p>Catálogo</p>
-                            </button>
+                        <Link to = {"/cart"}>
+                        <button className="opcao">
+                            <p>Meu Carrinho</p>
+                        </button>
+                        </Link>
+                        <Link to={"/catalogue"}>
+                        <button className="opcao">
+                            <p>Catálogo</p>
+                        </button>
+                        </Link>
+                        <Link to={"/entrega"}>
+                        <button className="opcao">
+                            <p>Acompanhar Pedido</p>
+                        </button>
+                        </Link>
                     </div>
 
                 </main>

@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import NavbarComp from "../../components/NavbarComp";
 import ImportaBootstrap from "../../components/ImportsBootStrap";
 import WishListItem from "./WishListItem";
+import useWishList from "../../Estados/useWishList";
 
 import { BsHeartFill } from "react-icons/bs";
 import { BsFillTrashFill } from "react-icons/bs"
@@ -19,10 +20,9 @@ function WishList () {
                 <main>
                     <div className="container-fluid" id="suport">
                         <div className="container-fluid" id="tittle">
-                            <h1>Minha Lista de Desejos <i><BsHeartFill/></i></h1>
+                            <h1 className="mt-4">Minha Lista de Desejos <i><BsHeartFill/></i></h1>
                         </div>
                         <div className="container-fluid mt-5 d-flex justify-content-around">
-                            <h3>Produto</h3>
                         </div>
                         <div className="container-fluid" id="wishListItems"> 
                             <div className="row" id="wishListItem">

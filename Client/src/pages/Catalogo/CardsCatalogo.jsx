@@ -1,16 +1,20 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function CardsCatalogo({titulo, desc, imagem}) {
+import { Link } from 'react-router-dom';
+
+function CardsCatalogo(props) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={imagem} />
+      <Card.Img variant="top" src={`src/img${props.item.fotos.foto1}`} />
       <Card.Body>
-        <Card.Title>{titulo}</Card.Title>
+        <Card.Title>Novidade {props.item.nome}</Card.Title>
         <Card.Text>
-          {desc}
+          {props.item.descricao}
         </Card.Text>
-        <Button variant="primary">Acessar Página</Button>
+        <Link to={"/detail" + props.item.id} className="text-decoration-none" style={{ color: "inherit" }}>
+          <Button variant="primary">Acessar Página</Button>
+        </Link>
       </Card.Body>
     </Card>
   );

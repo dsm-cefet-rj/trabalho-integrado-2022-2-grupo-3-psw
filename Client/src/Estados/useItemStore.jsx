@@ -3,6 +3,7 @@ import { itens } from "../pages/Catalogo/itens";
 
 const useCartItem = create((set, get) => ({
     cartItens: [],
+    quantityCartItens: 0,
 
     addCartItem: (item) => {
         const cart = get().cartItens;
@@ -14,6 +15,7 @@ const useCartItem = create((set, get) => ({
             cart.push({...item, quantitdade: 1 });
         }
         set({ cart });
+        set({quantityCartItens: cart.length})
     },
     // addCartItem: (item) => {
     //     set(state => ({cartItens: [...state.cartItens, item] }))
@@ -21,6 +23,7 @@ const useCartItem = create((set, get) => ({
 
     removeCartItem: (itemId) => {
         set({cartItens: get().cartItens.filter(item => item.id !== itemId)});
+        set({quantityCartItens: get().quantityCartItens - 1})
     },
 
     updateItemQuantity: (itemId, action) => {
