@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import Footer from "../../components/Footer";
 import NoTransitionExample from "./Carrossel";
 import NavbarComp from "../../components/NavbarComp";
-import { CiHeart } from "react-icons/ci";
+import { IoIosHeartEmpty } from "react-icons/io";
+import { IoIosHeart } from "react-icons/io";
 import BasicExample from "./Informacoes";
 import { Link, useParams } from "react-router-dom";
 import useWishList from "../../Estados/useWishList";
@@ -17,8 +18,31 @@ function DetalhesPage() {
 
     const { id } = useParams();
     const additem = useCartItem(state => state.addCartItem);
+    const [favorite, setFavorite] = useState(false);
 
     const addWishList = useWishList(state => state.addWishListItem);
+    const removeWishList = useWishList(state => state.removeWishListItem);
+    const itensOnWishList = useWishList(state => state.wishList);
+    const ids = [];
+    for (let i = 0; i < itensOnWishList.length; i++) {
+        ids.push(itensOnWishList[i].id);
+    }
+
+    useEffect(() => {
+        finId(produto2[0].id)
+    }, [])
+
+    const finId = (id) => {
+        for (let i = 0; i < ids.length; i++) {
+            if (id == ids[i]) {
+                return setFavorite(true);
+            }
+            else
+                setFavorite(false);
+        }
+    }
+
+
 
 
     const produto2 = itens.filter(item => item.id == id);
@@ -75,8 +99,8 @@ function DetalhesPage() {
                         <div id="text">
                             <h2>{produto2[0].nome}</h2>
                             <p id="simpleText">{produto2[0].descricao}</p>
-                            <p id="preco">{produto2[0].preco}</p>
-                            <h3 id="precoNovo">{produto2[0].preco}</h3>
+                            <p id="preco">R${produto2[0].preco}</p>
+                            <h3 id="precoNovo">R${produto2[0].preco}</h3>
                         </div>
 
                         <div id="color">
@@ -86,7 +110,7 @@ function DetalhesPage() {
                                     return (
                                         <label>
                                             <input type="radio" name="test" value="1"></input>
-                                            <img src={`https://via.placeholder.com/40x40/${item}/${item}&text=.`}/>
+                                            <img src={`https://via.placeholder.com/40x40/${item}/${item}&text=.`} />
                                         </label>
                                     )
                                 })}
@@ -103,12 +127,25 @@ function DetalhesPage() {
                             </button>
                         </div>
                         <div className="buyButton">
-                            <button className="buy" onClick={()=>{
-                                addWishList(produto2[0]);
-                                alert("Adicionado a lista de desejos!")
-                            }}>
-                                <p>Adicionar aos Favoritos     <CiHeart size={25} ></CiHeart></p>
-                            </button>
+                            {favorite == false
+                                ?
+                                <button className="buy" onClick={() => {
+                                    addWishList(produto2[0]);
+                                    setFavorite(true);
+                                    alert("Adicionado a lista de desejos!")
+                                }}>
+                                    <p>Adicionar aos Favoritos     <IoIosHeartEmpty size={25} ></IoIosHeartEmpty></p>
+                                </button>
+                                :
+                                <button className="buy" onClick={() => {
+                                    removeWishList(produto2[0].id)
+                                    setFavorite(false)
+                                    alert("Retirado da lista de desejos!")
+                                }}>
+                                    <p>Retirar dos favoritos     <IoIosHeart size={25} ></IoIosHeart></p>
+                                </button>
+                            }
+
                         </div>
                         <hr></hr>
                         <div id="details">

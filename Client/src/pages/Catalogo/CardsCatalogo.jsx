@@ -4,7 +4,6 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 function CardsCatalogo(props) {
-  console.log(props)
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={`src/img${props.item.fotos.foto1}`} />

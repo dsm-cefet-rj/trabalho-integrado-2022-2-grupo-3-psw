@@ -38,16 +38,16 @@ function EmailArea(){
             </div>
             <div className="row">
               <div className="col-12 d-flex justify-content-center">
-                <a href="#">
+                <a href="https://www.facebook.com" target={"_blank"}>
                   <AiOutlineFacebook size={25} id="redesIcons"/>
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/login" target={"_blank"}>
                     <AiOutlineTwitter size={25} id="redesIcons"/>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com" target={"_blank"}>
                   <AiOutlineInstagram size={25} id="redesIcons"/>
                 </a>
-                <a href="#">
+                <a href="https://br.linkedin.com" target={"_blank"}>
                   <AiOutlineLinkedin size={25} id="redesIcons"/>
                 </a>
               </div>

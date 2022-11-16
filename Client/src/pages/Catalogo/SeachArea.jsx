@@ -14,7 +14,6 @@ function SearchArea() {
 
     }
 
-    console.log(option);
 
     return (
         <div className="container mb-0 mt-0">
