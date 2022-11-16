@@ -24,13 +24,16 @@ function RecomendacaoMeio() {
                     <h2>Bem vindo ao quiz do sono!</h2>
                 </Container>
                 <Perguntas pergunta={opcoes[1].perguntaRecomendacao} />
-                <OpcoesQuiz opcoes={opcoes[1].opcoesRecomendacao}/>
-                <Link to={"/quizRI"}>
-                    <BotaoAnteriorQuiz />
-                </Link>
-                <Link to={"/quizRF"}>
-                    <BotaoProximoQuiz />
-                </Link>
+                <OpcoesQuiz opcoes={opcoes[1].opcoesRecomendacao} />
+                <div className="container-fluid" id="botoes">
+                    <Link to={"/quizRI"}>
+                        <BotaoAnteriorQuiz />
+                    </Link>
+                    <Link to={"/quizRF"}>
+                        <BotaoProximoQuiz />
+                    </Link>
+                </div>
+
                 <div id="image">
                     <img src={foto} />
                 </div>
