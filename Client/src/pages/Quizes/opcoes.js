@@ -17,7 +17,6 @@ export const opcoes =[
     },
     {
         "perguntaSatisfacao": "Você compraria de novo?",
-        "opcaoSatisfacao": "Dentro do esperado",
         "perguntaRecomendacao": "Voce acorda com frizz?",
         "opcoesRecomendacao":{
             "A": "Não",
@@ -26,15 +25,14 @@ export const opcoes =[
             "D": "Sempre, muito frizz"
         },
         "opcoesSatisfacao":{
-            "A": "Muito satisfeito",
-            "B": "Satisfeito",
-            "C": "Pouco satisfeito",
-            "D": "Insatisfeito"
+            "A": "Com certeza",
+            "B": "Talvez",
+            "C": "Com outro fornecedor",
+            "D": "Não"
         }
     },
     {
         "perguntaSatisfacao": "Você recomendaria produtos do mesmo fornecedor para outra pessoa?",
-        "opcaoSatisfacao": "Abaixo do esperado",
         "perguntaRecomendacao": "Você cuida do seu cabelo?",
         "opcoesRecomendacao":{
             "A": "Não",
@@ -43,10 +41,10 @@ export const opcoes =[
             "D": "Sempre"
         },
         "opcoesSatisfacao":{
-            "A": "Muito satisfeito",
-            "B": "Satisfeito",
-            "C": "Pouco satisfeito",
-            "D": "Insatisfeito"
+            "A": "Sim",
+            "B": "Talvez",
+            "C": "Não recomendaria",
+            "D": "Desconheço outro produto"
         }
     }
 ] 
