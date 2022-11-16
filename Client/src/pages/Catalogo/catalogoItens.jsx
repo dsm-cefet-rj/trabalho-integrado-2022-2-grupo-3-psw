@@ -24,7 +24,7 @@ function CatalogoItens({ itens }) {
                                 }}><AiOutlineShoppingCart size={20} /></a>
                             </div>
                             <Link to={"/detail" + item.id} className="text-decoration-none" style={{ color: "inherit" }}>
-                                <img src={`src/img${item.fotos.foto1}`} classNameName="img-fluid" />
+                                <img src={`src/img${item.fotos.foto1}`} className="img-fluid" />
                             </Link>
                         </div>
                         <div className="product-info">
