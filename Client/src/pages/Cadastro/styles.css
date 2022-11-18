@@ -105,3 +105,7 @@
 .passwordCheckList {
     color:rgba(255, 255, 255, 0.582);
 }
+
+#haveAccountText > p{
+    color:rgba(255, 255, 255, 0.582);
+}

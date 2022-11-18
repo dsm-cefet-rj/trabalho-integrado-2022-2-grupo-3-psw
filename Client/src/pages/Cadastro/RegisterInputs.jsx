@@ -94,7 +94,7 @@ function RegisterInputs () {
 				onChange = {(isValid) => {}}
                 />
             </div>
-            <div className="col-12 container" style={{width: "23vw", padding:"0"}}>
+            <div className="col-12 container" style={{width: "23vw", padding:"0"}} id="haveAccountText">
                 <button disabled={!validPassword || !validPasswordAgain || !email || !nome ? true : false}
                 className="btn btn-danger" id="confirmButton">Confirmar</button>
                 <p className="mt-3">Já possui conta?
