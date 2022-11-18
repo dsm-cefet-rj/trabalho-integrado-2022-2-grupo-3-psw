@@ -18,7 +18,6 @@ import useCartItem from "../Estados/useItemStore"
 function NavbarComp() {
 
     const cartItem = useCartItem(state => state.quantityCartItens);
-    console.log(cartItem);
 
     return (
         <Navbar style={{ backgroundColor: "#1052A8" }} fixed="top" expand="lg">
