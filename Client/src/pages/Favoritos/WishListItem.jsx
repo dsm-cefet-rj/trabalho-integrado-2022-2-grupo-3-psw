@@ -5,6 +5,7 @@ import { BsFillCartPlusFill } from "react-icons/bs";
 import useWishList from "../../Estados/useWishList";
 import useCartItem from "../../Estados/useItemStore";
 import { FaInfoCircle } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 function WishListItem () {
@@ -33,6 +34,10 @@ function WishListItem () {
                             addToCart(item)}}>
                             <BsFillCartPlusFill size={25} style={{marginRight: "10px"}}/>
                             Adicionar ao Carrinho</button>
+                        <Link to={"/detail"+ item.id}>
+                            <button className="btn btn-primary ms-4"><FaInfoCircle size={22} style={{marginRight: "8px"}}/>
+                            Detalhes do Produto</button>   
+                        </Link>
                         </div>
                     </div>
                 </div>
