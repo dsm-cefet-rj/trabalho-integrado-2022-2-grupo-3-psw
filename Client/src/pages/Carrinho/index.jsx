@@ -13,6 +13,11 @@ import useOrderItem from "../../Estados/useOrderPrice";
 
 function CartPage () {
     const orderList = useOrderItem(state => state.totalValue);
+    const [cepInput, setCepInput] = useState("");
+
+    const handleSubmit  = (e) => {
+        e.preventDefault();
+    }
  
     return (
         <html lang="pt-br">
@@ -30,18 +35,19 @@ function CartPage () {
                         <div className="container-fluid" id="cartItens">
                             <CartItens />
                         </div>
-                        <form action="" method="post">
+                        <form onSubmit={handleSubmit}>
                         <div className="container" id="cep">
                             <div className="row">
                                 <div className="col-12 mt-3" >
                                     <h5><FaBuilding/> Informe seu Cep:</h5>
                                     <input type="text" id="cepArea"
+                                    onChange={e => setCepInput(e.target.value)}
                                     required
                                     pattern="\d{5}-?\d{3}"/>
                                 </div>
                                 <div className="col-12 mt-4">
                                     <h5><FiTruck/> Frete a ser calculado:</h5>
-                                    <input type="text" id="shipping" value={0}></input>
+                                    <input type="text" id="shipping" value={cepInput}></input>
                                 </div>
                             </div>
                         </div>
