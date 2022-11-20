@@ -15,9 +15,13 @@ const useOrderItem = create((set, get) => ({
     removeOrderItemValue: (valor) => {
         const orderItems = get().orderItemsList;
         const index = orderItems.lastIndexOf(valor);
+        const totalValue2 = get().totalValue;
 
         set({orderItems: get().orderItemsList.splice(index, 1)});
-        set(state => ({totalValue: state.totalValue -= valor}));
+        if (totalValue2 > 0) {
+            set(state => ({totalValue: state.totalValue -= valor}));
+        }
+          
     },
 
     removeAllSameItems: (valor, qtd) => {
