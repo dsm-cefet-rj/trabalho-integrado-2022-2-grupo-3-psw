@@ -21,21 +21,16 @@ function CartPage () {
 
     const calculaFrete = (e) => {
         e.preventDefault();
-        var valorFrete = 0
+        var valorFrete ;
         apiCep
         .post("/cep/" + cepInput)
         .then((response) => {
             setShippingValue(response.data.replace(",","."))
             valorFrete = parseFloat(response.data.replace(",", "."))
-            console.log(valorFrete)
-            removeShippingValue(valorFrete);
-            addShippingValue(valorFrete);
         })
         .catch(() => {
           alert("Cep não encontrado/inválido")
-        });
-        // removeShippingValue(valorFrete);
-        // addShippingValue(valorFrete);
+        })
     }
 
     const handleSubmit  = (e) => {
@@ -98,7 +93,7 @@ function CartPage () {
                             </div>
                         </div>
                         <div className="col-6 ms-3 mt-4">
-                            <h5>Valor a ser pago: R${orderList}</h5>
+                            <h5>Valor a ser pago: R${orderList + parseFloat(shippingValue)}</h5>
                         </div>
                         <div className="col-6 ms-3 mt-4">
                             <button className="btn btn-primary" id="checkOutButton"><FiShoppingBag/> Finalizar Compra</button>
