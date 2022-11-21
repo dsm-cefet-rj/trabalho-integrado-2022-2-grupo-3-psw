@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import { FaRegPlusSquare } from "react-icons/fa";
 import { FaRegMinusSquare } from "react-icons/fa";
 import "./styles.css";
@@ -26,16 +26,16 @@ function ItemCounter (props) {
     }
 
     const diminuiValor = () => {
-        if (valor > 1 ) {
+        if (valor > 0 ) {
             setValor(valor - 1);
             removeOrderValue(props.valorItem);
             atualizaItens(props.itemId, 'decrease');
         } else {
-            setValor(1);
+            setValor(0);
         }
         
     }
-    
+
     return (
         <>
         <div className="col-9">

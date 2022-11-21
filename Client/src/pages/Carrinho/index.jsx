@@ -16,6 +16,7 @@ function CartPage () {
     const orderList = useOrderItem(state => state.totalValue);
     const addShippingValue = useOrderItem(state => state.addOrderItemValue);
     const removeShippingValue = useOrderItem(state => state.removeOrderItemValue);
+    const resetValue = useOrderItem(state => state.resetTotalValue);
     const [cepInput, setCepInput] = useState("");
     const [shippingValue, setShippingValue] = useState(0);
 
@@ -42,7 +43,7 @@ function CartPage () {
         <html lang="pt-br">
             <ImportaBootstrap/>
 
-            <body>
+            <body onLoad={resetValue}>
 
                 <NavbarComp/>
 

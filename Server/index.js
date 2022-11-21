@@ -11,7 +11,7 @@ const { consultarCep } = require('correios-brasil');
 const { response } = require('express');
 
 app.get('/', (req,res) => {
-    return res.json(dadosCep)
+    return res.json("Servidor está funcionando!")
 });
 
 app.post("/cep/:cep", async (req, res) =>{
