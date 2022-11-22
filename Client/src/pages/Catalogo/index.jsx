@@ -161,7 +161,7 @@ function Catalogo() {
 
 
 
-            <div className="container p-0">
+            <div className="container p-0 d-flex justify-content-center align-items-center">
                 <div className="row">
                     <div className="col-12 mb-2">
                         <h3>Novidades</h3>
