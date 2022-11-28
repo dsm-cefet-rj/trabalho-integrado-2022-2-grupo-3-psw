@@ -421,6 +421,13 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
+axios@^0.21.1:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
+  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
+  dependencies:
+    follow-redirects "^1.14.0"
+
 axios@^0.27.2:
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
@@ -708,7 +715,7 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==
 
-follow-redirects@^1.14.9, follow-redirects@^1.15.0:
+follow-redirects@^1.14.0, follow-redirects@^1.14.9, follow-redirects@^1.15.0:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -741,6 +748,15 @@ globals@^11.1.0:
   version "11.12.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
+
+gn-api-sdk-node@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/gn-api-sdk-node/-/gn-api-sdk-node-2.0.8.tgz#065708e3564128a1c2845cd2a6b67e97f85d6c55"
+  integrity sha512-OpQl+jVVRmszocdXi1FVhh5bSxxVZkteUaiJ61JMaqPUfaB0c2MnlNuKOZfox+DDoS+OllNgHe7qccRJffTMbw==
+  dependencies:
+    axios "^0.21.1"
+    oauth "0.9.15"
+    q "~1.5.1"
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -843,6 +859,11 @@ node-releases@^2.0.6:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.6.tgz#8a7088c63a55e493845683ebf3c828d8c51c5503"
   integrity sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg==
 
+oauth@0.9.15:
+  version "0.9.15"
+  resolved "https://registry.yarnpkg.com/oauth/-/oauth-0.9.15.tgz#bd1fefaf686c96b75475aed5196412ff60cfb9c1"
+  integrity sha512-a5ERWK1kh38ExDEfoO6qUHJb32rd7aYmPHuyCu3Fta/cnICvYmgd2uhuKXvPD+PXB+gCEYYEaQdIRAjCOwAKNA==
+
 object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
@@ -862,6 +883,20 @@ picomatch@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
+
+pix-react@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/pix-react/-/pix-react-1.0.4.tgz#67db4df94f33aa51d1c77a08034acbac4924b9b2"
+  integrity sha512-cT4ftz4r0OCOYo0X93HkJ2/Oi0v9W3qIwBUVuVRJgltWBJrUciEzGmqbtVx45JLfcrIy5GbxmZZ1cLDoh8bE2Q==
+  dependencies:
+    polycrc "^1.1.1"
+    qrcode.react "^3.1.0"
+    react ">=18.2"
+
+polycrc@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/polycrc/-/polycrc-1.1.1.tgz#74404cc6443ca237f902c6df43233cff9ba33ca9"
+  integrity sha512-bfvt5BA/1e3e5RhBmmYVYED3PRddGN0j+lAed5PmnLWrVCkYEsltsfZLuKgtmUz1OEvPBAZlgWfoEpUTN/po6Q==
 
 postcss-value-parser@^4.0.2:
   version "4.2.0"
@@ -898,6 +933,21 @@ proxy-from-env@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
+
+q@~1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
+  integrity sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==
+
+qrcode-generator@^1.4.4:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/qrcode-generator/-/qrcode-generator-1.4.4.tgz#63f771224854759329a99048806a53ed278740e7"
+  integrity sha512-HM7yY8O2ilqhmULxGMpcHSF1EhJJ9yBj8gvDEuZ6M+KGJ0YY2hKpnXvRD+hZPLrDVck3ExIGhmPtSdcjC+guuw==
+
+qrcode.react@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/qrcode.react/-/qrcode.react-3.1.0.tgz#5c91ddc0340f768316fbdb8fff2765134c2aecd8"
+  integrity sha512-oyF+Urr3oAMUG/OiOuONL3HXM+53wvuH3mtIWQrYmsXoAq0DkvZp2RYUWFSMFtbdOpuS++9v+WAkzNVkMlNW6Q==
 
 react-bootstrap@^2.6.0:
   version "2.6.0"
@@ -947,6 +997,20 @@ react-password-checklist@^1.4.2:
   dependencies:
     styled-components "^5.3.5"
 
+react-qrcode-pix@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/react-qrcode-pix/-/react-qrcode-pix-4.1.0.tgz#97f032c59dc3113e61836634342ebc77b205c21c"
+  integrity sha512-xH3DiwaeGDQKuW3qnuOyB6Kax4tJDtykc8aSwYy0RMRdRe+UFt3/rO3qSuPiiv7Ln8dAp/+6j12lMnWetSIgHA==
+  dependencies:
+    react-qrcode-pretty "^1.3.1"
+
+react-qrcode-pretty@^1.3.1:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/react-qrcode-pretty/-/react-qrcode-pretty-1.3.2.tgz#ab39701523ecc9c2a92c048657a09b461fab5e53"
+  integrity sha512-yaEeNhpNwZk+UJGAj2BqRhpe24Nu4pgTJh2WocNtip6+HYND8CDZXJmfRG1XADD7OCM18AfCeuSj+LyyyF1I/Q==
+  dependencies:
+    qrcode-generator "^1.4.4"
+
 react-refresh@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
@@ -977,7 +1041,7 @@ react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@^18.2.0:
+react@>=18.2, react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

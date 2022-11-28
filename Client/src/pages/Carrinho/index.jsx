@@ -11,12 +11,15 @@ import { FiTruck } from "react-icons/fi";
 import { FaBuilding } from "react-icons/fa";
 import useOrderItem from "../../Estados/useOrderPrice";
 import { useApi } from "../../Hooks/useAPI";
+import PIX from "react-qrcode-pix";
 
 function CartPage() {
     const orderList = useOrderItem(state => state.totalValue);
     const resetValue = useOrderItem(state => state.resetTotalValue);
     const [cepInput, setCepInput] = useState("");
     const [shippingValue, setShippingValue] = useState(0);
+    const [fullPIX, setFullPIX] = useState("");
+    const now = new Date().getTime().toString();
 
     const api = useApi();
 
@@ -34,7 +37,28 @@ function CartPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        <>
+        <h1>PAGAMENTO DOS CRIAS</h1><br/>
+        <PIX 
+        pixkey="vini1100@outlook.com"
+        merchant="DeepSleep ltda"
+        city="Rio de Janeiro"
+        cep="20.271-110"
+        code={"RQP" + now }
+        amount={orderList + parseFloat(shippingValue)}
+        onLoad={setFullPIX}
+        resize={384}
+        variant="fluid"
+        padding={30}
+        color="#357"
+        bgColor="#def"
+        bgRounded
+        divider
+        />
+        <p>
+            <code>{fullPIX}</code>
+        </p>
+        </>
     }
 
     return (
@@ -60,7 +84,8 @@ function CartPage() {
                                         <h5><FaBuilding /> Informe seu Cep:</h5>
                                         <input type="text" id="cepArea"
                                             onChange={e => setCepInput(e.target.value)}
-                                            pattern="\d{5}-?\d{3}" />
+                                            pattern="\d{5}-?\d{3}" 
+                                            required/>
                                         <button className="btn btn-primary ms-3" onClick={calculaFrete}
                                             style={{ borderRadius: "20px" }}>
                                             Calcular Frete
@@ -77,7 +102,7 @@ function CartPage() {
                                     <div className="col-12 mt-4">
                                         <h5>Formas de Pagamento:</h5>
                                         <img src={pix} className="me-3 " />
-                                        <input type="radio" name="paymentMethod"></input>
+                                        <input className="form-check-input" type="checkbox" id="paymentMethod" required></input>
                                     </div>
                                     <div className="col-12 mt-4" id="installment">
                                         <select id="installmentOptions">
