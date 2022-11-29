@@ -8,6 +8,12 @@ app.use(cors());
 
 const { calcularPrecoPrazo } = require('correios-brasil');
 
+var quizReco = require("./routes/quizRRoutes/quizRRoutes")
+app.use("/", quizReco);
+
+// var user = require("./routers/userRes");
+// app.use("/", user);
+
 //Rota de apresentação
 app.get('/', (req,res) => {
     return res.json("Bem vindo a API do DeepSleep!");
