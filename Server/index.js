@@ -36,6 +36,17 @@ app.get("/products/:id", (req, res) => {
   res.json({msgError: "Houve um erro"});
 })
 
+app.get("/products/filter/:filter", (req, res) => {
+  const filter = req.params.filter;
+
+  const filteredProducts = products.filter(item => item.categoria.toLowerCase() == filter.toLowerCase());
+
+  if(filteredProducts){
+    return res.send(filteredProducts);
+  }
+  res.json({msgError: "Houve um erro"});
+})
+
 //Modificar produto pelo id
 app.put("/products/:id", (req, res) => {
   const id = req.params.id;

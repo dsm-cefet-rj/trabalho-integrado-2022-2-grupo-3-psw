@@ -24,5 +24,9 @@ export const useApi = () => ({
     autenticarUsuario: async (user) => {
         const response = await api.post("/user/auth", user);
         return response.data;
+    },
+    getFilteredProducts: async (filter) => {
+        const response = await api.get("/products/filter/" + filter);
+        return response.data;
     }
 })
