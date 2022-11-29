@@ -44,7 +44,7 @@ function LoginInputs() {
                     name="password" id="formPassword"
                     placeholder="Senha do Usuário"
                     required
-                    pattern="(?=.*\d).{5,10}" />
+                    pattern="(?=.*\d).{5,12}" />
                 <button className="btnEye" onClick={togglePassword}>
                     {passwordShown ? <AiOutlineEyeInvisible size={20} /> : <AiOutlineEye size={20} />
                     }
