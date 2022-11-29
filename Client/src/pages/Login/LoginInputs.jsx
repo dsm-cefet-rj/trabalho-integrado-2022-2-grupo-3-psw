@@ -40,7 +40,7 @@ function LoginInputs() {
                 <input className="formInput"
                     onChange={e => setPassword(e.target.value)}
                     type={passwordShown ? "text" : "password"}
-                    aria-invalid={validPassword ? false : true}
+                    aria-invalid={!validPassword}
                     name="password" id="formPassword"
                     placeholder="Senha do Usuário"
                     required
