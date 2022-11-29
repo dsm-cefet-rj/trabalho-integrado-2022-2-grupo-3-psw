@@ -100,3 +100,5 @@ quizReco = [
         }
     }
 ]
+
+module.exports = quizReco;
