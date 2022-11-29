@@ -4,6 +4,8 @@ import PasswordChecklist from "react-password-checklist"
 import './styles.css'
 import { AiOutlineEyeInvisible} from "react-icons/ai";
 import { AiOutlineEye} from "react-icons/ai";
+import { useApi } from "../../Hooks/useAPI";
+
 
 function RegisterInputs () {
     const pswRGX = /^(?=.*\d).{5,12}/;
@@ -29,8 +31,7 @@ function RegisterInputs () {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(nome, password, email);
-        setSuccess(true);
+        console.log(useApi().registrarUsuario({nome, email, password}));
     }
 
     return (
@@ -38,12 +39,12 @@ function RegisterInputs () {
             <div className="col-12 container-fluid mb-4" id="formBox">
                 <input className="formInput" 
                 onChange={e => setNome(e.target.value)}
-                type="text" name="userName" id="formEmail"
+                type="text" name="userName" id="formNome"
                 placeholder="Nome de usuário"
                 required/>
             </div>
             <div className="col-12 container-fluid mb-4" id="formBox">
-                <input class="formInput" 
+                <input className="formInput" 
                 onChange={e => setEmail(e.target.value)}
                 type="email" name="email" id="formEmail"
                 placeholder="Email"
@@ -53,7 +54,7 @@ function RegisterInputs () {
                 <input className="formInput" 
                 type={passwordShown ? "text" : "password"}
                 onChange={e => setPassword(e.target.value)}
-                aria-invalid={validPassword ? false : true}
+                aria-invalid={!validPassword}
                 name="password" id="formPassword"
                 placeholder="Senha"
                 required
@@ -67,8 +68,8 @@ function RegisterInputs () {
                 <input className="formInput" 
                 type={passwordShown ? "text" : "password"} 
                 onChange={e => setPasswordAgain(e.target.value)}
-                aria-invalid={validPasswordAgain ? false : true}
-                name="password" id="formPassword"
+                aria-invalid={!validPasswordAgain}
+                name="password" id="formConfirmPassword"
                 placeholder="Confirmar Senha"
                 required
                 pattern="(?=.*\d).{5,12}"/>

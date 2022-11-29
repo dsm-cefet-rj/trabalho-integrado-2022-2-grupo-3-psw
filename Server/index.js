@@ -1,18 +1,19 @@
-const express = require('express');
-const cors = require('cors');
-const products = require("./products");
+import express, { json } from 'express';
+import cors from 'cors';
+import products from "./products.js";
+import user from "./routes/userRoutes/userRoutes.js";
+import quizReco from "./routes/quizRRoutes/quizRRoutes.js";
 
 const app = express();
-app.use(express.json())
+app.use(json())
 app.use(cors());
 
-const { calcularPrecoPrazo } = require('correios-brasil');
+import { calcularPrecoPrazo } from 'correios-brasil';
 
-var quizReco = require("./routes/quizRRoutes/quizRRoutes")
 app.use("/", quizReco);
 
-// var user = require("./routers/userRes");
-// app.use("/", user);
+//Rota de autenticação/registro de usuários
+app.use("/user", user);
 
 //Rota de apresentação
 app.get('/', (req,res) => {

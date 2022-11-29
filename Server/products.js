@@ -1,4 +1,4 @@
-products = [
+const products = [
     {
         "nome": "Cama de luxo",
         "cores": {
@@ -1449,4 +1449,4 @@ products = [
     },
 ]
 
-module.exports = products;
+export default products;

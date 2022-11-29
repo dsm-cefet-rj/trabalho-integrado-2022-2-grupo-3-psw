@@ -3,6 +3,7 @@ import { FiLock } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
+import { useApi } from "../../Hooks/useAPI";
 
 function LoginInputs() {
     const pswRGX = /^(?=.*\d).{5,12}/;
@@ -23,7 +24,7 @@ function LoginInputs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("submit", {password, email});
+        console.log(useApi().autenticarUsuario({email, password}));
     }
 
     return (

@@ -7,7 +7,7 @@ import styles from "./styles.css";
 import Pagination from "./pagination";
 import CatalogoItens from "./catalogoItens";
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import ReactLoading from 'react-loading';
+// import ReactLoading from 'react-loading';
 
 
 

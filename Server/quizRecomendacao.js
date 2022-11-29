@@ -1,4 +1,4 @@
-quizReco = [
+const quizReco = [
     {
         "idQuiz": "1",
         "questoes": {
@@ -101,4 +101,4 @@ quizReco = [
     }
 ]
 
-module.exports = quizReco;
+export default quizReco;
