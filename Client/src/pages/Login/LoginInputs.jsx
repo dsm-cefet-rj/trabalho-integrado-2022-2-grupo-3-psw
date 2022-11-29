@@ -23,8 +23,7 @@ function LoginInputs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(password, email);
-        setSuccess(true);
+        console.log("submit", {password, email});
     }
 
     return (
