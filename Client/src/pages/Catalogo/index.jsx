@@ -7,6 +7,7 @@ import styles from "./styles.css";
 import Pagination from "./pagination";
 import CatalogoItens from "./catalogoItens";
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import ReactLoading from 'react-loading';
 
 
 
@@ -17,26 +18,36 @@ import Footer from "../../components/Footer";
 
 import { itens } from "./itens";
 import { Button } from "react-bootstrap";
+import { useApi } from "../../Hooks/useAPI";
+
 
 
 function Catalogo() {
 
-    const [itensC, setItensC] = useState([]);
+    const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [itensPerPage] = useState(16);
     const [busca, setBusca] = useState("");
-    const [selectValue, setSelectValue] = useState("");
+    const api = useApi();
+
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+    const getProducts = async () => {
+        await api.getProducts().then((response) => {
+            setProducts(response);
+        })
+    }
+
     useEffect(() => {
-        setItensC(itens);
+        getProducts();
     }, [])
+
 
     const indexOfLastItem = currentPage * itensPerPage;
     const indexOfFirstItem = indexOfLastItem - itensPerPage;
 
-    const filteredItens = itensC.filter(item => item.nome.toLowerCase().includes(busca.toLowerCase()))
+    const filteredItens = products.filter(item => item.nome.toLowerCase().includes(busca.toLowerCase()))
 
 
     const currentItens = filteredItens.slice(indexOfFirstItem, indexOfLastItem);
@@ -66,7 +77,7 @@ function Catalogo() {
                                 <DropdownButton id="dropdown-item-button" title="Ordernar por...">
                                     <div className="d-flex justify-content-center flex-column">
                                         <Button onClick={() => {
-                                            setItensC(filteredItens.sort((a, b) => {
+                                            setProducts(filteredItens.sort((a, b) => {
                                                 if (a.nome > b.nome) {
                                                     return 1;
                                                 }
@@ -79,7 +90,7 @@ function Catalogo() {
                                         }}>Nome</Button>
                                         <Button
                                             onClick={() => {
-                                                setItensC(filteredItens.sort((a, b) => {
+                                                setProducts(filteredItens.sort((a, b) => {
                                                     if (a.preco > b.preco) {
                                                         return 1;
                                                     }
@@ -93,7 +104,7 @@ function Catalogo() {
                                         >Preço (Menor - Maior)</Button>
                                         <Button as="button"
                                             onClick={() => {
-                                                setItensC(filteredItens.sort((a, b) => {
+                                                setProducts(filteredItens.sort((a, b) => {
                                                     if (a.preco < b.preco) {
                                                         return 1;
                                                     }
@@ -106,7 +117,7 @@ function Catalogo() {
                                             }}
                                         >Preço (Maior - Menor)</Button>
                                         <Button onClick={() => {
-                                            setItensC(itens)
+                                            setProducts(itens)
                                         }}>Sem ordenação</Button>
                                     </div>
                                 </DropdownButton>
@@ -125,25 +136,34 @@ function Catalogo() {
                         <h2>Categorias</h2>
                         <div className="buttonsCategory">
                             <button className="btn btn-primary" onClick={() => {
-                                setItensC(itens)
+                                setProducts(itens)
                             }}>Tudo</button>
                             <button className="btn btn-primary" onClick={() => {
-                                setItensC(itens.filter(item => item.categoria == "Cama"))
+                                setProducts(itens.filter(item => item.categoria == "Cama"))
                             }}>Cama</button>
                             <button className="btn btn-primary" onClick={() => {
-                                setItensC(itens.filter(item => item.categoria == "Estrado"))
+                                setProducts(itens.filter(item => item.categoria == "Estrado"))
                             }}>Estrado</button>
                             <button className="btn btn-primary" onClick={() => {
-                                setItensC(itens.filter(item => item.categoria == "Toalha"))
+                                setProducts(itens.filter(item => item.categoria == "Toalha"))
                             }}>Toalha</button>
                             <button className="btn btn-primary" onClick={() => {
-                                setItensC(itens.filter(item => item.categoria == "Coco"))
+                                setProducts(itens.filter(item => item.categoria == "Coco"))
                             }}>Coco</button>
                         </div>
                     </div>
                     <div className="col-10">
 
+                        {products.length > 0
+                        ?
                         <CatalogoItens itens={currentItens} />
+                        :
+                        <div style={{width: '100%', height: '100%', alignItems: "center", justifyContent: "center", display: "flex"}}>
+                            <ReactLoading type={"spin"} color={"#173CF0"} height={70} width={70}/>
+                        </div>
+                        }
+
+                        
 
                     </div>
                 </div>
@@ -170,10 +190,10 @@ function Catalogo() {
                         <CardsCatalogo item={itens[0]} />
                     </div>
                     <div className="col-md-4 col-sm-6 col-12">
-                        <CardsCatalogo item={itens[1]}  />
+                        <CardsCatalogo item={itens[1]} />
                     </div>
                     <div className="col-md-4 col-sm-6 col-12">
-                        <CardsCatalogo  item={itens[2]}/>
+                        <CardsCatalogo item={itens[2]} />
                     </div>
                 </div>
             </div>

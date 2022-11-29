@@ -21,7 +21,7 @@ app.get('/', (req,res) => {
 
 //Retornar todos os produtos
 app.get("/products", (req, res) => {
-  res.send(products);
+  return res.send(products);
 })
 
 //Retornar produto por id
