@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "axios": "^1.1.3",
     "correios-brasil": "^3.0.3",
+    "emailjs": "^4.0.1",
     "gn-api-sdk-node": "^2.0.8",
     "pix-react": "^1.0.4",
     "react": "^18.2.0",
