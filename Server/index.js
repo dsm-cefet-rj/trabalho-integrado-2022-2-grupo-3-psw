@@ -3,12 +3,15 @@ import cors from 'cors';
 import products from "./products.js";
 import user from "./routes/userRoutes/userRoutes.js";
 import quizReco from "./routes/quizRRoutes/quizRRoutes.js";
+import quizSatis from './routes/quizSRoutes/quizSRoutes.js';
 
 const app = express();
 app.use(json())
 app.use(cors());
 
 import { calcularPrecoPrazo } from 'correios-brasil';
+
+app.use("/", quizSatis);
 
 app.use("/", quizReco);
 
