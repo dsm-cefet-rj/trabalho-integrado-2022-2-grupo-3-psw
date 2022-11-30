@@ -12,6 +12,10 @@ import { FaBuilding } from "react-icons/fa";
 import useOrderItem from "../../Estados/useOrderPrice";
 import { useApi } from "../../Hooks/useAPI";
 import PIX from "react-qrcode-pix";
+import useCartItem from "../../Estados/useItemStore";
+
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 function CartPage() {
     const orderList = useOrderItem(state => state.totalValue);
@@ -19,6 +23,12 @@ function CartPage() {
     const [cepInput, setCepInput] = useState("");
     const [shippingValue, setShippingValue] = useState(0);
     const [fullPIX, setFullPIX] = useState("");
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    const itensOnCart = useCartItem(state => state.cartItens);
+
     const now = new Date().getTime().toString();
 
     const api = useApi();
@@ -38,26 +48,26 @@ function CartPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         <>
-        <h1>PAGAMENTO DOS CRIAS</h1><br/>
-        <PIX 
-        pixkey="vini1100@outlook.com"
-        merchant="DeepSleep ltda"
-        city="Rio de Janeiro"
-        cep="20.271-110"
-        code={"RQP" + now }
-        amount={orderList + parseFloat(shippingValue)}
-        onLoad={setFullPIX}
-        resize={384}
-        variant="fluid"
-        padding={30}
-        color="#357"
-        bgColor="#def"
-        bgRounded
-        divider
-        />
-        <p>
-            <code>{fullPIX}</code>
-        </p>
+            <h1>PAGAMENTO DOS CRIAS</h1><br />
+            <PIX
+                pixkey="vini1100@outlook.com"
+                merchant="DeepSleep ltda"
+                city="Rio de Janeiro"
+                cep="20.271-110"
+                code={"RQP" + now}
+                amount={orderList + parseFloat(shippingValue)}
+                onLoad={setFullPIX}
+                resize={384}
+                variant="fluid"
+                padding={30}
+                color="#357"
+                bgColor="#def"
+                bgRounded
+                divider
+            />
+            <p>
+                <code>{fullPIX}</code>
+            </p>
         </>
     }
 
@@ -84,8 +94,8 @@ function CartPage() {
                                         <h5><FaBuilding /> Informe seu Cep:</h5>
                                         <input type="text" id="cepArea"
                                             onChange={e => setCepInput(e.target.value)}
-                                            pattern="\d{5}-?\d{3}" 
-                                            required/>
+                                            pattern="\d{5}-?\d{3}"
+                                            required />
                                         <button className="btn btn-primary ms-3" onClick={calculaFrete}
                                             style={{ borderRadius: "20px" }}>
                                             Calcular Frete
@@ -120,11 +130,45 @@ function CartPage() {
                                 <h5>Valor a ser pago: R${orderList + parseFloat(shippingValue)}</h5>
                             </div>
                             <div className="col-6 ms-3 mt-4">
-                                <button className="btn btn-primary" id="checkOutButton"><FiShoppingBag /> Finalizar Compra</button>
+                                <button className="btn btn-primary" id="checkOutButton" onClick={() => setShow(true)}><FiShoppingBag /> Finalizar Compra</button>
                             </div>
                         </form>
                     </div>
                 </main>
+
+                <Modal
+                    show={show}
+                    onHide={() => setShow(false)}
+                    dialogClassName="modal-90w"
+                    aria-labelledby="example-custom-modal-styling-title"
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="example-custom-modal-styling-title">
+                            Confira suas informações
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <h5>Itens</h5>
+                        {itensOnCart.map((item) => {
+                            return(
+                                <p>{item.nome}</p>
+                            )
+                        })}
+                        <h5>Cep</h5>
+                        <p>{cepInput}</p>
+                        <h5>Valor Total</h5>
+                        <p>R$ {orderList + parseFloat(shippingValue)}</p>
+                        
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Fechar
+                        </Button>
+                        <Button variant="primary" onClick={handleClose}>
+                            Confirmar
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
 
                 <Footer />
 
