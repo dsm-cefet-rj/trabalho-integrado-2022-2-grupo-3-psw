@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react"
-import { FiLock } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
-import { useApi } from "../../Hooks/useAPI";
+import { useApi } from "../../Hooks/useApi";
 
 function LoginInputs() {
     const pswRGX = /^(?=.*\d).{5,12}/;

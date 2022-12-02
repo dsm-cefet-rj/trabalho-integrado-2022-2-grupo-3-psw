@@ -16,7 +16,7 @@ import ReactLoading from 'react-loading';
 
 import { itens } from "./itens";
 import { Button } from "react-bootstrap";
-import { useApi } from "../../Hooks/useAPI";
+import { useApi } from "../../Hooks/useApi";
 
 
 

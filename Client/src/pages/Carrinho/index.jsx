@@ -3,16 +3,16 @@ import "./styles.css"
 import NavbarComp from "../../components/NavbarComp";
 import ImportaBootstrap from "../../components/ImportsBootStrap";
 import Footer from "../../components/Footer";
-import pix from "../../img/pix.png";
+import pix from "../../img/Pix.png";
 import CartItens from "./CartItens";
 import { FiShoppingBag } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";
 import { FiTruck } from "react-icons/fi";
 import { FaBuilding } from "react-icons/fa";
 import useOrderItem from "../../Estados/useOrderPrice";
-import { useApi } from "../../Hooks/useAPI";
-import PIX from "react-qrcode-pix";
+import { useApi } from "../../Hooks/useApi";
 import useCartItem from "../../Estados/useItemStore";
+import useCheckOut from "../../Estados/useCheckOut";
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -20,16 +20,29 @@ import Button from 'react-bootstrap/Button';
 function CartPage() {
     const orderList = useOrderItem(state => state.totalValue);
     const resetValue = useOrderItem(state => state.resetTotalValue);
+    const checkOutList = useCheckOut(state => state.checkOutItems);
+    const addItemToCheckOut = useCheckOut(state => state.addItemToCheckOut);
+    const removeAllCartItens = useCartItem(state => state.removeAllItems);
     const [cepInput, setCepInput] = useState("");
     const [shippingValue, setShippingValue] = useState(0);
-    const [fullPIX, setFullPIX] = useState("");
     const [show, setShow] = useState(false);
+    const valorTotal = orderList + parseFloat(shippingValue);
+
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const itensOnCart = useCartItem(state => state.cartItens);
 
-    const now = new Date().getTime().toString();
+    const checkOut = () => {
+        setShow(false);
+        itensOnCart.forEach(product => {
+            addItemToCheckOut(product)
+        })
+        removeAllCartItens(69);
+        console.log(checkOutList);
+        console.log(itensOnCart);
+        resetValue();
+    }
 
     const api = useApi();
 
@@ -38,7 +51,7 @@ function CartPage() {
         await api.calcularValorFrete(cepInput).then((response) => {
             var valorFrete = parseFloat(response.valorFrete.replace(",", "."));
             console.log(valorFrete);
-            setShippingValue(valorFrete);
+            setShippingValue(valorFrete.toFixed(2));
         }).catch(() => {
             alert("Cep não encontrado/inválido")
         })
@@ -47,28 +60,12 @@ function CartPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        <>
-            <h1>PAGAMENTO DOS CRIAS</h1><br />
-            <PIX
-                pixkey="vini1100@outlook.com"
-                merchant="DeepSleep ltda"
-                city="Rio de Janeiro"
-                cep="20.271-110"
-                code={"RQP" + now}
-                amount={orderList + parseFloat(shippingValue)}
-                onLoad={setFullPIX}
-                resize={384}
-                variant="fluid"
-                padding={30}
-                color="#357"
-                bgColor="#def"
-                bgRounded
-                divider
-            />
-            <p>
-                <code>{fullPIX}</code>
-            </p>
-        </>
+        setShow(true);
+
+        if (itensOnCart == 0) {
+            alert("Não há itens no carrinho!! Adicione itens para realizar o pedido!")
+            setShow(false);
+        }
     }
 
     return (
@@ -127,10 +124,10 @@ function CartPage() {
                                 </div>
                             </div>
                             <div className="col-6 ms-3 mt-4">
-                                <h5>Valor a ser pago: R${orderList + parseFloat(shippingValue)}</h5>
+                                <h5>Valor a ser pago: R${valorTotal.toFixed(2)}</h5>
                             </div>
                             <div className="col-6 ms-3 mt-4">
-                                <button className="btn btn-primary" id="checkOutButton" onClick={() => setShow(true)}><FiShoppingBag /> Finalizar Compra</button>
+                                <button className="btn btn-primary" id="checkOutButton" ><FiShoppingBag /> Finalizar Compra</button>
                             </div>
                         </form>
                     </div>
@@ -157,14 +154,14 @@ function CartPage() {
                         <h5>Cep</h5>
                         <p>{cepInput}</p>
                         <h5>Valor Total</h5>
-                        <p>R$ {orderList + parseFloat(shippingValue)}</p>
+                        <p>R$ {valorTotal.toFixed(2)}</p>
                         
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleClose}>
                             Fechar
                         </Button>
-                        <Button variant="primary" onClick={handleClose}>
+                        <Button variant="primary" onClick={checkOut}>
                             Confirmar
                         </Button>
                     </Modal.Footer>

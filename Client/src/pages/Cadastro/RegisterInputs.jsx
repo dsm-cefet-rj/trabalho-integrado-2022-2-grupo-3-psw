@@ -4,7 +4,7 @@ import PasswordChecklist from "react-password-checklist"
 import './styles.css'
 import { AiOutlineEyeInvisible} from "react-icons/ai";
 import { AiOutlineEye} from "react-icons/ai";
-import { useApi } from "../../Hooks/useAPI";
+import { useApi } from "../../Hooks/useApi";
 
 
 function RegisterInputs () {

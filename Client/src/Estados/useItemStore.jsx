@@ -38,6 +38,13 @@ const useCartItem = create((set, get) => ({
             }
         }
         set({cart});
+    },
+
+    removeAllItems: (id) => {
+        set({cartItens: get().cartItens.filter(item => item.id == id)});
+        set(state => ({quantityCartItens: state.quantityCartItens = 0}));
+
+
     }
 }));
 

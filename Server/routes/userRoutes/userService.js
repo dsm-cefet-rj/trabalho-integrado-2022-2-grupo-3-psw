@@ -13,7 +13,7 @@ export async function registrarUsuario (user) {
 
 export async function autenticarUsuario (user) {
     let usuarios = await getUsuarios()
-    let usuarioExistente = usuarios.some(u => u.email == user.email && u.senha == user.senha);
+    let usuarioExistente = usuarios.some(u => u.email == user.email && u.password == user.password);
 
     if (usuarioExistente){
         return "Usuário autenticado!";
