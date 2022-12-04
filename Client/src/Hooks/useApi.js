@@ -28,5 +28,9 @@ export const useApi = () => ({
     getFilteredProducts: async (filter) => {
         const response = await api.get("/products/filter/" + filter);
         return response.data;
+    },
+    getProductById: async (id) => {
+        const response = await api.get("/products/" + id);
+        return response.data;
     }
 })

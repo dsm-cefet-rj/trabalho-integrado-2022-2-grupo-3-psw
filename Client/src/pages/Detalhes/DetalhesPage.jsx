@@ -11,44 +11,47 @@ import useWishList from "../../Estados/useWishList";
 
 import useCartItem from "../../Estados/useItemStore";
 
-import { itens } from "../Catalogo/itens";
+import { useApi } from "../../Hooks/useApi";
+import ReactLoading from 'react-loading';
 
 
 function DetalhesPage() {
 
     const { id } = useParams();
+    const api = useApi();
     const additem = useCartItem(state => state.addCartItem);
     const [favorite, setFavorite] = useState(false);
+    const [product, setProduct] = useState({});
 
     const addWishList = useWishList(state => state.addWishListItem);
     const removeWishList = useWishList(state => state.removeWishListItem);
     const itensOnWishList = useWishList(state => state.wishList);
     const ids = [];
-    for (let i = 0; i < itensOnWishList.length; i++) {
-        ids.push(itensOnWishList[i].id);
+
+    const getProduct = async (id) => {
+        await api.getProductById(id).then((response) => {
+            setProduct(response);
+        })
     }
 
     useEffect(() => {
-        finId(produto2[0].id)
-    }, [])
+        getProduct(id);
+        finId(product.id)
+    }, [product.id])
 
+    for (let i = 0; i < itensOnWishList.length; i++) {
+        ids.push(itensOnWishList[i].id);
+    }
     const finId = (id) => {
         for (let i = 0; i < ids.length; i++) {
             if (id == ids[i]) {
                 return setFavorite(true);
             }
-            else
+            else {
                 setFavorite(false);
+            }
         }
     }
-
-
-
-
-    const produto2 = itens.filter(item => item.id == id);
-
-    const cores = Object.values(produto2[0].cores);
-
 
     return (
 
@@ -82,82 +85,92 @@ function DetalhesPage() {
 
             <NavbarComp></NavbarComp>
 
-            <div className="container" id="local">
-                <p>
-                    <Link to={"/catalogue"}> Catálogo / </Link>
-                    {produto2[0].nome}
-                </p>
-            </div>
 
 
-            <div className="container-fluid" id="produto">
-                <div className="row">
-                    <div className="col-md-5 col-sm-12" id="carousel">
-                        <NoTransitionExample produto={produto2[0].fotos} ></NoTransitionExample>
+
+            {Object.keys(product).length > 0
+                ?
+                <div>
+                    <div className="container" id="local">
+                        <p>
+                            <Link to={"/catalogue"}> Catálogo / </Link>
+                            {product.nome}
+                        </p>
                     </div>
-                    <div className="col-md-6 col-sm-12">
-                        <div id="text">
-                            <h2>{produto2[0].nome}</h2>
-                            <p id="simpleText">{produto2[0].descricao}</p>
-                            <p id="preco">R${produto2[0].preco}</p>
-                            <h3 id="precoNovo">R${produto2[0].preco}</h3>
-                        </div>
+                    <div className="container-fluid" id="produto">
+                        <div className="row">
+                            <div className="col-md-5 col-sm-12" id="carousel">
+                                <NoTransitionExample produto={product.fotos} ></NoTransitionExample>
+                            </div>
+                            <div className="col-md-6 col-sm-12">
+                                <div id="text">
+                                    <h2>{product.nome}</h2>
+                                    <p id="simpleText">{product.descricao}</p>
+                                    <p id="preco">R${product.preco}</p>
+                                    <h3 id="precoNovo">R${product.preco}</h3>
+                                </div>
 
-                        <div id="color">
-                            <p>Cor</p>
-                            <div>
-                                {cores.map((item) => {
-                                    return (
-                                        <label>
-                                            <input type="radio" name="test" value="1"></input>
-                                            <img src={`https://via.placeholder.com/40x40/${item}/${item}&text=.`} />
-                                        </label>
-                                    )
-                                })}
+                                <div id="color">
+                                    <p>Cor</p>
+                                    <div>
+                                        {Object.values(product.cores).map((item) => {
+                                            return (
+                                                <label>
+                                                    <input type="radio" name="test" value="1"></input>
+                                                    <img src={`https://via.placeholder.com/40x40/${item}/${item}&text=.`} />
+                                                </label>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+
+
+                                <div className="buyButton">
+                                    <button className="buy" onClick={() => {
+                                        additem(product);
+                                        alert("Adicionado ao carrinho de compras!")
+                                    }}>
+                                        <p>Adicionar ao Carrinho</p>
+                                    </button>
+                                </div>
+                                <div className="buyButton">
+                                    {favorite == false
+                                        ?
+                                        <button className="buy" onClick={() => {
+                                            addWishList(product);
+                                            setFavorite(true);
+                                            alert("Adicionado a lista de desejos!")
+                                        }}>
+                                            <p>Adicionar aos Favoritos     <IoIosHeartEmpty size={25} ></IoIosHeartEmpty></p>
+                                        </button>
+                                        :
+                                        <button className="buy" onClick={() => {
+                                            removeWishList(product.id)
+                                            setFavorite(false)
+                                            alert("Retirado da lista de desejos!")
+                                        }}>
+                                            <p>Retirar dos favoritos     <IoIosHeart size={25} ></IoIosHeart></p>
+                                        </button>
+                                    }
+
+                                </div>
+                                <hr></hr>
+                                <div id="details">
+                                    <BasicExample medidas={product.detalhes.medidas} material={product.detalhes.material} fabricante={product.detalhes.fabricante} ></BasicExample>
+                                </div>
+                                <hr></hr>
                             </div>
                         </div>
-
-
-                        <div className="buyButton">
-                            <button className="buy" onClick={() => {
-                                additem(produto2[0]);
-                                alert("Adicionado ao carrinho de compras!")
-                            }}>
-                                <p>Adicionar ao Carrinho</p>
-                            </button>
-                        </div>
-                        <div className="buyButton">
-                            {favorite == false
-                                ?
-                                <button className="buy" onClick={() => {
-                                    addWishList(produto2[0]);
-                                    setFavorite(true);
-                                    alert("Adicionado a lista de desejos!")
-                                }}>
-                                    <p>Adicionar aos Favoritos     <IoIosHeartEmpty size={25} ></IoIosHeartEmpty></p>
-                                </button>
-                                :
-                                <button className="buy" onClick={() => {
-                                    removeWishList(produto2[0].id)
-                                    setFavorite(false)
-                                    alert("Retirado da lista de desejos!")
-                                }}>
-                                    <p>Retirar dos favoritos     <IoIosHeart size={25} ></IoIosHeart></p>
-                                </button>
-                            }
-
-                        </div>
-                        <hr></hr>
-                        <div id="details">
-                            <BasicExample medidas={produto2[0].detalhes.medidas} material={produto2[0].detalhes.material} fabricante={produto2[0].detalhes.fabricante} ></BasicExample>
-                        </div>
-                        <hr></hr>
                     </div>
                 </div>
-                <Footer>
-                </Footer>
-            </div>
+                :
+                <div style={{ width: '100vw', height: '100vh', alignItems: "center", justifyContent: "center", display: "flex" }}>
+                    <ReactLoading type={"spin"} color={"#173CF0"} height={70} width={70} />
+                </div>
+            }
 
+            <Footer>
+            </Footer>
         </div >
     );
 }
