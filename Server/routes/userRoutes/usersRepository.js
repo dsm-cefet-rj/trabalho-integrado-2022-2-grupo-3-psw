@@ -1,15 +1,15 @@
-import * as fs from 'fs';
-import * as fsa from 'fs/promises';
+const fs = require('fs');
+//import * as fsa from 'fs/promises';
 
 const usuariosFileName = 'users.json'
 
-export async function salvarUsuario(user) {
+async function salvarUsuario(user) {
     let usuarios = await getUsuarios()
     usuarios.push(user);
     await fsa.writeFile(usuariosFileName, JSON.stringify(usuarios));
 }
 
-export async function getUsuarios() {
+async function getUsuarios() {
 
     if (!fs.existsSync(usuariosFileName)) {
         await fsa.writeFile(usuariosFileName, JSON.stringify([]));
@@ -29,3 +29,6 @@ export async function getUsuarios() {
 //         return false;
 //     }
 // }
+
+module.exports = salvarUsuario;
+module.exports = getUsuarios;

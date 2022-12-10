@@ -101,4 +101,4 @@ const quizReco = [
     }
 ]
 
-export default quizReco;
+module.exports =  quizReco;

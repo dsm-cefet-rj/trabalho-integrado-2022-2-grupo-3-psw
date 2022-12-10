@@ -1,6 +1,6 @@
-import { Router } from 'express';
+const {Router} = require("express");
 const router = Router();
-import quizes from "../../quizRecomendacao.js";
+const quizes = require ("../../quizRecomendacao.js");
 
 router.get("/quizRecomendacao", (req, res)=>{
     return res.send(quizes)
@@ -17,4 +17,4 @@ router.get("/quizRecomendacao/:id", (req, res) =>{
 })
 
 
-export default router;
+module.exports =  router;

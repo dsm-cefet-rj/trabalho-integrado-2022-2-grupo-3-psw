@@ -1,5 +1,5 @@
-import { Router } from 'express';
-import { registrarUsuario, autenticarUsuario } from './userService.js';
+const { Router } = require('express');
+const { registrarUsuario, autenticarUsuario } = require('./userService.js');
 
 var router = Router();
 
@@ -18,4 +18,4 @@ router.post("/auth", async (req, res) => {
 })
 
 
-export default router;
+module.exports =  router;

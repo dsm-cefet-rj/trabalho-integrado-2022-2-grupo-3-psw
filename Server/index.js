@@ -1,15 +1,18 @@
-import express, { json } from 'express';
-import cors from 'cors';
-import products from "./products.js";
-import user from "./routes/userRoutes/userRoutes.js";
-import quizReco from "./routes/quizRRoutes/quizRRoutes.js";
-import quizSatis from './routes/quizSRoutes/quizSRoutes.js';
+const express = require('express');
+const cors = require('cors');
+const products = require("./products.js");
+const user = require("./routes/userRoutes/userRoutes.js");
+const quizReco = require("./routes/quizRRoutes/quizRRoutes.js");
+const quizSatis = require('./routes/quizSRoutes/quizSRoutes.js');
+const connectDatabase = require('./database/db.js');
 
 const app = express();
-app.use(json())
+app.use(express.json())
 app.use(cors());
 
-import { calcularPrecoPrazo } from 'correios-brasil';
+connectDatabase()
+
+const { calcularPrecoPrazo } = require('correios-brasil');
 
 app.use("/", quizSatis);
 

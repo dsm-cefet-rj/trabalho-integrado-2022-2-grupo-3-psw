@@ -1,6 +1,6 @@
-import { salvarUsuario, getUsuarios } from "./usersRepository.js";
+const { salvarUsuario, getUsuarios } = require("./usersRepository.js");
 
-export async function registrarUsuario (user) {
+async function registrarUsuario (user) {
     let usuarios = await getUsuarios()
     let usuarioRepetido = usuarios.some(u => u.email == user.email);
 
@@ -11,7 +11,7 @@ export async function registrarUsuario (user) {
     return "Usuário cadastrado com sucesso!";
 }
 
-export async function autenticarUsuario (user) {
+ async function autenticarUsuario (user) {
     let usuarios = await getUsuarios()
     let usuarioExistente = usuarios.some(u => u.email == user.email && u.password == user.password);
 
@@ -21,3 +21,6 @@ export async function autenticarUsuario (user) {
     
     return "Credenciais inválidas!";
 }
+
+module.exports = registrarUsuario;
+module.exports = autenticarUsuario;

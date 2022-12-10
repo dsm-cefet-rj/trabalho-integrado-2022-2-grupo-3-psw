@@ -1,6 +1,6 @@
-import {Router} from "express";
+const {Router} = require("express");
 const router = Router();
-import quizesS from "../../quizSatisfacao.js";
+const quizesS = require("../../quizSatisfacao.js");
 
 router.get("/quizSatisfacao", (req, res)=>{
     return res.send(quizesS);
@@ -16,4 +16,4 @@ router.get("/quizSatisfacao/:id", (req, res)=>{
     res.json({msgError: "Ocorreu um erro"});
 })
 
-export default router;
+module.exports = router;

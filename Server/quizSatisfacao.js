@@ -101,4 +101,4 @@ const quizSatis = [
     }
 ]
 
-export default quizSatis;
+module.exports =  quizSatis;

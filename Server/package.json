@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "type": "module",
   "dependencies": {
     "@supercharge/filesystem": "^2.3.0",
     "correios-brasil": "^3.0.3",
