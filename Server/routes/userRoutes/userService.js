@@ -1,8 +1,11 @@
 // const { salvarUsuario, getUsuarios } = require("./usersRepository.js");
 const User = require("../../models/User");
 
-const create = (body) => User.create(body);
+const registerUser = (body) => User.create(body);
 
+// const authUser = (body) => {
+
+// }
 // async function registrarUsuario (user) {
 //     let usuarios = await getUsuarios()
 //     let usuarioRepetido = usuarios.some(u => u.email == user.email);
@@ -28,5 +31,5 @@ const create = (body) => User.create(body);
 // module.exports = registrarUsuario;
 // module.exports = autenticarUsuario;
 module.exports = {
-    create
+    registerUser
 };
