@@ -19,8 +19,8 @@ async function registerUser(req, res) {
 };
 
 async function authUser (req, res) {
-  const userEmail = req.params.email;
-  const userPassword = req.params.password;
+  const userEmail = req.body.email;
+  const userPassword = req.body.password;
 
   const result = await userService.authUser(userEmail, userPassword);
 
