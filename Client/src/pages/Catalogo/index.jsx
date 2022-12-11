@@ -36,6 +36,7 @@ function Catalogo() {
 
     const getProducts = async () => {
         await api.getProducts().then((response) => {
+            console.log(response)
             setProducts(response);
         })
     }

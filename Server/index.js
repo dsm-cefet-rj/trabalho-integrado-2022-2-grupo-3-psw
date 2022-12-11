@@ -5,6 +5,7 @@ const user = require("./routes/userRoutes/userRoutes.js");
 const quizReco = require("./routes/quizRRoutes/quizRRoutes.js");
 const quizSatis = require('./routes/quizSRoutes/quizSRoutes.js');
 const connectDatabase = require('./database/db.js');
+const productsModel = require('./models/Products')
 
 const app = express();
 app.use(express.json())
@@ -26,8 +27,30 @@ app.get('/', (req,res) => {
     return res.json("Bem vindo a API do DeepSleep!");
 });
 
+app.post('/product', (req, res) => {
+  const product = new productsModel({
+    nome: req.body.nome,
+    categoria: req.body.categoria,
+    preco: req.body.preco,
+    descricao: req.body.descricao,
+    imagens: req.body.imagens,
+    cores: req.body.cores,
+    detalhes: req.body.detalhes
+  })
+
+  product.save(function(err){
+    if(err){
+      res.send("Falha ao cadastrar produto!");
+    }
+    else{
+      res.send("Produto cadastrado com sucesso!");
+    }
+  })
+})
+
 //Retornar todos os produtos
-app.get("/products", (req, res) => {
+app.get("/products", async (req, res) => {
+  const products = await productsModel.find()
   return res.send(products);
 })
 

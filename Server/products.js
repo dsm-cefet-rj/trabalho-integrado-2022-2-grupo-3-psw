@@ -7,11 +7,11 @@ const products = [
         },
         "categoria" : "Cama",
         "preco" : 786.00,
-        "fotos":{
-            "foto1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
-            "foto2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
-            "foto3" : "../../img/folded-towels-on-the-bed.jpg",
-            "foto4" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg"
+        "imagens":{
+            "imagem1": "../../img/beautiful-luxury-hotel-bedroom.jpg",
+            "imagem2" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
+            "imagem3" : "../../img/folded-towels-on-the-bed.jpg",
+            "imagem4" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg"
         },
         "descricao": "Cama boa demais pra dormir bem.",
         "detalhes": {
@@ -29,11 +29,11 @@ const products = [
         },
         "categoria": "Estrado",
         "preco" : 235.00,
-        "fotos":{
-            "foto1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
-            "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
-            "foto3" : "../../img/folded-towels-on-the-bed.jpg",
-            "foto4" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg"
+        "imagens":{
+            "imagem1" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
+            "imagem2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
+            "imagem3" : "../../img/folded-towels-on-the-bed.jpg",
+            "imagem4" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg"
         },
         "descricao": "Estrado de cama que aguenta várias coisas, compra esse.",
         "detalhes": {
@@ -53,11 +53,11 @@ const products = [
         },
         "categoria": "Toalha",
         "preco" : 76.00,
-        "fotos":{
-            "foto1" : "../../img/folded-towels-on-the-bed.jpg",
-            "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
-            "foto3" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
-            "foto4" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg"
+        "imagens":{
+            "imagem1" : "../../img/folded-towels-on-the-bed.jpg",
+            "imagem2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
+            "imagem3" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
+            "imagem4" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg"
         },
         "descricao": "Toalha boa demais pra secar as paradas, boa mesmo.",
         "detalhes": {
@@ -74,11 +74,11 @@ const products = [
         },
         "categoria": "Coco",
         "preco" : 185.00,
-        "fotos":{
-            "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
-            "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
-            "foto3" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
-            "foto4" : "../../img/folded-towels-on-the-bed.jpg"
+        "imagens":{
+            "imagem1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
+            "imagem2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
+            "imagem3" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
+            "imagem4" : "../../img/folded-towels-on-the-bed.jpg"
         },
         "descricao": "Coco mas não de beber água, esse é o que ajuda a dormir",
         "detalhes": {
@@ -101,7 +101,7 @@ const products = [
         "fotos":{
             "foto1" : "../../img/composition-with-incense-sticks-diffuser-candles-and-books-on-the-table-in-the-interior-of-the-room.jpg",
             "foto2": "../../img/beautiful-luxury-hotel-bedroom.jpg",
-            "foto3" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
+            "imagem3" : "../../img/assembly-of-a-double-bed-made-of-wood-and-lamella.jpg",
             "foto4" : "../../img/folded-towels-on-the-bed.jpg"
         },
         "descricao": "Coco mas não de beber água, esse é o que ajuda a dormir",
