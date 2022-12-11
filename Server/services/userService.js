@@ -1,5 +1,4 @@
 const authenticationService = require("./authenticationService");
-const User = require("../models/User");
 const userRepository = require("../repositories/usersRepository");
 
 const registerUser = async (user) => {
@@ -21,7 +20,6 @@ const registerUser = async (user) => {
   user.hashedPassword = hashedPassword;
 
   const registeredUser = await userRepository.registerUser(user);
-  console.log(hashedPassword)
 
   return {
     message: "Usuário cadastrado com sucesso!",
