@@ -23,7 +23,7 @@ function LoginInputs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(useApi().autenticarUsuario({email, password}));
+        console.log(useApi().authUser({email, password}));
     }
 
     return (

@@ -8,7 +8,7 @@ const registerUser = async (req, res) => {
         res.status(400).send({ message: "Todos os campos devem ser preenchidos para realizar o registro!"});
     }
 
-    const user = await userService.create(req.body);
+    const user = await userService.registerUser(req.body)
 
     if (!user){
         return res.status(400).send({message: "Erro na criação de usuário!"})
@@ -25,7 +25,27 @@ const registerUser = async (req, res) => {
     });
 };
 
-module.exports = { registerUser };
+const authUser = async (req, res) => {
+    const { email, password } = req.body;
+
+    const auth = await userService.find();
+
+    if (auth) {
+        return res.status(400).send({ message: "Credenciais inválidas!"});
+    }
+
+    res.status(201).send({ 
+        message: "Usuário autenticado!",
+        user: {
+            id: user._id,
+            email: user.email,
+            password: user.password
+        }
+    });
+
+}
+
+module.exports = { registerUser, authUser};
 
 // const usuariosFileName = 'users.json'
 

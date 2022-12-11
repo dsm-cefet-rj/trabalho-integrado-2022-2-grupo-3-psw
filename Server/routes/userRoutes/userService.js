@@ -3,9 +3,8 @@ const User = require("../../models/User");
 
 const registerUser = (body) => User.create(body);
 
-// const authUser = (body) => {
+const authUser = (body) => User.find({body});
 
-// }
 // async function registrarUsuario (user) {
 //     let usuarios = await getUsuarios()
 //     let usuarioRepetido = usuarios.some(u => u.email == user.email);
@@ -31,5 +30,6 @@ const registerUser = (body) => User.create(body);
 // module.exports = registrarUsuario;
 // module.exports = autenticarUsuario;
 module.exports = {
-    registerUser
+    registerUser,
+    authUser
 };
