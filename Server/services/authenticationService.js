@@ -15,6 +15,7 @@ const authUser = async (email, password) => {
     const authenticated = await bcrypt.compare(password, authData.hashedPassword)
 
     if (authenticated){
+        console.log(authenticated)
         return {message: "Usuário autenticado!", success: true}
     }
 
