@@ -100,7 +100,7 @@ function DetalhesPage() {
                     <div className="container-fluid" id="produto">
                         <div className="row">
                             <div className="col-md-5 col-sm-12" id="carousel">
-                                <NoTransitionExample produto={product.fotos} ></NoTransitionExample>
+                                <NoTransitionExample produto={product.imagens} ></NoTransitionExample>
                             </div>
                             <div className="col-md-6 col-sm-12">
                                 <div id="text">
