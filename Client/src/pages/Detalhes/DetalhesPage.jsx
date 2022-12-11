@@ -36,8 +36,8 @@ function DetalhesPage() {
 
     useEffect(() => {
         getProduct(id);
-        finId(product._id)
-    }, [product._id])
+        finId(product.id)
+    }, [product.id])
 
     for (let i = 0; i < itensOnWishList.length; i++) {
         ids.push(itensOnWishList[i].id);
@@ -100,7 +100,7 @@ function DetalhesPage() {
                     <div className="container-fluid" id="produto">
                         <div className="row">
                             <div className="col-md-5 col-sm-12" id="carousel">
-                                <NoTransitionExample produto={product.imagens} ></NoTransitionExample>
+                                <NoTransitionExample produto={product.fotos} ></NoTransitionExample>
                             </div>
                             <div className="col-md-6 col-sm-12">
                                 <div id="text">
@@ -145,7 +145,7 @@ function DetalhesPage() {
                                         </button>
                                         :
                                         <button className="buy" onClick={() => {
-                                            removeWishList(product._id)
+                                            removeWishList(product.id)
                                             setFavorite(false)
                                             alert("Retirado da lista de desejos!")
                                         }}>

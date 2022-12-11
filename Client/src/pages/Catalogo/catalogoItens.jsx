@@ -30,7 +30,7 @@ function CatalogoItens({ itens }) {
                                     alert(item.nome + " adicionado ao carrinho!")
                                 }}><AiOutlineShoppingCart size={20} /></a>
                             </div>
-                            <Link to={"/detail" + item._id} className="text-decoration-none" style={{ color: "inherit" }}>
+                            <Link to={"/detail" + item.id} className="text-decoration-none" style={{ color: "inherit" }}>
                                 <img src={`src/img${item.imagens.imagem1}`} className="img-fluid" />
                             </Link>
                         </div>

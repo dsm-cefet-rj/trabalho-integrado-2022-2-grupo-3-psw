@@ -55,14 +55,14 @@ app.get("/products", async (req, res) => {
 })
 
 //Retornar produto por id
-app.get("/product/:id", async (req, res) => {
+app.get("/products/:id", (req, res) => {
   const id = req.params.id;
 
-  const product = await productsModel.findById(id)
+  const product = products.filter(item => item.id == id);
   if(product){
-    return res.send(product);
+    res.send(product[0]);
   }
-  return res.json({msgError: "Houve um erro"});
+  res.json({msgError: "Houve um erro"});
 })
 
 app.get("/products/filter/:filter", (req, res) => {

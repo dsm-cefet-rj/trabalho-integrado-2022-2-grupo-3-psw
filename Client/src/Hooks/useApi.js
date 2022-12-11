@@ -11,6 +11,7 @@ export const useApi = () => ({
     },
     getProducts: async () => {
         const response = await api.get("/products");
+        console.log(response.data)
         return response.data;
     },
     getQuizReco: async (id) => {
@@ -30,7 +31,7 @@ export const useApi = () => ({
         return response.data;
     },
     getProductById: async (id) => {
-        const response = await api.get("/product/" + id);
+        const response = await api.get("/products/" + id);
         return response.data;
     }
 })
