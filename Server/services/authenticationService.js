@@ -12,10 +12,13 @@ const authUser = async (email, password) => {
     if (!authData){
         return {message: "Usuário não encontrado", success: false}
     }
-    console.log(authData)
-    const authenticated = bcrypt.compare(password, authData[0].hashedPassword)
+    const authenticated = await bcrypt.compare(password, authData.hashedPassword)
 
-    return {message: "Usuário existente", success: authenticated}
+    if (authenticated){
+        return {message: "Usuário autenticado!", success: true}
+    }
+
+    return {message: "Credenciais inválidas!", success: false}
 }
 
 module.exports = {hashPassword, authUser}
