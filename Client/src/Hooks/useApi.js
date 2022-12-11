@@ -30,7 +30,7 @@ export const useApi = () => ({
         return response.data;
     },
     getProductById: async (id) => {
-        const response = await api.get("/product/" + id);
+        const response = await api.get("/products/" + id);
         return response.data;
     }
 })

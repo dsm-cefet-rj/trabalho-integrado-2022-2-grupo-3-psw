@@ -5,21 +5,26 @@ const user = require("./routes/userRoutes/userRoutes.js");
 const quizReco = require("./routes/quizRRoutes/quizRRoutes.js");
 const quizSatis = require('./routes/quizSRoutes/quizSRoutes.js');
 const connectDatabase = require('./database/db.js');
-const productsModel = require('./models/Products')
+const productRoutes = require('./routes/products/productsRoutes')
 
 const app = express();
 app.use(express.json())
 app.use(cors());
 
-connectDatabase()
+connectDatabase();
 
 const { calcularPrecoPrazo } = require('correios-brasil');
 
+// Rotas relacionadas ao quiz de satisfação
 app.use("/", quizSatis);
 
+// Rotas relacionados ao quiz de recomendação
 app.use("/", quizReco);
 
-//Rota de autenticação/registro de usuários
+// Rotas relacionados aos produtos
+app.use("/products", productRoutes);
+
+// Rota de autenticação/registro de usuários
 app.use("/user", user);
 
 //Rota de apresentação
@@ -27,75 +32,6 @@ app.get('/', (req,res) => {
     return res.json("Bem vindo a API do DeepSleep!");
 });
 
-app.post('/product', (req, res) => {
-  const product = new productsModel({
-    nome: req.body.nome,
-    categoria: req.body.categoria,
-    preco: req.body.preco,
-    descricao: req.body.descricao,
-    imagens: req.body.imagens,
-    cores: req.body.cores,
-    detalhes: req.body.detalhes
-  })
-
-  product.save(function(err){
-    if(err){
-      res.send("Falha ao cadastrar produto!");
-    }
-    else{
-      res.send("Produto cadastrado com sucesso!");
-    }
-  })
-})
-
-//Retornar todos os produtos
-app.get("/products", async (req, res) => {
-  const products = await productsModel.find()
-  return res.send(products);
-})
-
-//Retornar produto por id
-app.get("/product/:id", async (req, res) => {
-  const id = req.params.id;
-
-  const product = await productsModel.findById(id);
-  if(product){
-    return res.send(product);
-  }
-  res.json({msgError: "Houve um erro"});
-})
-
-app.get("/products/filter/:filter", (req, res) => {
-  const filter = req.params.filter;
-
-  const filteredProducts = products.filter(item => item.categoria.toLowerCase() == filter.toLowerCase());
-
-  if(filteredProducts){
-    return res.send(filteredProducts);
-  }
-  res.json({msgError: "Houve um erro"});
-})
-
-//Modificar produto pelo id
-app.put("/products/:id", (req, res) => {
-  const id = req.params.id;
-
-  const {name, preco} = req.body;
-
-  const productTemp = products.filter(item => item.id == id);
-  const product = productTemp[0];
-
-  if(product){
-    product.nome = name;
-    product.preco = preco;
-
-    res.send(product);
-  }
-
-  res.json({msgError: "Ocorreu um erro"});
-  
-
-})
 
 //Buscar valor do frete pelo CEP
 app.post("/cep/:cep", async (req, res) =>{

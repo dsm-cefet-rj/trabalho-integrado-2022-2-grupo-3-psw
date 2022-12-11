@@ -142,16 +142,16 @@ function Catalogo() {
                                 getProducts();
                             }}>Tudo</button>
                             <button className="btn btn-primary" onClick={() => {
-                                getFilteredProducts("cama");
+                                getFilteredProducts("Cama");
                             }}>Cama</button>
                             <button className="btn btn-primary" onClick={() => {
-                                getFilteredProducts("estrado");
+                                getFilteredProducts("Estrado");
                             }}>Estrado</button>
                             <button className="btn btn-primary" onClick={() => {
-                                getFilteredProducts("toalha");
+                                getFilteredProducts("Toalha");
                             }}>Toalha</button>
                             <button className="btn btn-primary" onClick={() => {
-                                getFilteredProducts("coco");
+                                getFilteredProducts("Coco");
                             }}>Coco</button>
                         </div>
                     </div>
