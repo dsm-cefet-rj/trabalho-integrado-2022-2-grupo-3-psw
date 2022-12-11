@@ -1,21 +1,23 @@
 const { Router } = require('express');
-const { registrarUsuario, autenticarUsuario } = require('./userService.js');
+// const { registrarUsuario, autenticarUsuario } = require('./userService.js');
+const { create } = require('./usersRepository');
 
 var router = Router();
 
-router.post("/", async (req, res) => {
-    let usuario = req.body;
-    let resultado = await registrarUsuario(usuario);
+router.post("/", create)
+// async (req, res) => {
+//     let usuario = req.body;
+//     let resultado = await registrarUsuario(usuario);
 
-    return res.json({msg: resultado});
-})
+//     return res.json({msg: resultado});
+// })
 
-router.post("/auth", async (req, res) => {
-    let usuario = req.body;
-    let resultado = await autenticarUsuario(usuario);
+// router.post("/auth", async (req, res) => {
+//     let usuario = req.body;
+//     let resultado = await autenticarUsuario(usuario);
 
-    return res.json({msg: resultado});
-})
+//     return res.json({msg: resultado});
+// })
 
 
-module.exports =  router;
+module.exports = router;

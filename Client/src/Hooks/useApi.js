@@ -18,7 +18,7 @@ export const useApi = () => ({
         const response = await api.get("/quizRecomendacao/" + id);
         return response.data;
     },
-    registrarUsuario: async (user) => {
+    create: async (user) => {
         const response = await api.post("/user", user);
         return response.data;
     },

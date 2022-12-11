@@ -1,26 +1,32 @@
-const { salvarUsuario, getUsuarios } = require("./usersRepository.js");
+// const { salvarUsuario, getUsuarios } = require("./usersRepository.js");
+const User = require("../../models/User");
 
-async function registrarUsuario (user) {
-    let usuarios = await getUsuarios()
-    let usuarioRepetido = usuarios.some(u => u.email == user.email);
+const create = (body) => User.create(body);
 
-    if (usuarioRepetido){
-        return "Esse email já está em uso!";
-    }
-    await salvarUsuario(user);
-    return "Usuário cadastrado com sucesso!";
-}
+// async function registrarUsuario (user) {
+//     let usuarios = await getUsuarios()
+//     let usuarioRepetido = usuarios.some(u => u.email == user.email);
 
- async function autenticarUsuario (user) {
-    let usuarios = await getUsuarios()
-    let usuarioExistente = usuarios.some(u => u.email == user.email && u.password == user.password);
+//     if (usuarioRepetido){
+//         return "Esse email já está em uso!";
+//     }
+//     await salvarUsuario(user);
+//     return "Usuário cadastrado com sucesso!";
+// }
 
-    if (usuarioExistente){
-        return "Usuário autenticado!";
-    }
+//  async function autenticarUsuario (user) {
+//     let usuarios = await getUsuarios()
+//     let usuarioExistente = usuarios.some(u => u.email == user.email && u.password == user.password);
+
+//     if (usuarioExistente){
+//         return "Usuário autenticado!";
+//     }
     
-    return "Credenciais inválidas!";
-}
+//     return "Credenciais inválidas!";
+// }
 
-module.exports = registrarUsuario;
-module.exports = autenticarUsuario;
+// module.exports = registrarUsuario;
+// module.exports = autenticarUsuario;
+module.exports = {
+    create
+};
