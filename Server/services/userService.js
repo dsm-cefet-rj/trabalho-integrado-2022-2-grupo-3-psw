@@ -1,5 +1,5 @@
-const User = require("../../models/User");
-const userRepository = require ('./usersRepository');
+const User = require("../models/User");
+const userRepository = require ('../repositories/usersRepository');
 
 const registerUser = async (user) => {
     if (!user.nome || !user.email || !user.password) {
@@ -11,6 +11,7 @@ const registerUser = async (user) => {
     if (duplicatedEmail) {
         return { message: "Esse email já está em uso!", success: false}
     }
+
 
     const registeredUser = await userRepository.registerUser(user);
 

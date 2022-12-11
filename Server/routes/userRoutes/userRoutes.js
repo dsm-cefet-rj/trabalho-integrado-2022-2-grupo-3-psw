@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const userService = require("./userService");
+const userService = require("../../services/userService");
 
 var router = Router();
 
@@ -8,7 +8,7 @@ router.post("/auth", authUser);
 
 async function registerUser(req, res) {
   const user = req.body;
-  
+
   const result = await userService.registerUser(user);
 
   if (result.success) {
