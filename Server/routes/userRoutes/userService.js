@@ -1,35 +1,39 @@
-// const { salvarUsuario, getUsuarios } = require("./usersRepository.js");
 const User = require("../../models/User");
+const userRepository = require ('./usersRepository');
 
-const registerUser = (body) => User.create(body);
+const registerUser = async (user) => {
+    if (!user.nome || !user.email || !user.password) {
+        return { message: "Todos os campos devem ser preenchidos para realizar o registro!", success: false}
+    }
 
-const authUser = (body) => User.find({body});
+    const duplicatedEmail = await userRepository.validateEmail(user.email);
 
-// async function registrarUsuario (user) {
-//     let usuarios = await getUsuarios()
-//     let usuarioRepetido = usuarios.some(u => u.email == user.email);
+    if (duplicatedEmail) {
+        return { message: "Esse email já está em uso!", success: false}
+    }
 
-//     if (usuarioRepetido){
-//         return "Esse email já está em uso!";
-//     }
-//     await salvarUsuario(user);
-//     return "Usuário cadastrado com sucesso!";
-// }
+    const registeredUser = await userRepository.registerUser(user);
 
-//  async function autenticarUsuario (user) {
-//     let usuarios = await getUsuarios()
-//     let usuarioExistente = usuarios.some(u => u.email == user.email && u.password == user.password);
+    return {
+        message: "Usuário cadastrado com sucesso!",
+        registeredUser,
+        success: true
+    }
+}
 
-//     if (usuarioExistente){
-//         return "Usuário autenticado!";
-//     }
+ async function authUser (email, password) {
+    let usuarioExistente = await userRepository.authUser(email, password);
+
+    if (usuarioExistente){
+        return {message: "Usuário autenticado!", success: true};
+    }
     
-//     return "Credenciais inválidas!";
-// }
+    return { message: "Credenciais inválidas!", success: false}
+}
 
-// module.exports = registrarUsuario;
-// module.exports = autenticarUsuario;
 module.exports = {
     registerUser,
     authUser
 };
+
+

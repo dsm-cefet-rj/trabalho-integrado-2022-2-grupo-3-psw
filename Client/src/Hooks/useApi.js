@@ -21,7 +21,7 @@ export const useApi = () => ({
         const response = await api.post("/user", user);
         return response.data;
     },
-    autenticarUsuario: async (user) => {
+    authUser: async (user) => {
         const response = await api.post("/user/auth", user);
         return response.data;
     },

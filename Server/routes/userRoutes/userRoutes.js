@@ -1,24 +1,34 @@
-const { Router } = require('express');
-// const { registrarUsuario, autenticarUsuario } = require('./userService.js');
-const { registerUser, authUser } = require('./usersRepository');
+const { Router } = require("express");
+const userService = require("./userService");
 
 var router = Router();
 
-router.post("/", registerUser)
-router.get("/auth", authUser)
-// async (req, res) => {
-//     let usuario = req.body;
-//     let resultado = await registrarUsuario(usuario);
+router.post("/", registerUser);
+router.post("/auth", authUser);
 
-//     return res.json({msg: resultado});
-// })
+async function registerUser(req, res) {
+  const user = req.body;
+  
+  const result = await userService.registerUser(user);
 
-// router.post("/auth", async (req, res) => {
-//     let usuario = req.body;
-//     let resultado = await autenticarUsuario(usuario);
+  if (result.success) {
+    return res.status(200).send(result)
+  }
 
-//     return res.json({msg: resultado});
-// })
+  return res.status(400).send(result);
+};
 
+async function authUser (req, res) {
+  const userEmail = req.params.email;
+  const userPassword = req.params.password;
+
+  const result = await userService.authUser(userEmail, userPassword);
+
+  if (result.success) {
+    return res.status(200).send(result);
+  }
+
+  return res.status(400).send(result);
+};
 
 module.exports = router;
