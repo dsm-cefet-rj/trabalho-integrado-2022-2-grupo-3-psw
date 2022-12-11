@@ -5,7 +5,9 @@ const Products = moongose.model('Products', {
         type: String,
         required: true
     },
-    cores: { type: Object},
+    cores: { 
+        type: Object
+    },
     imagens: {
         type: Object
     },
