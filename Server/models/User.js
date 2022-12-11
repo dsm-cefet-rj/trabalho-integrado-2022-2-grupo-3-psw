@@ -10,12 +10,12 @@ const UserSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    password: {
+    hashedPassword: {
         type: String,
         required: true,
     }
 })
 
-const User = mongoose.model("User", UserSchema);
+const User = mongoose.model("user", UserSchema, "users");
 
 module.exports = User;
