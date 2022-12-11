@@ -1,10 +1,10 @@
 const { Router } = require('express');
 // const { registrarUsuario, autenticarUsuario } = require('./userService.js');
-const { create } = require('./usersRepository');
+const { registerUser } = require('./usersRepository');
 
 var router = Router();
 
-router.post("/", create)
+router.post("/", registerUser)
 // async (req, res) => {
 //     let usuario = req.body;
 //     let resultado = await registrarUsuario(usuario);

@@ -1,7 +1,7 @@
 // const fs = require('fs');
 const userService = require ('./userService');
 
-const create = async (req, res) => {
+const registerUser = async (req, res) => {
     const { nome, email, password } = req.body;
 
     if (!nome || !email || !password) {
@@ -25,7 +25,7 @@ const create = async (req, res) => {
     });
 };
 
-module.exports = { create };
+module.exports = { registerUser };
 
 // const usuariosFileName = 'users.json'
 

@@ -31,7 +31,7 @@ function RegisterInputs () {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(useApi().create({nome, email, password}));
+        console.log(useApi().registerUser({nome, email, password}));
     }
 
     return (
