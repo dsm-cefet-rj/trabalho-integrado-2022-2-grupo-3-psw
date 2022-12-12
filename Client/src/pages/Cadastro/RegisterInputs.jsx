@@ -31,7 +31,7 @@ function RegisterInputs () {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(useApi().registerUser({nome, email, password}));
+        alert(useApi().registerUser({nome, email, password}));
     }
 
     return (
@@ -98,7 +98,7 @@ function RegisterInputs () {
             <div className="col-12 container" style={{width: "23vw", padding:"0"}} id="haveAccountText">
                 <button disabled={!validPassword || !validPasswordAgain || !email || !nome ? true : false}
                 className="btn btn-danger" id="confirmButton">Confirmar</button>
-                <p className="mt-3">Já possui conta?
+                <p className="mt-2">Já possui conta?
                 <Link to={"/login"}><button className="btn btn-link p-1">Clique aqui</button></Link> 
                 </p> 
             </div>

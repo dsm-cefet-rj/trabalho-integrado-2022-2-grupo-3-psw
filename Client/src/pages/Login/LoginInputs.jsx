@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
 import { useApi } from "../../Hooks/useApi";
+import useLogged from "../../Estados/useLogged";
 
 function LoginInputs() {
     const pswRGX = /^(?=.*\d).{5,12}/;
@@ -10,6 +11,10 @@ function LoginInputs() {
     const [password, setPassword] = useState("");
     const [passwordShown, setPasswordShown] = useState(false);
     const [validPassword, setValidPassword] = useState(false);
+    const currentUser = useLogged(state => state.loggedUser);
+    const login = useLogged(state => state.login);
+    const logout = useLogged(state => state.logout);
+
 
     const togglePassword = (e) => {
         e.preventDefault();
@@ -23,7 +28,8 @@ function LoginInputs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(useApi().authUser({email, password}));
+        const promise = await useApi().authUser({email, password})
+        console.log(promise.success);
     }
 
     return (

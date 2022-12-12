@@ -1,5 +1,10 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { 
+    BrowserRouter as Router,
+    Route, 
+    Routes,
+    Navigate 
+} from "react-router-dom";
 
 //imports das páginas
 import RegisterPage from "../pages/Cadastro";
@@ -17,6 +22,7 @@ import QuizSatisfacaoF from "../pages/Quizes/QuizSatisfacaoFinal"
 import WishList from "../pages/Favoritos"
 import UserPage from "../pages/UserSpace";
 import AcompanharPedido from "../pages/AcompanharPedido";
+// import useLogged from "../Estados/useLogged";
 
 export function AppRoutes() {
     return (
