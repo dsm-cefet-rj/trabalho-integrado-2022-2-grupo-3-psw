@@ -3,7 +3,7 @@ import create from "zustand";
 const useLogged = create((set, get) => ({
     loggedUser: [],
 
-    login: (user) => {
+    logIn: (user) => {
         const login = get().loggedUser;
 
         login.push(user);
@@ -11,7 +11,7 @@ const useLogged = create((set, get) => ({
         set({ login });
     },
     
-    logout: (user) => {
+    logOut: (user) => {
         const login = get().loggedUser;
 
         login.pop(user);

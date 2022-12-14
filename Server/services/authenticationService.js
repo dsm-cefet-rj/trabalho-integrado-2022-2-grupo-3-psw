@@ -16,7 +16,7 @@ const authUser = async (email, password) => {
 
     if (authenticated){
         console.log(authenticated)
-        return {message: "Usuário autenticado!", success: true}
+        return {message: "Usuário autenticado!", success: true, email: authData.email, nome: authData.nome}
     }
 
     return {message: "Credenciais inválidas!", success: false}

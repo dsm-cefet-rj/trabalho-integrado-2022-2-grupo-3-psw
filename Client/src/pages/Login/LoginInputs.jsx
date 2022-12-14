@@ -12,14 +12,13 @@ function LoginInputs() {
     const [passwordShown, setPasswordShown] = useState(false);
     const [validPassword, setValidPassword] = useState(false);
     const currentUser = useLogged(state => state.loggedUser);
-    const login = useLogged(state => state.login);
-    const logout = useLogged(state => state.logout);
+    const logIn = useLogged(state => state.logIn);
+    const logOut = useLogged(state => state.logOut);
 
+    const [userEmail, setUserEmail] = useState("");
+    const [userName, setUserNome] = useState("");
 
-    const togglePassword = (e) => {
-        e.preventDefault();
-        setPasswordShown(!passwordShown);
-    }
+    var user = { email: userEmail, nome: userName };
 
     useEffect(() => {
         const result = pswRGX.test(password);
@@ -29,7 +28,21 @@ function LoginInputs() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const promise = await useApi().authUser({email, password})
-        console.log(promise.success);
+        setUserEmail(promise.email)
+        setUserNome(promise.nome)
+        console.log(promise)
+        if (promise.success) {
+            logIn(user)
+            alert("Usuário autenticado!")
+        }
+    }
+
+    const togglePassword = (e) => {
+        e.preventDefault();
+        setPasswordShown(!passwordShown);
+        console.log(userEmail, userName);
+        console.log(user);
+        console.log(currentUser);
     }
 
     return (
