@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
 import { useApi } from "../../Hooks/useApi";
 import useLogged from "../../Estados/useLogged";
+import useUser from "../../Estados/useUser";
 
 function LoginInputs() {
     const pswRGX = /^(?=.*\d).{5,12}/;
@@ -14,6 +15,8 @@ function LoginInputs() {
     const currentUser = useLogged(state => state.loggedUser);
     const logIn = useLogged(state => state.logIn);
     const logOut = useLogged(state => state.logOut);
+    const setUser = useUser(state => state.setUser);
+    const navigate = useNavigate();
 
     const [userEmail, setUserEmail] = useState("");
     const [userName, setUserNome] = useState("");
@@ -27,14 +30,19 @@ function LoginInputs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const promise = await useApi().authUser({email, password})
-        setUserEmail(promise.email)
+        const promise = await useApi().authUser({email, password}).then((response) => {
+            if(response.success){
+                setUser(response.user);
+                navigate("/");
+            }
+        })
+        /*setUserEmail(promise.email)
         setUserNome(promise.nome)
         console.log(promise)
         if (promise.success) {
             logIn(user)
             alert("Usuário autenticado!")
-        }
+        }*/
     }
 
     const togglePassword = (e) => {

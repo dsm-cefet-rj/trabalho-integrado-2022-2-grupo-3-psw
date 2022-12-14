@@ -31,7 +31,11 @@ function RegisterInputs () {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        alert(useApi().registerUser({nome, email, password}));
+        useApi().registerUser({nome, email, password}).then((response) => {
+            if(response.success){
+                alert("Usuário cadastrado com sucesso!");
+            }
+        });
     }
 
     return (

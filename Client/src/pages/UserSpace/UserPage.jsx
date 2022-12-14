@@ -5,8 +5,13 @@ import "./style.css";
 import { FaUserCircle } from "react-icons/fa";
 import { nomesUsuario } from "./nomesUsuario";
 import { Link } from "react-router-dom";
+import useUser from "../../Estados/useUser";
 
 function UserPage() {
+
+    const user = useUser(state => state.user);
+    const logout = useUser(state => state.desSetUser);
+
     return (
         <html lang="pt-br">
             <ImportaBootstrap />
@@ -18,7 +23,7 @@ function UserPage() {
 
                         <i><FaUserCircle /></i>
                         <div id="texto">
-                            <p>Olá, <b>{nomesUsuario[2].nome}</b></p>
+                            <p>Olá, <b>{user.nome}</b></p>
                         </div>
 
                         <Link to={"/wishlist"}>
@@ -40,6 +45,11 @@ function UserPage() {
                         <Link to={"/entrega"}>
                         <button className="opcao">
                             <p>Acompanhar Pedido</p>
+                        </button>
+                        </Link>
+                        <Link>
+                        <button className="opcao" onClick={logout}>
+                            <p>Sair</p>
                         </button>
                         </Link>
                     </div>

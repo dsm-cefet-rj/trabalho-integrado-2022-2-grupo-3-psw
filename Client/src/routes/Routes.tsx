@@ -22,6 +22,7 @@ import QuizSatisfacaoF from "../pages/Quizes/QuizSatisfacaoFinal"
 import WishList from "../pages/Favoritos"
 import UserPage from "../pages/UserSpace";
 import AcompanharPedido from "../pages/AcompanharPedido";
+import RequireAuth from "../components/RequireAuth";
 // import useLogged from "../Estados/useLogged";
 
 export function AppRoutes() {
@@ -40,7 +41,7 @@ export function AppRoutes() {
             <Route path="/quizSM" element={<QuizSatisfacaoM />} />
             <Route path="/quizSF" element={<QuizSatisfacaoF />} />
             <Route path="/wishlist" element={<WishList />} />
-            <Route path="/user" element={<UserPage />} />
+            <Route path="/user" element={<RequireAuth><UserPage /></RequireAuth>} />
             <Route path = "/entrega" element={<AcompanharPedido />} />
         </Routes>
     )
