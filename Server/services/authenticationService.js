@@ -1,5 +1,8 @@
 const bcrypt = require('bcrypt');
 const userRepository = require('../repositories/usersRepository');
+const jwt = require('jsonwebtoken');
+
+const secret = "SIAMFGIESJdhfG8017513U2MsgfdfhJ3IJR0WEIFWEnbv";
 
 const hashPassword = async (password) => {
     const hash = await bcrypt.hash(password, 10);
@@ -14,12 +17,26 @@ const authUser = async (email, password) => {
     }
     const authenticated = await bcrypt.compare(password, authData.hashedPassword)
 
-    if (authenticated){
+    if (!authenticated){
         console.log(authenticated)
-        return {message: "Usuário autenticado!", success: true, user: {nome: authData.nome, email: authData.email}}
+        return {message: "Credenciais inválidas!", success: false}
+    }
+    
+    try {
+        const token = jwt.sign({
+            id: authData._id,
+            nome: authData.nome,
+            email: authData.email
+        }, secret,)
+
+        return {message: "Usuário autenticado!", success: true, email: authData.email, nome: authData.nome ,token}
     }
 
-    return {message: "Credenciais inválidas!", success: false}
+    catch (err) {
+        return {message: "Token inválido!", success: false}
+
+    }
+
 }
 
 module.exports = {hashPassword, authUser}
