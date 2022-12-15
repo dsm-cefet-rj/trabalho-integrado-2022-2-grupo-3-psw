@@ -1,6 +1,5 @@
 import React from "react";
 import LoginPage from "../pages/Login";
-import useLogged from "../Estados/useLogged";
 import useUser from "../Estados/useUser";
 import { useNavigate } from "react-router-dom";
 

@@ -23,7 +23,6 @@ import WishList from "../pages/Favoritos"
 import UserPage from "../pages/UserSpace";
 import AcompanharPedido from "../pages/AcompanharPedido";
 import RequireAuth from "../components/RequireAuth";
-// import useLogged from "../Estados/useLogged";
 
 export function AppRoutes() {
     return (

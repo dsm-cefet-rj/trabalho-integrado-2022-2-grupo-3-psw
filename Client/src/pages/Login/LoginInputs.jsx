@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
 import { useApi } from "../../Hooks/useApi";
-import useLogged from "../../Estados/useLogged";
 import useUser from "../../Estados/useUser";
 
 function LoginInputs() {
@@ -12,16 +11,9 @@ function LoginInputs() {
     const [password, setPassword] = useState("");
     const [passwordShown, setPasswordShown] = useState(false);
     const [validPassword, setValidPassword] = useState(false);
-    const currentUser = useLogged(state => state.loggedUser);
-    const logIn = useLogged(state => state.logIn);
-    const logOut = useLogged(state => state.logOut);
+   
     const setUser = useUser(state => state.setUser);
     const navigate = useNavigate();
-
-    const [userEmail, setUserEmail] = useState("");
-    const [userName, setUserNome] = useState("");
-
-    var user = { email: userEmail, nome: userName };
 
     useEffect(() => {
         const result = pswRGX.test(password);
@@ -36,13 +28,6 @@ function LoginInputs() {
                 navigate("/");
             }
         })
-        /*setUserEmail(promise.email)
-        setUserNome(promise.nome)
-        console.log(promise)
-        if (promise.success) {
-            logIn(user)
-            alert("Usuário autenticado!")
-        }*/
     }
 
     const togglePassword = (e) => {
