@@ -6,7 +6,7 @@ const useCartItem = create((set, get) => ({
 
     addCartItem: (item) => {
         const cart = get().cartItens;
-        const findProduct = cart.find(produto=> produto.id === item.id);
+        const findProduct = cart.find(produto=> produto._id === item._id);
 
         if (findProduct) {
             findProduct.quantidade += 1;
@@ -21,13 +21,13 @@ const useCartItem = create((set, get) => ({
     // },
 
     removeCartItem: (itemId) => {
-        set({cartItens: get().cartItens.filter(item => item.id !== itemId)});
+        set({cartItens: get().cartItens.filter(item => item._id !== itemId)});
         set({quantityCartItens: get().quantityCartItens - 1})
     },
 
     updateItemQuantity: (itemId, action) => {
         const cart = get().cartItens;
-        const findProduct = cart.find(p => p.id === itemId);
+        const findProduct = cart.find(p => p._id === itemId);
 
         if(findProduct) {
             if (action === 'decrease') {
@@ -40,7 +40,7 @@ const useCartItem = create((set, get) => ({
     },
 
     removeAllItems: (id) => {
-        set({cartItens: get().cartItens.filter(item => item.id == id)});
+        set({cartItens: get().cartItens.filter(item => item._id == id)});
         set(state => ({quantityCartItens: state.quantityCartItens = 0}));
 
 

@@ -7,7 +7,6 @@ import { AiOutlineInbox } from "react-icons/ai"
 import { BsTruckFlatbed } from "react-icons/bs"
 import { GiNightSleep } from "react-icons/gi"
 import "./style.css"
-import useCartItem from "../../Estados/useItemStore";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import useCheckOut from "../../Estados/useCheckOut";
@@ -92,7 +91,7 @@ function AcompanharPedido() {
                         {itemList.map((item) => {
                             return(
                                 <>
-                                <img src={`src/img${item.fotos.foto1}`} className="img-fluid"/>
+                                <img src={`src/img${item.imagens.imagem1}`} className="img-fluid"/>
                                 <p className="mb-5"><strong>{item.nome}</strong></p>
                                 </>
                             )
