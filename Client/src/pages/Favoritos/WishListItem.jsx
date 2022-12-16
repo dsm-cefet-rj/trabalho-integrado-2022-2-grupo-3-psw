@@ -19,7 +19,7 @@ function WishListItem () {
             return (
                 <div className="row">
                     <div className="col-8 my-5 mx-5">
-                        <img src={`src/img${item.fotos.foto1}`} className="img-fluid"/> 
+                        <img src={`src/img${item.imagens.imagem1}`} className="img-fluid"/> 
                             <h3 className="mt-2">{item.nome}</h3>
                         <div className="col-12">
                              <span>R${item.preco}</span>
@@ -27,14 +27,14 @@ function WishListItem () {
                         <div className="col-12 mt-2">
                        <button className="btn btn-danger" onClick={() => {
                         alert("Item removido da lista de desejos!")
-                        removeFromWishList(item.id)}}>
+                        removeFromWishList(item._id)}}>
                             <BsFillTrashFill size={30}/></button>
                         <button className="btn btn-success ms-4" onClick={() =>{
                             alert("Item Adicionado ao Carrinho!")
                             addToCart(item)}}>
                             <BsFillCartPlusFill size={25} style={{marginRight: "10px"}}/>
                             Adicionar ao Carrinho</button>
-                        <Link to={"/detail"+ item.id}>
+                        <Link to={"/detail"+ item._id}>
                             <button className="btn btn-primary ms-4"><FaInfoCircle size={22} style={{marginRight: "8px"}}/>
                             Detalhes do Produto</button>   
                         </Link>

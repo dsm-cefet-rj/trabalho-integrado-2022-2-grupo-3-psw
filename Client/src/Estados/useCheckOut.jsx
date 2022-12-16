@@ -8,7 +8,8 @@ const useCheckOut = create((set, get) => ({
         checkOut.push(item);
 
         set({ checkOut });
-    }
+    },
+
 }));
 
 export default useCheckOut;

@@ -23,6 +23,7 @@ function CartPage() {
     const checkOutList = useCheckOut(state => state.checkOutItems);
     const addItemToCheckOut = useCheckOut(state => state.addItemToCheckOut);
     const removeAllCartItens = useCartItem(state => state.removeAllItems);
+
     const [cepInput, setCepInput] = useState("");
     const [shippingValue, setShippingValue] = useState(0);
     const [show, setShow] = useState(false);
@@ -39,7 +40,6 @@ function CartPage() {
             addItemToCheckOut(product)
         })
         removeAllCartItens(69);
-        console.log(checkOutList);
         console.log(itensOnCart);
         resetValue();
     }

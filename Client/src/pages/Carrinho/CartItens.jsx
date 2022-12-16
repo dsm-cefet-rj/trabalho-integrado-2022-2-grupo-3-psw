@@ -23,7 +23,7 @@ function CartItens ({}) {
                     <div className="col-5 my-5 mx-3">
                         <img src={`src/img${item.imagens.imagem1}`} className="img-fluid"/>
                             <h3 className="mt-2">{item.nome}</h3>
-                        <ItemCounter valorItem={item.preco} itemId={item.id}/>
+                        <ItemCounter valorItem={item.preco} itemId={item._id}/>
                     </div>
                 </div>
             )
