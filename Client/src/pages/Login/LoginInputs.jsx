@@ -20,10 +20,15 @@ function LoginInputs() {
         setValidPassword(result);
     }, [password])
 
+    const setToken = (token) => {
+        localStorage.setItem("authToken",token);
+    } 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const promise = await useApi().authUser({email, password}).then((response) => {
+        await useApi().authUser({email, password}).then((response) => {
             if(response.success){
+                setToken(response.token);
                 setUser(response.user);
                 navigate("/");
             }

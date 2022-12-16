@@ -29,7 +29,7 @@ const authUser = async (email, password) => {
             email: authData.email
         }, secret,)
 
-        return {message: "Usuário autenticado!", success: true, email: authData.email, nome: authData.nome ,token}
+        return {message: "Usuário autenticado!", success: true, user: {email: authData.email, nome: authData.nome} ,token}
     }
 
     catch (err) {
@@ -39,4 +39,21 @@ const authUser = async (email, password) => {
 
 }
 
-module.exports = {hashPassword, authUser}
+const validateToken = (req, res) => {
+    const token = req.params.token;
+
+    try{
+        jwt.verify(token, secret, async (error, decoded) => {
+            if(error){
+                return res.status(400).send({message: "Token inválido para validação"})
+            }
+            const user = await userRepository.getAuthData(decoded.email)
+            return res.status(200).send({user: {nome: user.nome, email: user.email}})
+        })
+    }catch (err) {
+        console.log(err.message)
+        return res.status(400).send({ message: "Não foi possível realizar a validação." });
+    }
+}
+
+module.exports = {hashPassword, authUser,validateToken}

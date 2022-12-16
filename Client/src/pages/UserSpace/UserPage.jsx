@@ -12,6 +12,10 @@ function UserPage() {
     const user = useUser(state => state.user);
     const logout = useUser(state => state.desSetUser);
 
+    const setToken = (token) => {
+        localStorage.setItem("authToken",token);
+    } 
+
     return (
         <html lang="pt-br">
             <ImportaBootstrap />
@@ -48,7 +52,10 @@ function UserPage() {
                         </button>
                         </Link>
                         <Link>
-                        <button className="opcao" onClick={logout}>
+                        <button className="opcao" onClick={() => {
+                            logout();
+                            setToken("");
+                        }}>
                             <p>Sair</p>
                         </button>
                         </Link>

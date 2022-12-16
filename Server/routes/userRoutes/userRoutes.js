@@ -1,10 +1,12 @@
 const { Router } = require("express");
 const userService = require("../../services/userService");
+const authenticationService = require("../../services/authenticationService");
 
 var router = Router();
 
 router.post("/", registerUser);
 router.post("/auth", authUser);
+router.post("/validate/:token", authenticationService.validateToken);
 
 async function registerUser(req, res) {
   const user = req.body;

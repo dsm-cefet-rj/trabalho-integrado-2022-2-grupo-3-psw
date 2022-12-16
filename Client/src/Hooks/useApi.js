@@ -32,5 +32,9 @@ export const useApi = () => ({
     getProductById: async (id) => {
         const response = await api.get("/products/" + id);
         return response.data;
+    },
+    getUserbyToken: async(token) => {
+        const response = await api.post("/user/validate/" + token);
+        return response.data;
     }
 })
