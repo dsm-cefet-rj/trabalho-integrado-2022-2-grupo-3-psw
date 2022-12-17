@@ -13,6 +13,10 @@ const UserSchema = new mongoose.Schema({
     hashedPassword: {
         type: String,
         required: true,
+    },
+    favorites:{
+        type: Array,
+        require: true
     }
 })
 

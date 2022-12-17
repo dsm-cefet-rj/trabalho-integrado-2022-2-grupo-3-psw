@@ -30,6 +30,7 @@ function LoginInputs() {
             if(response.success){
                 setToken(response.token);
                 setUser(response.user);
+                console.log(response.user)
                 navigate("/");
             }
         })

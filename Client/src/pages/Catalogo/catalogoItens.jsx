@@ -6,11 +6,22 @@ import { Link } from "react-router-dom";
 
 import useCartItem from "../../Estados/useItemStore"
 import useWishList from "../../Estados/useWishList";
+import useUser from "../../Estados/useUser";
+
+import { useApi } from "../../Hooks/useApi";
 
 function CatalogoItens({ itens }) {
+    console.log(itens)
+
+    const api = useApi();
+    const user = useUser(state => state.user);
+    console.log(user)
 
     const addItemOnCart = useCartItem(state => state.addCartItem);
-    const addItemOnWishList = useWishList(state => state.addWishListItem);
+
+    const favorite = async(idUser, idProduct) => {
+        await api.favoriteActions(idUser, idProduct).then((response) => console.log(response));
+    }
 
     return (
         <div className="row">
@@ -20,10 +31,7 @@ function CatalogoItens({ itens }) {
                         <div className="product-inner-box position-relative">
                             <div className="iconsProduct position-absolute">
                                 <a className="text-decoration-none"><AiOutlineHeart size={20} 
-                                onClick={() => {
-                                    addItemOnWishList(item)
-                                    alert(item.nome + " adicionado ao lista de desejos!")
-                                }}
+                                onClick={() => favorite(user.id, item._id).then(alert(`${item.nome} adicionado a lista de desejos!`))}
                                 /></a>
                                 <a className="text-decoration-none" onClick={() => {
                                     addItemOnCart(item)

@@ -9,8 +9,24 @@ const getAuthData = async (email) =>  {
     return await User.findOne({email: email})
 }
 
+const addToFavorites = async (idUser, product) => await User.findOneAndUpdate(
+    {_id: idUser, "favorites.product._id": {$nin: [product._id]}} ,
+    {$push: {favorites: {product, add_at: new Date()}}}
+)
+
+const removeToFavorites = async (idUser, product) => await User.findOneAndUpdate(
+    {_id: idUser} ,
+    {$pull: {favorites: {product}}}
+)
+
+
+const getUsers = async () => await User.find();
+
 module.exports = {
     registerUser,
     validateEmail,
-    getAuthData
+    getAuthData,
+    addToFavorites,
+    removeToFavorites,
+    getUsers
 };

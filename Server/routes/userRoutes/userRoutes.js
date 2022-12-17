@@ -7,6 +7,8 @@ var router = Router();
 router.post("/", registerUser);
 router.post("/auth", authUser);
 router.post("/validate/:token", authenticationService.validateToken);
+router.patch("/addToFavorites/:idUser/:idProduct", userService.addToFavorites);
+router.get("/", userService.getUsers);
 
 async function registerUser(req, res) {
   const user = req.body;

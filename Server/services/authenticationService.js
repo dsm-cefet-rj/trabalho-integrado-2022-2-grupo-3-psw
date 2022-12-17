@@ -29,7 +29,7 @@ const authUser = async (email, password) => {
             email: authData.email
         }, secret,)
 
-        return {message: "Usuário autenticado!", success: true, user: {email: authData.email, nome: authData.nome} ,token}
+        return {message: "Usuário autenticado!", success: true, user: {email: authData.email, nome: authData.nome, id: authData._id} ,token}
     }
 
     catch (err) {
@@ -48,7 +48,7 @@ const validateToken = (req, res) => {
                 return res.status(400).send({message: "Token inválido para validação"})
             }
             const user = await userRepository.getAuthData(decoded.email)
-            return res.status(200).send({user: {nome: user.nome, email: user.email}})
+            return res.status(200).send({user: {nome: user.nome, email: user.email, id: user._id, favorites: user.favorites}})
         })
     }catch (err) {
         console.log(err.message)

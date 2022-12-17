@@ -36,5 +36,9 @@ export const useApi = () => ({
     getUserbyToken: async(token) => {
         const response = await api.post("/user/validate/" + token);
         return response.data;
+    },
+    favoriteActions: async(idUser, idProduct) => {
+        const response = await api.patch(`/user/addToFavorites/${idUser}/${idProduct}`);
+        return response.data;
     }
 })
