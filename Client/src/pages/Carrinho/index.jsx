@@ -23,6 +23,9 @@ function CartPage() {
     const checkOutList = useCheckOut(state => state.checkOutItems);
     const addItemToCheckOut = useCheckOut(state => state.addItemToCheckOut);
     const removeAllCartItens = useCartItem(state => state.removeAllItems);
+    const [rua, setRua] = useState("");
+    const [bairro, setBairro] = useState('');
+    const [cidade, setCidade] = useState('');
 
     const [cepInput, setCepInput] = useState("");
     const [shippingValue, setShippingValue] = useState(0);
@@ -55,6 +58,11 @@ function CartPage() {
         }).catch(() => {
             alert("Cep não encontrado/inválido")
         })
+        await api.getLocal(cepInput).then((response) => {
+            setRua(response.logradouro);
+            setBairro(response.bairro);
+            setCidade(response.localidade);
+        });
 
     }
 
@@ -155,6 +163,31 @@ function CartPage() {
                         <p>{cepInput}</p>
                         <h5>Valor Total</h5>
                         <p>R$ {valorTotal.toFixed(2)}</p>
+                        <h5>Cidade</h5>
+                        <p>
+                        <input type={"text"} 
+                        value={cidade}
+                        onChange={e => setCidade(e.target.value)}
+                        style={{border: "none"}}
+                        />
+                        </p>
+                        <h5>Bairro</h5>
+                        <p>
+                        <input type={"text"} 
+                        value={bairro}
+                        onChange={e => setBairro(e.target.value)}
+                        style={{border: "none"}}
+                        />
+                        </p>
+                        <h5>Rua</h5>
+                        <p>
+                        <input type={"text"} 
+                        value={rua}
+                        onChange={e => setRua(e.target.value)}
+                        style={{border: "none"}}
+                        />
+                        </p>
+    
                         
                     </Modal.Body>
                     <Modal.Footer>
