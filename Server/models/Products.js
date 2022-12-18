@@ -9,7 +9,8 @@ const Products = moongose.model('Products', {
         type: Object
     },
     imagens: {
-        type: Object
+        type: Object,
+        required: true
     },
     categoria: {
         type: String,
@@ -25,6 +26,11 @@ const Products = moongose.model('Products', {
     },
     detalhes: {
         type: Object,
+        required: true
+    },
+    feedback:{
+        type: Array,
+        require: true
     }
 });
 

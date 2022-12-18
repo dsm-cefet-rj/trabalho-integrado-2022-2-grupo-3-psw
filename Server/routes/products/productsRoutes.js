@@ -18,5 +18,8 @@ router.get("/:id", productServices.findProductById);
 
 //Retornar produtos pela categoria
 router.get("/filter/:filter", productServices.findProductByCategory);
-  
+
+//Adicionar resposta à lista de respostas do quiz satisfação do produto
+router.patch("/:id", productServices.addFeedback);
+
 module.exports = router;

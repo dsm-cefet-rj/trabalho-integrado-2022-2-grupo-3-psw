@@ -37,53 +37,69 @@ const addProduct = async (req, res) => {
 const findProductById = async (req, res) => {
     const id = req.params.id;
 
-    try{
+    try {
         const product = await productRepository.findProductById(id);
 
         if (product) {
             return res.status(200).send(product);
         }
-    
+
         return res.status(400).send({ message: "Nenhum produto com esse id foi encontrado." });
-    }catch (err) {
+    } catch (err) {
         console.log(err.message)
-        return res.status(400).send({ message: "Não foi possível realizar a busca."});
+        return res.status(400).send({ message: "Não foi possível realizar a busca." });
     }
-  
+
 }
 
-const removeProductById = async(req, res) => {
+const removeProductById = async (req, res) => {
     const id = req.params.id;
 
-    try{
+    try {
         const productRemoved = await productRepository.removeProductById(id);
 
-        if(productRemoved){
-           return res.status(200).send({message: "Produto removido com sucesso!"});
+        if (productRemoved) {
+            return res.status(200).send({ message: "Produto removido com sucesso!" });
         }
 
-        return res.status(400).send({message: "Falha ao tentar remover o produto."});
-    }catch (err) {
+        return res.status(400).send({ message: "Falha ao tentar remover o produto." });
+    } catch (err) {
         console.log(err.message)
-        return res.status(400).send({ message: "Não foi possível realizar a busca."});
+        return res.status(400).send({ message: "Não foi possível realizar a busca." });
     }
 }
 
-const findProductByCategory = async(req, res) => {
+const findProductByCategory = async (req, res) => {
     const category = req.params.filter;
 
-    try{
+    try {
         const filteredProducts = await productRepository.findProductByCategory(category);
 
-        if(filteredProducts.length === 0){
-            return res.status(400).send({message: "Não há produtos compatíveis com essa categoria!"});
+        if (filteredProducts.length === 0) {
+            return res.status(400).send({ message: "Não há produtos compatíveis com essa categoria!" });
         }
-          
+
         return res.status(200).send(filteredProducts);
 
+    } catch (err) {
+        console.log(err.message)
+        return res.status(400).send({ message: "Não foi possível realizar a busca." });
+    }
+}
+
+const addFeedback = async (req, res) => {
+    const id = req.params.id;
+    const feedback = req.body;
+    try {
+        const product = await productRepository.findProductById(id);
+        if (!product) {
+            return res.status(400).send({ message: "Nenhum produto com esse id foi encontrado." });
+        }
+
+        await productRepository.addFeedback(id, feedback);
     }catch (err) {
         console.log(err.message)
-        return res.status(400).send({ message: "Não foi possível realizar a busca."});
+        return res.status(400).send({ message: "Não foi possível adicionar resposta." });
     }
 }
 
@@ -93,4 +109,5 @@ module.exports = {
     findProductById,
     removeProductById,
     findProductByCategory,
+    addFeedback
 }
