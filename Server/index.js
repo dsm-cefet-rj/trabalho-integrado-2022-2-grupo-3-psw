@@ -13,7 +13,7 @@ app.use(cors());
 
 connectDatabase();
 
-const { calcularPrecoPrazo } = require('correios-brasil');
+const { calcularPrecoPrazo, consultarCep } = require('correios-brasil');
 
 // Rotas relacionadas ao quiz de satisfação
 app.use("/", quizSatis);
@@ -56,6 +56,16 @@ app.post("/cep/:cep", async (req, res) =>{
         return res.json({valorFrete: valorEntrega})
       }
       return res.status(400).json();
+})
+
+app.get("/local/:cep", async(req, res) => {
+  const cep = req.params.cep;
+
+  const resposta = await consultarCep(cep);
+  if(resposta){
+    return res.status(200).send(resposta.data);
+  }
+  return res.status(400).send({message: "Não foi possível realizar a busca."});
 })
 
 app.listen(3000, () => {

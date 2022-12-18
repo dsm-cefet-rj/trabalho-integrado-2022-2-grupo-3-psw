@@ -40,5 +40,9 @@ export const useApi = () => ({
     favoriteActions: async(idUser, idProduct) => {
         const response = await api.patch(`/user/addToFavorites/${idUser}/${idProduct}`);
         return response.data;
+    },
+    getLocal: async (cep) => {
+        const response = await api.get("/local/" + cep);
+        return response.data;
     }
 })
