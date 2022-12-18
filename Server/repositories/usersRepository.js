@@ -19,8 +19,35 @@ const removeToFavorites = async (idUser, product) => await User.findOneAndUpdate
     {$pull: {favorites: {product}}}
 )
 
-
 const getUsers = async () => await User.find();
+
+const addToCart = async (userId, product) => await User.findOneAndUpdate(
+    {_id: userId, "cartItens.product._id": {$nin: [product._id]}},
+    {$push: {cartItens: {product}}}
+)
+
+const increaseItemQuantity = async (userId, product) => {
+    let productQtd = product.quantidade + 1;
+
+    await User.findOneAndUpdate(
+        {_id: userId, "cartItens.product._id": {$eq: [product._id]}, "cartItens.product.quantidade": {$gte: [product.quantidade]}},
+        {$: cartItens.product.quantidade = productQtd}  
+    )
+}
+
+const decreaseItemQuantity = async (userId, product) => {
+    let productQtd = product.quantidade - 1;
+
+    await User.findOneAndUpdate(
+        {_id: userId, "cartItens.product._id": {$eq: [product._id]}, "cartItens.product.quantidade":{$lte: [product.quantidade]}},
+        {$: cartItens.product.quantidade = productQtd}  
+    )
+}
+
+const removeFromCart = async (userId, product) => await User.findOneAndUpdate(
+    {_id: userId} ,
+    {$pull: {cartItens: {product}}}
+)
 
 module.exports = {
     registerUser,
@@ -28,5 +55,9 @@ module.exports = {
     getAuthData,
     addToFavorites,
     removeToFavorites,
-    getUsers
+    getUsers,
+    addToCart,
+    increaseItemQuantity,
+    decreaseItemQuantity,
+    removeFromCart
 };

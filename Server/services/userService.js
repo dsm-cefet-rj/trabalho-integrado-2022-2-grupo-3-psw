@@ -68,9 +68,52 @@ const getUsers =  async(req, res) => {
 }
 }
 
+const addToCart = async(req, res) => {
+  const userId = req.params.userId;
+  const productId = req.params.productId;
+
+  try {
+    const product = await findProductById(productId);
+    const addedToCart = await userRepository.addToCart(userId, product);
+
+    if (!addedToCart) {
+      await userRepository.removeFromCart(userId, product);
+      return res.status(200).send({ message: "Item removido do carrinho!", success: true });
+    }
+
+    return res.status(200).send({ message: "Item adicionado ao carrinho!", success: true});
+  }
+  catch (err) {
+    return res.status(400).send({ message: "Não foi possível realizar essa operação!", success: false });
+  }
+}
+
+const increaseItemQuantity = async(req, res) => {
+  const userId = req.params.userId;
+  const productId = req.params.productId;
+
+  try {
+    const product = await findProductById(productId);
+    const increasedItemQtd = await userRepository.increaseItemQuantity(userId, product);
+
+    if (!increasedItemQtd) {
+      await userRepository.decreaseItemQuantity(userId, product);
+      return res.status(200).send({ message: "Quantidade do item diminuída em 1!", success: true, quantidade: product.quantidade});
+    }
+
+    return res.status(200).send({ message: "Quantidade do item aumentada em 1!", success: true, quantidade: product.quantidade});
+  }
+  catch (err) {
+    return res.status(400).send({ message: "Não foi possível realizar essa operação!", success: false});
+  }
+}
+
+
 module.exports = {
   registerUser,
   authUser,
   addToFavorites,
-  getUsers
+  getUsers,
+  addToCart,
+  increaseItemQuantity
 };

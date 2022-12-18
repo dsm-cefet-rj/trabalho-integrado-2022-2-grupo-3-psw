@@ -8,6 +8,8 @@ router.post("/", registerUser);
 router.post("/auth", authUser);
 router.post("/validate/:token", authenticationService.validateToken);
 router.patch("/addToFavorites/:idUser/:idProduct", userService.addToFavorites);
+router.patch("/addToCart/:idUser/:idProduct", userService.addToCart);
+router.patch("/updatedItemQuantity/:idUser/:idProduct", userService.increaseItemQuantity);
 router.get("/", userService.getUsers);
 
 async function registerUser(req, res) {

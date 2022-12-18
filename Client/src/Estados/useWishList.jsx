@@ -1,5 +1,4 @@
 import create from "zustand";
-import { itens } from "../pages/Catalogo/itens";
 
 const useWishList = create((set, get) => ({
     wishList: [],

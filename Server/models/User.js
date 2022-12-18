@@ -17,6 +17,10 @@ const UserSchema = new mongoose.Schema({
     favorites:{
         type: Array,
         require: true
+    },
+    cartItens:{
+        type: Array,
+        required: true
     }
 })
 

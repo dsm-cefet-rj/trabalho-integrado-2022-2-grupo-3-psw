@@ -44,5 +44,13 @@ export const useApi = () => ({
     getLocal: async (cep) => {
         const response = await api.get("/local/" + cep);
         return response.data;
+    },
+    addOrRemoveCartItem: async(userId, productId) => {
+        const response = await api.patch(`/user/addToCart/${userId}/${productId}`);
+        return response.data;
+    },
+    updateItemQuantity: async(userId, productId) => {
+        const response = await api.patch(`/user/updatedItemQuantity/${userId}/${productId}`);
+        return response.data;
     }
 })
