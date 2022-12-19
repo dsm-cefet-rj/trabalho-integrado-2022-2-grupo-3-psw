@@ -1,27 +1,27 @@
-import React, { useState } from "react";
-import QuizS from "./quizS";
+import React, {useState} from "react";
+import { QuizR } from "./QuizR";
 import NavbarComp from "../../../components/NavbarComp";
+import ImportaBootstrap from "../../../components/ImportsBootStrap";
+import Container from "react-bootstrap/esm/Container";
 import Perguntas from "../Perguntas";
 import OpcoesQuiz from "../OpcoesQuiz";
-import BotaoEnviarQuiz from "../BotaoEnviarQuiz"
+import foto from "../../../img/bro.png";
+import BotaoEnviarQuiz from "../BotaoEnviarQuiz";
 import BotaoProximoQuiz from "../BotaoProximoQuiz";
 import BotaoAnteriorQuiz from "../BotaoAnteriorQuiz";
 import Footer from "../../../components/Footer";
-import "./style.css";
-import smile from "../../../img/smile.png";
-import ImportaBootstrap from "../../../components/ImportsBootStrap";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-function QuizSatisfacao() {
 
-    const perguntas = Object.values(QuizS[0].questoes);
+function QuizRecomendacao() {
+    const perguntas = Object.values(QuizR[0].questoes);
     const [questao, setQuestao] = useState(perguntas[0]);
 
     function showButton() {
         if (perguntas.indexOf(questao) == 0) {
             return (<BotaoProximoQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) + 1])} />)
-        } else if (perguntas.indexOf(questao) == 4) {
+        } else if (perguntas.indexOf(questao) == 2) {
             return (<Link to={'/user'}>
                 <BotaoEnviarQuiz />
             </Link>)
@@ -32,40 +32,30 @@ function QuizSatisfacao() {
             </>)
         }
     }
-
     return (
         <>
-
             <ImportaBootstrap />
 
             <body>
 
                 <NavbarComp />
 
-                <main>
+                <Container id="title">
+                    <h2>Bem vindo ao quiz do sono!</h2>
+                </Container>
 
-                    <div className="container" id="title">
-                        <h2>Conte-nos o que achou!</h2>
-                    </div>
+                <Perguntas pergunta={questao.perguntaRecomendacao} />
+                <OpcoesQuiz opcoes={questao.opcoesRecomendacao} />
 
-                    <Perguntas pergunta={questao.perguntaSatisfacao} />
-                    <OpcoesQuiz opcoes={questao.opcoesSatisfacao} />
+                {showButton()}
 
-                    {showButton()}
-
-                    <div className="container" id="image">
-                        <img src={smile} />
-                    </div>
-                </main>
-
-                <footer>
-                    <Footer />
-                </footer>
-
+                <div id="image">
+                    <img src={foto} />
+                </div>
+                <Footer />
             </body>
         </>
     );
 }
 
-export default QuizSatisfacao;
-
+export default QuizRecomendacao;

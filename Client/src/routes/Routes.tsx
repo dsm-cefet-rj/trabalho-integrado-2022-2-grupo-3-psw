@@ -13,9 +13,7 @@ import Catalogo from "../pages/Catalogo";
 import DetalhesPage from "../pages/Detalhes";
 import Home from "../pages/Home";
 import LoginPage from "../pages/Login";
-import QuizRecomendacaoInicio from "../pages/Quizes/QuizRecomendacaoInicio";
-import QuizRecomendacaoMeio from "../pages/Quizes/QuizRecomendacaoMeio";
-import QuizRecomendacaoFinal from "../pages/Quizes/QuizRecomendacaoFinal";
+import QuizRecomendacao from "../pages/Quizes/QuizRecomendacao";
 import QuizSatisfacao from "../pages/Quizes/QuizSatisfacao/QuizSatisfacao";
 import WishList from "../pages/Favoritos"
 import UserPage from "../pages/UserSpace";
@@ -31,9 +29,7 @@ export function AppRoutes() {
             <Route path="/detail:id" element={<DetalhesPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/quizRI" element={<QuizRecomendacaoInicio />} />
-            <Route path="/quizRM" element={<QuizRecomendacaoMeio />} />
-            <Route path="/quizRF" element={<QuizRecomendacaoFinal />} />
+            <Route path="/quizRI" element={<QuizRecomendacao/>}/>
             <Route path="/quizSI" element={<QuizSatisfacao />} />
             <Route path="/wishlist" element={<WishList />} />
             <Route path="/user" element={<RequireAuth><UserPage /></RequireAuth>} />

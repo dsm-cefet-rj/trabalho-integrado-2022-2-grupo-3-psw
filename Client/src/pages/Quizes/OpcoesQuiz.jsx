@@ -1,6 +1,5 @@
 import React from "react";
 import "./styleOpcoesQuiz.css";
-import { opcoes } from "./opcoes"
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 
