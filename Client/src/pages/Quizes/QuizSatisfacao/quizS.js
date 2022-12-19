@@ -1,6 +1,5 @@
-const quizSatis = [
+const QuizS = [
     {
-        "idQuiz": "1",
         "questoes": {
             "q1": {
                 "perguntaSatisfacao": "Você está satisfeito com o produto comprado?",
@@ -51,4 +50,4 @@ const quizSatis = [
     },
 ]
 
-module.exports =  quizSatis;
+export default QuizS;

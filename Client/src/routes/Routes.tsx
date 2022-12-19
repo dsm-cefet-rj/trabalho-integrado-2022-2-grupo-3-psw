@@ -1,9 +1,9 @@
 import React from "react";
-import { 
+import {
     BrowserRouter as Router,
-    Route, 
+    Route,
     Routes,
-    Navigate 
+    Navigate
 } from "react-router-dom";
 
 //imports das páginas
@@ -16,9 +16,7 @@ import LoginPage from "../pages/Login";
 import QuizRecomendacaoInicio from "../pages/Quizes/QuizRecomendacaoInicio";
 import QuizRecomendacaoMeio from "../pages/Quizes/QuizRecomendacaoMeio";
 import QuizRecomendacaoFinal from "../pages/Quizes/QuizRecomendacaoFinal";
-import QuizSatisfacaoI from "../pages/Quizes/QuizSatisfacaoInicial"
-import QuizSatisfacaoM from "../pages/Quizes/QuizSatisfacaoM"
-import QuizSatisfacaoF from "../pages/Quizes/QuizSatisfacaoFinal"
+import QuizSatisfacao from "../pages/Quizes/QuizSatisfacao/QuizSatisfacao";
 import WishList from "../pages/Favoritos"
 import UserPage from "../pages/UserSpace";
 import AcompanharPedido from "../pages/AcompanharPedido";
@@ -36,12 +34,10 @@ export function AppRoutes() {
             <Route path="/quizRI" element={<QuizRecomendacaoInicio />} />
             <Route path="/quizRM" element={<QuizRecomendacaoMeio />} />
             <Route path="/quizRF" element={<QuizRecomendacaoFinal />} />
-            <Route path="/quizSI" element={<QuizSatisfacaoI />} />
-            <Route path="/quizSM" element={<QuizSatisfacaoM />} />
-            <Route path="/quizSF" element={<QuizSatisfacaoF />} />
+            <Route path="/quizSI" element={<QuizSatisfacao />} />
             <Route path="/wishlist" element={<WishList />} />
             <Route path="/user" element={<RequireAuth><UserPage /></RequireAuth>} />
-            <Route path = "/entrega" element={<AcompanharPedido />} />
+            <Route path="/entrega" element={<AcompanharPedido />} />
         </Routes>
     )
 }
