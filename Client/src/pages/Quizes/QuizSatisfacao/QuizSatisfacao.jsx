@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import QuizS from "./quizS";
 import NavbarComp from "../../../components/NavbarComp";
-import Perguntas from "../Perguntas";
-import OpcoesQuiz from "../OpcoesQuiz";
-import BotaoEnviarQuiz from "../BotaoEnviarQuiz"
-import BotaoProximoQuiz from "../BotaoProximoQuiz";
-import BotaoAnteriorQuiz from "../BotaoAnteriorQuiz";
+import Perguntas from "../components/Perguntas";
+import OpcoesQuiz from "../components/OpcoesQuiz";
+import BotaoEnviarQuiz from "../components/BotaoEnviarQuiz";
+import BotaoProximoQuiz from "../components/BotaoProximoQuiz";
+import BotaoAnteriorQuiz from "../components/BotaoAnteriorQuiz";
 import Footer from "../../../components/Footer";
 import "./style.css";
 import smile from "../../../img/smile.png";
