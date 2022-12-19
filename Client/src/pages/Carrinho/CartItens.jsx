@@ -16,12 +16,11 @@ function CartItens ({}) {
 
     const getUser = async(token)  => {
         await api.getUserbyToken(token).then((response) => setUser(response.user));
-        console.log(user)
     }
 
     useEffect(() => {
         getUser(token);
-    },[])
+    },[user.cartItens])
 
     return (
         <>
