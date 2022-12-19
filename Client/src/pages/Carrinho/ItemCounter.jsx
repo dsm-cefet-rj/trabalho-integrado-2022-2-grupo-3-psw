@@ -5,9 +5,15 @@ import "./styles.css";
 import { BsFillTrashFill } from "react-icons/bs"
 import useCartItem from "../../Estados/useItemStore";
 import useOrderItem from "../../Estados/useOrderPrice";
+import { useApi } from "../../Hooks/useApi";
+import useUser from "../../Estados/useUser";
 
 function ItemCounter (props) {
-    
+    const [user, setUser] = useState({});
+
+    const api = useApi();
+
+   
     const [valor, setValor] = useState(0);
     
     const addOrderValue = useOrderItem(state => state.addOrderItemValue);
@@ -16,7 +22,7 @@ function ItemCounter (props) {
     const removeSameItems = useOrderItem(state => state.removeAllSameItems);
     const atualizaItens = useCartItem(state => state.updateItemQuantity);
 
-    const valorTotal = props.valorItem*valor;
+    const valorTotal = props.item.preco*valor;
     
     const aumentaValor = () => {
         setValor(valor + 1);
@@ -36,6 +42,21 @@ function ItemCounter (props) {
         
     }
 
+    const cart = async(userId, productId) => {
+        await api.addOrRemoveCartItem(userId, productId).then((response) => console.log(response));
+    }
+
+    const token = localStorage.getItem("authToken");
+
+    const getUser = async(token)  => {
+        await api.getUserbyToken(token).then((response) => setUser(response.user));
+        console.log(user)
+    }
+
+    useEffect(() => {
+        getUser(token);
+    },[])
+
     return (
         <>
         <div className="col-9">
@@ -54,7 +75,7 @@ function ItemCounter (props) {
         <div className="col-12 mt-3">
             <button className="btn btn-danger" onClick={() => {
                 removeSameItems(props.valorItem, valor)
-                removeItens(props.itemId) 
+                cart(user._id, props.item._id) 
             }}
             >Remover Item <BsFillTrashFill size={18}/></button>  
         </div>

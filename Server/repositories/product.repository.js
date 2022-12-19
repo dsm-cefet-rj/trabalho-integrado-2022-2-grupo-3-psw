@@ -10,7 +10,7 @@ const addProduct = async (body) => {
         descricao: body.descricao,
         imagens: body.imagens,
         cores: body.cores,
-        detalhes: body.detalhes
+        detalhes: body.detalhes,
     })
 
     return product;

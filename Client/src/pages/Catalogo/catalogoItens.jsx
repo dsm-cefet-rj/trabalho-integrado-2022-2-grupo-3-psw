@@ -23,6 +23,10 @@ function CatalogoItens({ itens }) {
         await api.favoriteActions(idUser, idProduct).then((response) => console.log(response));
     }
 
+    const cart = async(userId, productId) => {
+        await api.addOrRemoveCartItem(userId, productId).then((response) => console.log(response));
+    }
+
     return (
         <div className="row">
             {itens.map((item) => {
@@ -34,9 +38,8 @@ function CatalogoItens({ itens }) {
                                 onClick={() => favorite(user.id, item._id).then(alert(`${item.nome} adicionado a lista de desejos!`))}
                                 /></a>
                                 <a className="text-decoration-none" onClick={() => {
-                                    addItemOnCart(item)
-                                    alert(item.nome + " adicionado ao carrinho!")
-                                }}><AiOutlineShoppingCart size={20} /></a>
+                                    cart(user.id, item._id).then(alert(`${item.nome} adicionado ao carrinho!`))}}>
+                                <AiOutlineShoppingCart size={20} /></a>
                             </div>
                             <Link to={"/detail" + item._id} className="text-decoration-none" style={{ color: "inherit" }}>
                                 <img src={`src/img${item.imagens.imagem1}`} className="img-fluid" />

@@ -24,6 +24,10 @@ function WishListItem() {
         await api.favoriteActions(idUser, idProduct).then(alert("Item removido da lista de desejos!"));
     }
 
+    const cart = async(userId, productId) => {
+        await api.addOrRemoveCartItem(userId, productId).then((response) => console.log(response));
+    }
+
     useEffect(() => {
         getUser(token);
     },[])
@@ -49,8 +53,8 @@ function WishListItem() {
                                         }}>
                                             <BsFillTrashFill size={30} /></button>
                                         <button className="btn btn-success ms-4" onClick={() => {
-                                            alert("Item Adicionado ao Carrinho!")
-                                            addToCart(item)
+                                            cart(user.id, item._id).then(alert(`${item.nome} adicionado ao carrinho!`))
+                                            getUser(token);
                                         }}>
                                             <BsFillCartPlusFill size={25} style={{ marginRight: "10px" }} />
                                             Adicionar ao Carrinho</button>

@@ -75,7 +75,7 @@ const addToCart = async(req, res) => {
   try {
     const product = await findProductById(productId);
     const addedToCart = await userRepository.addToCart(userId, product);
-
+    
     if (!addedToCart) {
       await userRepository.removeFromCart(userId, product);
       return res.status(200).send({ message: "Item removido do carrinho!", success: true });
@@ -88,25 +88,26 @@ const addToCart = async(req, res) => {
   }
 }
 
-const increaseItemQuantity = async(req, res) => {
+const updateItemQuantity = async(req, res) => {
   const userId = req.params.userId;
   const productId = req.params.productId;
 
   try {
     const product = await findProductById(productId);
-    const increasedItemQtd = await userRepository.increaseItemQuantity(userId, product);
+    const updatedItemQtd = await userRepository.increaseItemQuantity(userId, product);
 
-    if (!increasedItemQtd) {
+    if (increasedItemQtd) {
       await userRepository.decreaseItemQuantity(userId, product);
-      return res.status(200).send({ message: "Quantidade do item diminuída em 1!", success: true, quantidade: product.quantidade});
+      return res.status(200).send({ message: "Quantidade do item aumentada em 1!", success: true, quantidade: product.quantidade});
     }
-
-    return res.status(200).send({ message: "Quantidade do item aumentada em 1!", success: true, quantidade: product.quantidade});
+    
+    return res.status(200).send({ message: "Quantidade do item diminuída em 1!", success: true, quantidade: product.quantidade});
   }
   catch (err) {
     return res.status(400).send({ message: "Não foi possível realizar essa operação!", success: false});
   }
 }
+
 
 
 module.exports = {
@@ -115,5 +116,5 @@ module.exports = {
   addToFavorites,
   getUsers,
   addToCart,
-  increaseItemQuantity
+  updateItemQuantity
 };

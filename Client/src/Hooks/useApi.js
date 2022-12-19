@@ -50,7 +50,7 @@ export const useApi = () => ({
         return response.data;
     },
     updateItemQuantity: async(userId, productId) => {
-        const response = await api.patch(`/user/updatedItemQuantity/${userId}/${productId}`);
+        const response = await api.patch(`/user/increaseItemQuantity/${userId}/${productId}`);
         return response.data;
     }
 })

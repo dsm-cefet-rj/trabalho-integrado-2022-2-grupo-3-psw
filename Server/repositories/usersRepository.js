@@ -23,31 +23,20 @@ const getUsers = async () => await User.find();
 
 const addToCart = async (userId, product) => await User.findOneAndUpdate(
     {_id: userId, "cartItens.product._id": {$nin: [product._id]}},
-    {$push: {cartItens: {product}}}
+    {$push: {cartItens: {product, productQtd: 0, orderDate: null}}}
 )
-
-const increaseItemQuantity = async (userId, product) => {
-    let productQtd = product.quantidade + 1;
-
-    await User.findOneAndUpdate(
-        {_id: userId, "cartItens.product._id": {$eq: [product._id]}, "cartItens.product.quantidade": {$gte: [product.quantidade]}},
-        {$: cartItens.product.quantidade = productQtd}  
-    )
-}
-
-const decreaseItemQuantity = async (userId, product) => {
-    let productQtd = product.quantidade - 1;
-
-    await User.findOneAndUpdate(
-        {_id: userId, "cartItens.product._id": {$eq: [product._id]}, "cartItens.product.quantidade":{$lte: [product.quantidade]}},
-        {$: cartItens.product.quantidade = productQtd}  
-    )
-}
 
 const removeFromCart = async (userId, product) => await User.findOneAndUpdate(
     {_id: userId} ,
     {$pull: {cartItens: {product}}}
 )
+
+const updateItemQuantity = async (userId, product, productQtd, orderDate) => await User.findOneAndUpdate(
+        {_id: userId, "cartItens.product._id": {$eq: [product._id]}},
+        {$set: {cartItens: {productQtd: productQtd, orderDate: orderDate}}} 
+)
+
+
 
 module.exports = {
     registerUser,
@@ -57,7 +46,6 @@ module.exports = {
     removeToFavorites,
     getUsers,
     addToCart,
-    increaseItemQuantity,
-    decreaseItemQuantity,
+    updateItemQuantity,
     removeFromCart
 };
