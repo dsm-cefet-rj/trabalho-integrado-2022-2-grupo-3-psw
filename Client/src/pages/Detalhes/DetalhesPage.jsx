@@ -6,15 +6,13 @@ import NavbarComp from "../../components/NavbarComp";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoIosHeart } from "react-icons/io";
 import BasicExample from "./Informacoes";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, useNavigate, Navigate, useParams } from "react-router-dom";
 import useWishList from "../../Estados/useWishList";
 
 import useCartItem from "../../Estados/useItemStore";
 
 import { useApi } from "../../Hooks/useApi";
 import ReactLoading from 'react-loading';
-
-import { useNavigate } from "react-router-dom";
 
 
 function DetalhesPage() {
@@ -29,6 +27,7 @@ function DetalhesPage() {
     const removeWishList = useWishList(state => state.removeWishListItem);
     const itensOnWishList = useWishList(state => state.wishList);
     const ids = [];
+
     const navigate = useNavigate();
     const [user, setUser] = useState({});
 
@@ -60,7 +59,8 @@ function DetalhesPage() {
 
     useEffect(() => {
         getProduct(id);
-        finId(product.id)
+        finId(product.id);
+        getUser(token);
         getUser(token);
     }, [product.id])
 
@@ -189,6 +189,12 @@ function DetalhesPage() {
                                     }
 
                                 </div>
+                                {user.prioridade && <div className="buyButton">
+                                    <button className="buy" onClick={async () => await api.removeProductById(product._id).then(navigate("/catalogue"))}>
+                                        <p>Excluir Produto</p>
+                                    </button>
+                                </div>}
+
 
 
                                 <div className="buyButton" >

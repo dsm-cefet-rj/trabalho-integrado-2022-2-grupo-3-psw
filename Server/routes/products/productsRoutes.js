@@ -2,13 +2,14 @@ const {Router} = require("express");
 const router = Router();
 const productsModel = require('../../models/Products')
 const productServices = require('../../services/products.service')
+const upload = require("../../config_muter");
 
 
 //Retornar todos os produtos
 router.get("/", productServices.getAllProducts);
 
 //Cadastrar um produto
-router.post('/', productServices.addProduct);
+router.post('/', upload.single("fotoProduto"), productServices.addProduct);
 
 // Deletar um produto pelo id
 router.delete("/:id", productServices.removeProductById);

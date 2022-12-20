@@ -60,5 +60,12 @@ export const useApi = () => ({
     addToOrderList: async(userId, productId, productQtd, orderDate) => {
         const response = await api.patch(`/user/addToOrderList/${userId}/${productId}/${productQtd}/${orderDate}`);
         return response.data;
+    },
+    addProduct: async(product) => {
+        const response = await api.post('/products', product);
+        return response.data;
+    },
+    removeProductById: async(idProduct) => {
+        const response = await api.delete("products/" + idProduct);
     }
 })

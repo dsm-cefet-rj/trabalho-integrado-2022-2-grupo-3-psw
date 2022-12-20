@@ -29,6 +29,9 @@ const authUser = async (email, password) => {
             email: authData.email
         }, secret,)
 
+        if(email == "admin@gmail.com" && password == "admin1"){
+            return {message: "Usuário autenticado!", success: true, user: {email: authData.email, nome: authData.nome, id: authData._id, prioridade: 1} ,token}
+        }
         return {message: "Usuário autenticado!", success: true, user: {email: authData.email, nome: authData.nome, id: authData._id} ,token}
     }
 
@@ -47,10 +50,18 @@ const validateToken = (req, res) => {
             if(error){
                 return res.status(400).send({message: "Token inválido para validação"})
             }
-            const user = await userRepository.getAuthData(decoded.email)
+            const user = await userRepository.getAuthData(decoded.email);
+
+
+            if(user.nome == "admin" && user.email == "admin@gmail.com"){
+                return res.status(200).send({user: 
+                    {nome: user.nome, email: user.email, id: user._id, favorites: user.favorites, cartItens: user.cartItens, ordersList: user.ordersList, prioridade: 1}
+                })
+            }
             return res.status(200).send({user: 
                 {nome: user.nome, email: user.email, id: user._id, favorites: user.favorites, cartItens: user.cartItens, ordersList: user.ordersList}
             })
+          
         })
     }catch (err) {
         console.log(err.message)

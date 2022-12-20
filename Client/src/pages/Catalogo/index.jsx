@@ -17,6 +17,7 @@ import ReactLoading from 'react-loading';
 import { itens } from "./itens";
 import { Button } from "react-bootstrap";
 import { useApi } from "../../Hooks/useApi";
+import AddProduct from "./addProduct";
 
 
 
@@ -24,7 +25,16 @@ function Catalogo() {
 
     useEffect(() => {
         getProducts();
+        getUser(token);
     }, [])
+
+    const [user, setUser] = useState({});
+
+    const token = localStorage.getItem("authToken");
+
+    const getUser = async(token)  => {
+        await api.getUserbyToken(token).then((response) => setUser(response.user));
+    }
 
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -125,6 +135,8 @@ function Catalogo() {
                                     </div>
                                 </DropdownButton>
                             </form>
+                            {user.prioridade && <AddProduct/>}
+                            
                         </div>
                     </div>
                 </div>

@@ -11,11 +11,9 @@ import useUser from "../../Estados/useUser";
 import { useApi } from "../../Hooks/useApi";
 
 function CatalogoItens({ itens }) {
-    console.log(itens)
 
     const api = useApi();
     const user = useUser(state => state.user);
-    console.log(user)
 
     const addItemOnCart = useCartItem(state => state.addCartItem);
 

@@ -30,7 +30,7 @@ const Products = moongose.model('Products', {
     },
     feedback:{
         type: Array,
-        required: true
+        require: true
     },
 });
 
