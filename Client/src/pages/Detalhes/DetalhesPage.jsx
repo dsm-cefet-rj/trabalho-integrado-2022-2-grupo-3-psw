@@ -30,8 +30,18 @@ function DetalhesPage() {
     const itensOnWishList = useWishList(state => state.wishList);
     const ids = [];
     const navigate = useNavigate();
-    
-    const sendToSatisfaction = () =>{
+    const [user, setUser] = useState({});
+
+
+    const token = localStorage.getItem("authToken");
+
+    const getUser = async (token) => {
+        await api.getUserbyToken(token).then((response) => setUser(response.user));
+    }
+
+    console.log(user);
+
+    const sendToSatisfaction = () => {
         navigate("/visualizar");
     }
 
@@ -44,6 +54,7 @@ function DetalhesPage() {
     useEffect(() => {
         getProduct(id);
         finId(product.id)
+        getUser(token);
     }, [product.id])
 
     for (let i = 0; i < itensOnWishList.length; i++) {
@@ -134,8 +145,15 @@ function DetalhesPage() {
 
                                 <div className="buyButton">
                                     <button className="buy" onClick={() => {
-                                        additem(product);
-                                        alert("Adicionado ao carrinho de compras!")
+
+                                        if (token) {
+                                            additem(product);
+                                            alert("Adicionado ao carrinho de compras!");
+                                        }
+                                        else {
+                                            alert("Usuario não está logado!");
+                                        }
+
                                     }}>
                                         <p>Adicionar ao Carrinho</p>
                                     </button>
@@ -144,9 +162,14 @@ function DetalhesPage() {
                                     {favorite == false
                                         ?
                                         <button className="buy" onClick={() => {
-                                            addWishList(product);
-                                            setFavorite(true);
-                                            alert("Adicionado a lista de desejos!")
+                                            if (token) {
+                                                addWishList(product);
+                                                setFavorite(true);
+                                                alert("Adicionado a lista de desejos!")
+                                            }
+                                            else {
+                                                alert("Usuário não está logado!")
+                                            }
                                         }}>
                                             <p>Adicionar aos Favoritos     <IoIosHeartEmpty size={25} ></IoIosHeartEmpty></p>
                                         </button>
@@ -162,13 +185,13 @@ function DetalhesPage() {
 
                                 </div>
 
-                                
-                                    <div className="buyButton" >
-                                        <button className="buy" onClick = {sendToSatisfaction}>
-                                            <p>Satisfação do Cliente</p>
-                                        </button>
-                                    </div>
-                                
+
+                                <div className="buyButton" >
+                                    <button className="buy" onClick={sendToSatisfaction}>
+                                        <p>Satisfação do Cliente</p>
+                                    </button>
+                                </div>
+
 
                                 <hr></hr>
                                 <div id="details">
