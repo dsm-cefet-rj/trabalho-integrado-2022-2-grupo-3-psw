@@ -35,11 +35,18 @@ function DetalhesPage() {
 
     const token = localStorage.getItem("authToken");
 
+    const addToCart = async (userId, productId) => {
+        await api.addOrRemoveCartItem(userId, productId)
+    }
+
+    const toFavorites = async (userId, productId) => {
+        await api.favoriteActions(userId, productId)
+    }
+
     const getUser = async (token) => {
         await api.getUserbyToken(token).then((response) => setUser(response.user));
     }
 
-    console.log(user);
 
     const sendToSatisfaction = () => {
         navigate("/visualizar");
@@ -104,8 +111,6 @@ function DetalhesPage() {
             <NavbarComp></NavbarComp>
 
 
-
-
             {Object.keys(product).length > 0
                 ?
                 <div>
@@ -147,7 +152,7 @@ function DetalhesPage() {
                                     <button className="buy" onClick={() => {
 
                                         if (token) {
-                                            additem(product);
+                                            addToCart(user.id, product._id);
                                             alert("Adicionado ao carrinho de compras!");
                                         }
                                         else {
@@ -163,7 +168,7 @@ function DetalhesPage() {
                                         ?
                                         <button className="buy" onClick={() => {
                                             if (token) {
-                                                addWishList(product);
+                                                toFavorites(user.id, product._id);
                                                 setFavorite(true);
                                                 alert("Adicionado a lista de desejos!")
                                             }
@@ -175,7 +180,7 @@ function DetalhesPage() {
                                         </button>
                                         :
                                         <button className="buy" onClick={() => {
-                                            removeWishList(product.id)
+                                            toFavorites(user.id, product._id);
                                             setFavorite(false)
                                             alert("Retirado da lista de desejos!")
                                         }}>
