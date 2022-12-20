@@ -78,6 +78,16 @@ function DetalhesPage() {
         }
     }
 
+    function showButton(){
+        if(user.email == "admin@gmail.com"){
+            return(<div className="buyButton" >
+            <button className="buy" onClick={sendToSatisfaction}>
+                <p>Satisfação do Cliente</p>
+            </button>
+        </div>);
+        }
+    }
+
     return (
 
         <div>
@@ -195,15 +205,8 @@ function DetalhesPage() {
                                     </button>
                                 </div>}
 
-
-
-                                <div className="buyButton" >
-                                    <button className="buy" onClick={sendToSatisfaction}>
-                                        <p>Satisfação do Cliente</p>
-                                    </button>
-                                </div>
-
-
+                                {showButton()}
+                                
                                 <hr></hr>
                                 <div id="details">
                                     <BasicExample medidas={product.detalhes.medidas} material={product.detalhes.material} fabricante={product.detalhes.fabricante} ></BasicExample>
