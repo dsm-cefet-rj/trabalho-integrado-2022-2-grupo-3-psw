@@ -109,15 +109,16 @@ function AcompanharPedido() {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <h5 className="mb-4">Itens:</h5>
+                        <h5 className="mb-4">Lista de Pedidos:</h5>
                         {user.ordersList 
                         ?
                         user.ordersList.map(item => {
                         return(
                             <div className="container-fluid mb-5" id="modal">
                             <img src={`src/img${item.product.imagens.imagem1}`} className="img-fluid"/>
-                            <p className="mt-1"><strong>{item.product.nome}</strong></p>
+                            <h4 className="mt-1 mb-3"><strong>{item.product.nome}</strong></h4>
                             <p><strong>Quantidade do item: {item.productQtd}</strong></p>
+                            <p><strong>Valor total: R${(item.productQtd*item.product.preco).toFixed(2)}</strong></p>
                             <p><strong>Data do pedido: {item.orderDate}</strong></p>
                             </div>
                             )

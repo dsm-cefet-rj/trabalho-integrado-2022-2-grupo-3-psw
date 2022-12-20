@@ -67,7 +67,7 @@ function LoginInputs() {
                     }
                 </button>
             </div>
-            <div className="col-12 container my-4" style={{ width: "23vw", padding: "0" }} id="registerText">
+            <div className="col-12 container mt-4 mb-3" style={{ width: "23vw", padding: "0" }} id="registerText">
                 <button disabled={!validPassword || !email ? true : false}
                     className="btn btn-danger" id="confirmButton">Confirmar</button>
                 <p className="mt-3">Não é registrado?
