@@ -56,6 +56,9 @@ function AcompanharPedido() {
 
                         <div className="caixa" id="transporte">
                             <button className="btn btn-primary me-5"
+                            onClick={()=>{
+                                alert('Não há pedidos encaminhados!')
+                            }}
                             style={{borderRadius: "20px"}}>
                                 <BsTruckFlatbed className="me-2" size={30}/>
                                 Exibir pedidos a caminho
@@ -68,6 +71,9 @@ function AcompanharPedido() {
 
                         <div className="caixa" id="entregue">
                             <button className="btn btn-primary me-5"
+                            onClick={()=>{
+                                alert('Não há pedidos entregues!')
+                            }}
                             style={{borderRadius: "20px"}}>
                                 <GiNightSleep className="me-2" size={30}/>
                                 Exibir pedidos já entregues
@@ -99,18 +105,21 @@ function AcompanharPedido() {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="example-custom-modal-styling-title">
-                            <h2>Em breve o seu sono estará garantido! Pedido Coletado</h2>
+                            <h2>Aqui estão os pedidos que já foram feitos e coletados!</h2>
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <h5 className="mb-4">Itens:</h5>
-                        {user.ordersList ?
+                        {user.ordersList 
+                        ?
                         user.ordersList.map(item => {
                         return(
-                            <>
+                            <div className="container-fluid mb-5" id="modal">
                             <img src={`src/img${item.product.imagens.imagem1}`} className="img-fluid"/>
-                            <p className="mb-5"><strong>{item.product.nome}</strong></p>
-                            </>
+                            <p className="mt-1"><strong>{item.product.nome}</strong></p>
+                            <p><strong>Quantidade do item: {item.productQtd}</strong></p>
+                            <p><strong>Data do pedido: {item.orderDate}</strong></p>
+                            </div>
                             )
                         }):
                         <p></p>

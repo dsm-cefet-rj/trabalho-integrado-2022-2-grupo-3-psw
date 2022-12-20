@@ -48,7 +48,9 @@ const validateToken = (req, res) => {
                 return res.status(400).send({message: "Token inválido para validação"})
             }
             const user = await userRepository.getAuthData(decoded.email)
-            return res.status(200).send({user: {nome: user.nome, email: user.email, id: user._id, favorites: user.favorites, cartItens: user.cartItens}})
+            return res.status(200).send({user: 
+                {nome: user.nome, email: user.email, id: user._id, favorites: user.favorites, cartItens: user.cartItens, ordersList: user.ordersList}
+            })
         })
     }catch (err) {
         console.log(err.message)
