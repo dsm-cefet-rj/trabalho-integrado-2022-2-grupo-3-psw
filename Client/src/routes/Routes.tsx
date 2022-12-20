@@ -26,7 +26,7 @@ export function AppRoutes() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/catalogue" element={<Catalogo />} />
-            <Route path="/cart" element={<CartPage />} />
+            <Route path="/cart" element={<RequireAuth><CartPage /></RequireAuth>} />
             <Route path="/detail:id" element={<DetalhesPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />

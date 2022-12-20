@@ -13,21 +13,15 @@ import { MdAccountCircle } from "react-icons/md";
 import { MdShoppingCart } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
-import useCartItem from "../Estados/useItemStore"
 import { useEffect, useState } from 'react';
 import { useApi } from '../Hooks/useApi';
 
 function NavbarComp() {
 
-    //const cartItem = useCartItem(state => state.quantityCartItens);
     const [user, setUser] = useState({});
 
     const api = useApi();
-    if(user.cartItens){
-        const temp = Array.from(user.cartItens);
-    }
-
-
+    
     const token = localStorage.getItem("authToken");
 
     const getUser = async(token)  => {
@@ -76,7 +70,7 @@ function NavbarComp() {
                                 <div>
                                     <MdShoppingCart size={25} /><Badge bg="danger">{user.cartItens.length}</Badge>
                                 </div>
-                                : <p></p>}
+                                : <MdShoppingCart size={25}/> }
                                 
 
                             </Link>
