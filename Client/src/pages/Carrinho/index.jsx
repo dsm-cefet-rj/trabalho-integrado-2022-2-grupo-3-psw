@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css"
 import NavbarComp from "../../components/NavbarComp";
 import ImportaBootstrap from "../../components/ImportsBootStrap";
@@ -18,23 +18,34 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 function CartPage() {
-    const orderList = useOrderItem(state => state.totalValue);
-    const resetValue = useOrderItem(state => state.resetTotalValue);
-    const checkOutList = useCheckOut(state => state.checkOutItems);
+
     const addItemToCheckOut = useCheckOut(state => state.addItemToCheckOut);
     const removeAllCartItens = useCartItem(state => state.removeAllItems);
     const [rua, setRua] = useState("");
     const [bairro, setBairro] = useState('');
     const [cidade, setCidade] = useState('');
+    const [user, setUser] = useState({});
 
     const [cepInput, setCepInput] = useState("");
     const [shippingValue, setShippingValue] = useState(0);
     const [show, setShow] = useState(false);
-    const valorTotal = orderList + parseFloat(shippingValue);
+
+    const getValorTotal = () => {
+        if(user.cartItens){
+            const somaTemp = user.cartItens.map((item) => item.product.preco * item.productQtd);
+            let soma = 0;
+            for(var i = 0; i < somaTemp.length; i++) {
+                soma += somaTemp[i];
+            }
+            return soma;
+        }
+  
+    }
+
+    const valorTotal = getValorTotal() + parseFloat(shippingValue);
 
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
     const itensOnCart = useCartItem(state => state.cartItens);
 
     const checkOut = () => {
@@ -44,7 +55,6 @@ function CartPage() {
         })
         removeAllCartItens(69);
         console.log(itensOnCart);
-        resetValue();
     }
 
     const api = useApi();
@@ -70,17 +80,29 @@ function CartPage() {
         e.preventDefault();
         setShow(true);
 
-        if (itensOnCart == 0) {
+        if (user.cartItens.length == 0) {
             alert("Não há itens no carrinho!! Adicione itens para realizar o pedido!")
             setShow(false);
         }
     }
 
+
+
+    const token = localStorage.getItem("authToken");
+
+    const getUser = async(token)  => {
+        await api.getUserbyToken(token).then((response) => setUser(response.user));
+    }
+
+    useEffect(() => {
+        getUser(token);
+    },[user.cartItens])
+
     return (
         <html lang="pt-br">
             <ImportaBootstrap />
 
-            <body onLoad={resetValue}>
+            <body>
 
                 <NavbarComp />
 
@@ -154,11 +176,14 @@ function CartPage() {
                     </Modal.Header>
                     <Modal.Body>
                         <h5>Itens</h5>
-                        {itensOnCart.map((item) => {
+                        {user.cartItens ? user.cartItens.map((item) => {
                             return(
-                                <p>{item.nome}</p>
+                                <div style={{display: "flex"}}>
+                                <p>{item.product.nome}</p>
+                                <p style={{marginLeft: "20px", opacity: "0.5"}}>x {item.productQtd}</p>
+                                </div>
                             )
-                        })}
+                        }): <p>Não há itens</p>}
                         <h5>Cep</h5>
                         <p>{cepInput}</p>
                         <h5>Valor Total</h5>

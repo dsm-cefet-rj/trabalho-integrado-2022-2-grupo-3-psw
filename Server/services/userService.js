@@ -88,22 +88,40 @@ const addToCart = async(req, res) => {
   }
 }
 
-const updateItemQuantity = async(req, res) => {
+const increaseItemQuantity = async(req, res) => {
   const userId = req.params.userId;
   const productId = req.params.productId;
 
   try {
-    const product = await findProductById(productId);
-    const updatedItemQtd = await userRepository.increaseItemQuantity(userId, product);
+    const updatedItemQtd = await userRepository.increaseItemQuantity(userId, productId);
 
-    if (increasedItemQtd) {
-      await userRepository.decreaseItemQuantity(userId, product);
-      return res.status(200).send({ message: "Quantidade do item aumentada em 1!", success: true, quantidade: product.quantidade});
+    if (updatedItemQtd) {
+      return res.status(200).send({message: "Quantidade aumentada em 1!"});    
     }
     
-    return res.status(200).send({ message: "Quantidade do item diminuída em 1!", success: true, quantidade: product.quantidade});
+    return res.status(400).send({message: "Não foi possível aumentar a quantidade!"});
   }
   catch (err) {
+    console.log(err.message)
+    return res.status(400).send({ message: "Não foi possível realizar essa operação!", success: false});
+  }
+}
+
+const decreaseItemQuantity = async(req, res) => {
+  const userId = req.params.userId;
+  const productId = req.params.productId;
+
+  try {
+    const updatedItemQtd = await userRepository.decreaseItemQuantity(userId, productId);
+
+    if (updatedItemQtd) {
+      return res.status(200).send({message: "Quantidade diminuida em 1!"});    
+    }
+    
+    return res.status(400).send({message: "Não foi possível diminuir a quantidade!"});
+  }
+  catch (err) {
+    console.log(err.message)
     return res.status(400).send({ message: "Não foi possível realizar essa operação!", success: false});
   }
 }
@@ -116,5 +134,6 @@ module.exports = {
   addToFavorites,
   getUsers,
   addToCart,
-  updateItemQuantity
+  increaseItemQuantity,
+  decreaseItemQuantity
 };

@@ -9,7 +9,8 @@ router.post("/auth", authUser);
 router.post("/validate/:token", authenticationService.validateToken);
 router.patch("/addToFavorites/:idUser/:idProduct", userService.addToFavorites);
 router.patch("/addToCart/:userId/:productId", userService.addToCart);
-router.patch("/updateItemQuantity/:userId/:productId", userService.updateItemQuantity);
+router.patch("/increaseItemQuantity/:userId/:productId", userService.increaseItemQuantity);
+router.patch("/decreaseItemQuantity/:userId/:productId", userService.decreaseItemQuantity);
 
 router.get("/", userService.getUsers);
 

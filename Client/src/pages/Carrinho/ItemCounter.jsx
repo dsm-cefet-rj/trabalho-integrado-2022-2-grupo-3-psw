@@ -22,16 +22,20 @@ function ItemCounter (props) {
     const removeSameItems = useOrderItem(state => state.removeAllSameItems);
     const atualizaItens = useCartItem(state => state.updateItemQuantity);
 
-    const valorTotal = props.item.preco*valor;
+    const valorTotal = props.item.product.preco*props.item.productQtd
     
-    const aumentaValor = () => {
+    const aumentaValor = async(userId, productId) => {
+        /*
         setValor(valor + 1);
         atualizaItens(props.itemId, 'increase');
         addOrderValue(props.valorItem);
+        */
+       await api.increaseItemQuantity(userId, productId);
         
     }
 
-    const diminuiValor = () => {
+    const diminuiValor = async (userId, productId) => {
+        /*
         if (valor > 0 ) {
             setValor(valor - 1);
             removeOrderValue(props.valorItem);
@@ -39,6 +43,8 @@ function ItemCounter (props) {
         } else {
             setValor(0);
         }
+        */
+       await api.decreaseItemQuantity(userId, productId);
         
     }
 
@@ -53,6 +59,8 @@ function ItemCounter (props) {
         console.log(user)
     }
 
+    console.log(props)
+
     useEffect(() => {
         getUser(token);
     },[])
@@ -63,18 +71,18 @@ function ItemCounter (props) {
             <input value={`R$${valorTotal}`} id="itemTotalValue"></input>
         </div>
         <div className="col 12 mt-2">
-            <button className="btn btn-primary" onClick={diminuiValor}>
+            <button className="btn btn-primary" onClick={() => diminuiValor(user.id, props.item.product._id)}>
                 <FaRegMinusSquare size={18}/></button>
             <input style={{width: "35px", textAlign: "center", marginLeft:"3px", marginRight:"3px"}}
             type="text" id="itemQtd"
-            value={valor}>
+            value={props.item.productQtd}>
             </input>
-            <button className="btn btn-primary" onClick={aumentaValor}>
+            <button className="btn btn-primary" onClick={() => aumentaValor(user.id, props.item.product._id)}>
                 <FaRegPlusSquare size={18}/></button>  
         </div>
         <div className="col-12 mt-3">
             <button className="btn btn-danger" onClick={() => {
-                cart(user.id, props.item._id) 
+                cart(user.id, props.item.product._id) 
             }}
             >Remover Item <BsFillTrashFill size={18}/></button>  
         </div>

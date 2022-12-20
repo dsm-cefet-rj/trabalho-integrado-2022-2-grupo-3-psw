@@ -30,7 +30,7 @@ function CartItens ({}) {
                     <div className="col-5 my-5 mx-3">
                         <img src={`src/img${item.product.imagens.imagem1}`} className="img-fluid"/>
                             <h3 className="mt-2">{item.product.nome}</h3>
-                        <ItemCounter item={item.product}/>
+                        <ItemCounter item={item}/>
                     </div>
                 </div>
             )

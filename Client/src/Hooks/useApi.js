@@ -49,8 +49,12 @@ export const useApi = () => ({
         const response = await api.patch(`/user/addToCart/${userId}/${productId}`);
         return response.data;
     },
-    updateItemQuantity: async(userId, productId) => {
+    increaseItemQuantity: async(userId, productId) => {
         const response = await api.patch(`/user/increaseItemQuantity/${userId}/${productId}`);
+        return response.data;
+    },
+    decreaseItemQuantity: async(userId, productId) => {
+        const response = await api.patch(`/user/decreaseItemQuantity/${userId}/${productId}`);
         return response.data;
     }
 })
