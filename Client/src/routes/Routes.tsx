@@ -19,6 +19,7 @@ import WishList from "../pages/Favoritos"
 import UserPage from "../pages/UserSpace";
 import AcompanharPedido from "../pages/AcompanharPedido";
 import RequireAuth from "../components/RequireAuth";
+import VizualizarSatisfacao from "../pages/VisualizarSatisfacao";
 
 export function AppRoutes() {
     return (
@@ -34,6 +35,7 @@ export function AppRoutes() {
             <Route path="/wishlist" element={<WishList />} />
             <Route path="/user" element={<RequireAuth><UserPage /></RequireAuth>} />
             <Route path="/entrega" element={<AcompanharPedido />} />
+            <Route path="/visualizar" element={<VizualizarSatisfacao />} />
         </Routes>
     )
 }

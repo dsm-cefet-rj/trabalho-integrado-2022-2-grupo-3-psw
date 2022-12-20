@@ -6,13 +6,15 @@ import NavbarComp from "../../components/NavbarComp";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoIosHeart } from "react-icons/io";
 import BasicExample from "./Informacoes";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import useWishList from "../../Estados/useWishList";
 
 import useCartItem from "../../Estados/useItemStore";
 
 import { useApi } from "../../Hooks/useApi";
 import ReactLoading from 'react-loading';
+
+import { useNavigate } from "react-router-dom";
 
 
 function DetalhesPage() {
@@ -27,6 +29,11 @@ function DetalhesPage() {
     const removeWishList = useWishList(state => state.removeWishListItem);
     const itensOnWishList = useWishList(state => state.wishList);
     const ids = [];
+    const navigate = useNavigate();
+    
+    const sendToSatisfaction = () =>{
+        navigate("/visualizar");
+    }
 
     const getProduct = async (id) => {
         await api.getProductById(id).then((response) => {
@@ -154,6 +161,15 @@ function DetalhesPage() {
                                     }
 
                                 </div>
+
+                                
+                                    <div className="buyButton" >
+                                        <button className="buy" onClick = {sendToSatisfaction}>
+                                            <p>Satisfação do Cliente</p>
+                                        </button>
+                                    </div>
+                                
+
                                 <hr></hr>
                                 <div id="details">
                                     <BasicExample medidas={product.detalhes.medidas} material={product.detalhes.material} fabricante={product.detalhes.fabricante} ></BasicExample>

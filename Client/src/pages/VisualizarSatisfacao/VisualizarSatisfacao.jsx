@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import NavbarComp from "../../../components/NavbarComp";
-import ImportaBootstrap from "../../../components/ImportsBootStrap";
+import NavbarComp from "../../components/NavbarComp";
+import ImportaBootstrap from "../../components/ImportsBootStrap";
 import Container from "react-bootstrap/esm/Container";
-import Footer from "../../../components/Footer";
-import "./style.css";
+import Footer from "../../components/Footer";
+// import "./";
 
 
 function VisualizarSatisfacao(){
@@ -22,4 +22,4 @@ function VisualizarSatisfacao(){
     );
 }
 
-export default VizualizarSatisfacao;
+export default VisualizarSatisfacao;

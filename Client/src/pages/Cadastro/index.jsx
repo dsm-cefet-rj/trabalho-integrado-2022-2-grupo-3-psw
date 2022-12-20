@@ -24,7 +24,7 @@ function RegisterPage () {
             </div>
 
           </main>
-      <RegisterFooter/>
+          <RegisterFooter/>
 
        </body> 
       
