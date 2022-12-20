@@ -9,18 +9,13 @@ import { FiShoppingBag } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";
 import { FiTruck } from "react-icons/fi";
 import { FaBuilding } from "react-icons/fa";
-import useOrderItem from "../../Estados/useOrderPrice";
 import { useApi } from "../../Hooks/useApi";
-import useCartItem from "../../Estados/useItemStore";
-import useCheckOut from "../../Estados/useCheckOut";
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 function CartPage() {
 
-    const addItemToCheckOut = useCheckOut(state => state.addItemToCheckOut);
-    const removeAllCartItens = useCartItem(state => state.removeAllItems);
     const [rua, setRua] = useState("");
     const [bairro, setBairro] = useState('');
     const [cidade, setCidade] = useState('');
@@ -29,6 +24,14 @@ function CartPage() {
     const [cepInput, setCepInput] = useState("");
     const [shippingValue, setShippingValue] = useState(0);
     const [show, setShow] = useState(false);
+
+    const removeFromCart = async (userId, productId) => {
+        await api.addOrRemoveCartItem(userId, productId)
+    }
+
+    const addToOrderList = async (userId, productId, productQtd, orderDate) => {
+        await api.addToOrderList(userId, productId, productQtd, orderDate);
+    }
 
     const getValorTotal = () => {
         if(user.cartItens){
@@ -46,15 +49,14 @@ function CartPage() {
 
 
     const handleClose = () => setShow(false);
-    const itensOnCart = useCartItem(state => state.cartItens);
 
     const checkOut = () => {
+        const orderDate = new Date(Date.now());
         setShow(false);
-        itensOnCart.forEach(product => {
-            addItemToCheckOut(product)
-        })
-        removeAllCartItens(69);
-        console.log(itensOnCart);
+        user.cartItens.map(item => {
+            addToOrderList(user.id, item.product._id, item.productQtd, orderDate);
+            removeFromCart(user.id, item.product._id)
+        });
     }
 
     const api = useApi();

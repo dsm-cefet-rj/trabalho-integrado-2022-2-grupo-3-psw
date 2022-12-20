@@ -11,6 +11,8 @@ router.patch("/addToFavorites/:idUser/:idProduct", userService.addToFavorites);
 router.patch("/addToCart/:userId/:productId", userService.addToCart);
 router.patch("/increaseItemQuantity/:userId/:productId", userService.increaseItemQuantity);
 router.patch("/decreaseItemQuantity/:userId/:productId", userService.decreaseItemQuantity);
+router.patch("/addToOrderList/:userId/:productId/:productQtd/:orderDate", userService.addToOrderList);
+
 
 router.get("/", userService.getUsers);
 

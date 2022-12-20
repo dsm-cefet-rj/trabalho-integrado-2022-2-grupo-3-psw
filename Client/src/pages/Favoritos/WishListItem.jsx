@@ -53,7 +53,7 @@ function WishListItem() {
                                         }}>
                                             <BsFillTrashFill size={30} /></button>
                                         <button className="btn btn-success ms-4" onClick={() => {
-                                            cart(user.id, item._id).then(alert(`${item.nome} adicionado ao carrinho!`))
+                                            cart(user.id, item.product._id).then(alert(`${item.product.nome} adicionado ao carrinho!`))
                                             getUser(token);
                                         }}>
                                             <BsFillCartPlusFill size={25} style={{ marginRight: "10px" }} />

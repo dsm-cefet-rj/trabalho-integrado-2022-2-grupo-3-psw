@@ -1,22 +1,38 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import "./style.css"
 import { Link } from "react-router-dom";
 import NavbarComp from "../../components/NavbarComp";
 import Footer from "../../components/Footer";
 import ImportaBootstrap from "../../components/ImportsBootStrap";
+import { useApi } from "../../Hooks/useApi";
+
 import { AiOutlineInbox } from "react-icons/ai"
 import { BsTruckFlatbed } from "react-icons/bs"
 import { GiNightSleep } from "react-icons/gi"
-import "./style.css"
+
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import useCheckOut from "../../Estados/useCheckOut";
 
 function AcompanharPedido() {
-    const itemList = useCheckOut(state => state.checkOutItems);
-    const [show, setShow] = useState(false);
+    const [user, setUser] = useState({});
 
+    const api = useApi();
+
+    const token = localStorage.getItem("authToken");
+
+    const getUser = async(token)  => {
+        await api.getUserbyToken(token).then((response) => setUser(response.user));
+    }
+
+    const [show, setShow] = useState(false);
+    
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    
+    useEffect(() => {
+        getUser(token);
+    },[])
 
     return (
         <html lang="pt-br">
@@ -88,15 +104,17 @@ function AcompanharPedido() {
                     </Modal.Header>
                     <Modal.Body>
                         <h5 className="mb-4">Itens:</h5>
-                        {itemList.map((item) => {
-                            return(
-                                <>
-                                <img src={`src/img${item.imagens.imagem1}`} className="img-fluid"/>
-                                <p className="mb-5"><strong>{item.nome}</strong></p>
-                                </>
+                        {user.ordersList ?
+                        user.ordersList.map(item => {
+                        return(
+                            <>
+                            <img src={`src/img${item.product.imagens.imagem1}`} className="img-fluid"/>
+                            <p className="mb-5"><strong>{item.product.nome}</strong></p>
+                            </>
                             )
-                        })}
-                        
+                        }):
+                        <p></p>
+                        }
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleClose}>

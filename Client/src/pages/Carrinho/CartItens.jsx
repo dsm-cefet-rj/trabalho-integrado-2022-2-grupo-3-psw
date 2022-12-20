@@ -1,11 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./styles.css";
 import ItemCounter from "./ItemCounter";
-import useCartItem from "../../Estados/useItemStore";
-import useOrderItem from "../../Estados/useOrderPrice";
 import { useApi } from "../../Hooks/useApi";
-import useUser from "../../Estados/useUser";
-
 
 function CartItens ({}) {
     const [user, setUser] = useState({});

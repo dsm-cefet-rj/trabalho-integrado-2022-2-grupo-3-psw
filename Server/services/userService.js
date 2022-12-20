@@ -126,7 +126,27 @@ const decreaseItemQuantity = async(req, res) => {
   }
 }
 
+const addToOrderList = async(req, res) => {
+  const userId = req.params.userId;
+  const productId = req.params.productId;
+  const productQtd = req.params.productQtd;
+  const orderDate = req.params.orderDate;
 
+  try {
+    const product = await findProductById(productId);
+    const addedToOrderList = await userRepository.addToOrderList(userId, product, productQtd, orderDate);
+
+    if (addedToOrderList) {
+      return res.status(200).send({ message: "Item adicionado à lista de pedidos!", success: true });
+    }
+
+    return res.status(400).send({ message: "O Item não foi adicionado à lista de pedidos!", success: false });
+
+  }
+  catch (err) {
+    return res.status(400).send({ message: "Não foi possível realizar essa operação!", success: false });
+  }
+}
 
 module.exports = {
   registerUser,
@@ -135,5 +155,6 @@ module.exports = {
   getUsers,
   addToCart,
   increaseItemQuantity,
-  decreaseItemQuantity
+  decreaseItemQuantity,
+  addToOrderList
 };
