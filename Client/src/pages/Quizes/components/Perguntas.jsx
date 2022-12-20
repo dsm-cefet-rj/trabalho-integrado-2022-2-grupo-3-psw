@@ -6,7 +6,7 @@ function Perguntas(props) {
     return(
     <div>
         <div className="container" id="question">
-            <p>{props.pergunta}</p>
+            <p id = "questionID">{props.pergunta}</p>
         </div>
     </div>)
 }
