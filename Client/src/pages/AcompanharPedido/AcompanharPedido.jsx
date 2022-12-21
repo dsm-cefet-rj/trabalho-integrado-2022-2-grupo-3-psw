@@ -113,13 +113,15 @@ function AcompanharPedido() {
                         {user.ordersList 
                         ?
                         user.ordersList.map(item => {
+                            const data = new Date(item.orderDate);
+                            const dataFormated = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
                         return(
                             <div className="container-fluid mb-5" id="modal">
                             <img src={`src/img${item.product.imagens.imagem1}`} className="img-fluid"/>
                             <h4 className="mt-1 mb-3"><strong>{item.product.nome}</strong></h4>
                             <p><strong>Quantidade do item: {item.productQtd}</strong></p>
                             <p><strong>Valor total: R${(item.productQtd*item.product.preco).toFixed(2)}</strong></p>
-                            <p><strong>Data do pedido: {item.orderDate}</strong></p>
+                            <p><strong>Data do pedido: {dataFormated}</strong></p>
                             </div>
                             )
                         }):
