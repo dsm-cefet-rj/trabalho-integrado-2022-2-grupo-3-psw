@@ -68,8 +68,8 @@ export const useApi = () => ({
     removeProductById: async(idProduct) => {
         const response = await api.delete("products/" + idProduct);
     },
-    addFeedback: async(idProduct) =>{
-        const response = await api.patch('products/' + idProduct);
+    addFeedback: async(idProduct, feedback) =>{
+        const response = await api.patch('products/' + idProduct, feedback);
         return response.data;
     }
 })

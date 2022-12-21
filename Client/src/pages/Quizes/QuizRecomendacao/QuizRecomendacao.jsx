@@ -22,18 +22,17 @@ function QuizRecomendacao() {
     const resposta2 = useQuiz(state => state.resposta2);
     const resposta3 = useQuiz(state => state.resposta3);
 
-    function getProduto(){
-        listaDeRespostas = [resposta1, resposta2, resposta3];
-        
-    }
 
     function showButton() {
         if (perguntas.indexOf(questao) == 0) {
             return (<BotaoProximoQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) + 1])} />)
         } else if (perguntas.indexOf(questao) == 2) {
-            return (<Link>
-                <BotaoEnviarQuiz />
-            </Link>)
+            return (<>
+                    <BotaoAnteriorQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) - 1])} />
+                    <Link to={'/user'}>
+                        <BotaoEnviarQuiz />
+                    </Link>
+                </>)
         } else {
             return (<>
                 <BotaoAnteriorQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) - 1])} />

@@ -30,8 +30,8 @@ function AcompanharPedido() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const toFeedBack = () => {
-        navigate("/quizSI");
+    const toFeedBack = (id) => {
+        navigate("/quizSI/"+id);
     }
 
     useEffect(() => {
@@ -116,7 +116,7 @@ function AcompanharPedido() {
                             <p><strong>Quantidade do item: {item.productQtd}</strong></p>
                             <p><strong>Valor total: R${(item.productQtd*item.product.preco).toFixed(2)}</strong></p>
                             <p><strong>Data do pedido: {dataFormated}</strong></p>
-                            <button onClick={toFeedBack}
+                            <button onClick={()=>{toFeedBack(item.product._id)}}
                             className="btn btn-primary mb-3">Avaliar Produto</button>
                             </div>
                             )

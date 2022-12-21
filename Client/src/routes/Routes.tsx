@@ -31,7 +31,7 @@ export function AppRoutes() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/quizRI" element={<QuizRecomendacao/>}/>
-            <Route path="/quizSI" element={<QuizSatisfacao />} />
+            <Route path="/quizSI/:id" element={<QuizSatisfacao />} />
             <Route path="/wishlist" element={<WishList />} />
             <Route path="/user" element={<RequireAuth><UserPage /></RequireAuth>} />
             <Route path="/entrega" element={<AcompanharPedido />} />
