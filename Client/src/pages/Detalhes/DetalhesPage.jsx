@@ -18,12 +18,12 @@ import quizS from "../Quizes/QuizSatisfacao/quizS";
 
 function DetalhesPage() {
     const [show, setShow] = useState(false);
-    
+
     // const formatted = {
-        // resposta2: quizS.questoes.q2.opcoesSatisfacao.resposta2,
-        // resposta3: quizS.questoes.q3.opcoesSatisfacao.resposta3,
+    // resposta2: quizS.questoes.q2.opcoesSatisfacao.resposta2,
+    // resposta3: quizS.questoes.q3.opcoesSatisfacao.resposta3,
     //  }
-     
+
     //  const traduzResposta = (resposta) => {
     //     const superResposta = product.feedback.feedback.resposta1
     //     const traducao = "quizS.questoes.q1.opcoesSatisfacao." + superResposta
@@ -34,11 +34,17 @@ function DetalhesPage() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [showDelete, setShowDelete] = useState(false);
+
+  const handleCloseDelete = () => setShowDelete(false);
+  const handleShowDelete = () => setShowDelete(true);
+
     const { id } = useParams();
     const api = useApi();
     const [favorite, setFavorite] = useState(false);
+    const [cart, setCart] = useState(false);
     const [product, setProduct] = useState({});
-    
+
     const ids = [];
 
     const navigate = useNavigate();
@@ -69,6 +75,7 @@ function DetalhesPage() {
         getProduct(id);
         finId(product._id);
         getUser(token);
+        finIdCart(product._id);
     }, [user.favorites])
 
     if (user.favorites) {
@@ -86,6 +93,23 @@ function DetalhesPage() {
                 setFavorite(false);
             }
         }
+    }
+
+    const idsCarrinho = []
+
+    if (user.cartItens) {
+        for (let i = 0; i < user.cartItens.length; i++) {
+            idsCarrinho.push(user.cartItens[i].product._id);
+        }
+    }
+
+    const finIdCart = (id) => {
+        for (let i = 0; i < idsCarrinho.length; i++) {
+            if (id == idsCarrinho[i]) {
+                return setCart(true);
+            }
+        }
+        return setCart(false);
     }
 
     function showButton() {
@@ -169,19 +193,37 @@ function DetalhesPage() {
 
 
                                 <div className="buyButton">
-                                    <button className="buy" onClick={() => {
+                                    {cart == false
+                                        ?
+                                        <button className="buy" onClick={() => {
 
-                                        if (token) {
-                                            addToCart(user.id, product._id);
-                                            alert("Adicionado ao carrinho de compras!");
-                                        }
-                                        else {
-                                            alert("Usuario não está logado!");
-                                        }
+                                            if (token) {
+                                                addToCart(user.id, product._id);
+                                                alert("Adicionado ao carrinho de compras!");
+                                            }
+                                            else {
+                                                alert("Usuario não está logado!");
+                                            }
 
-                                    }}>
-                                        <p>Adicionar ao Carrinho</p>
-                                    </button>
+                                        }}>
+                                            <p>Adicionar ao Carrinho</p>
+                                        </button>
+                                        :
+                                        <button className="buy" onClick={() => {
+
+                                            if (token) {
+                                                addToCart(user.id, product._id);
+                                                alert("Removido do carrinho de compras!");
+                                            }
+                                            else {
+                                                alert("Usuario não está logado!");
+                                            }
+
+                                        }}>
+                                            <p>Remover do Carrinho</p>
+                                        </button>
+                                    }
+
                                 </div>
                                 <div className="buyButton">
                                     {favorite == false
@@ -199,8 +241,13 @@ function DetalhesPage() {
                                         </button>
                                         :
                                         <button className="buy" onClick={() => {
-                                            toFavorites(user.id, product._id);
-                                            alert("Retirado da lista de desejos!")
+                                            if (token) {
+                                                toFavorites(user.id, product._id);
+                                                alert("Retirado da lista de desejos!")
+                                            } else {
+                                                alert("Usuário não está logado!")
+                                            }
+
                                         }}>
                                             <p>Retirar dos favoritos     <IoIosHeart size={25} ></IoIosHeart></p>
                                         </button>
@@ -208,10 +255,28 @@ function DetalhesPage() {
 
                                 </div>
                                 {user.prioridade && <div className="buyButton">
-                                    <button className="buy" onClick={async () => await api.removeProductById(product._id).then(navigate("/catalogue"))}>
+                                    <button className="buy" onClick={handleShowDelete}>
                                         <p>Excluir Produto</p>
                                     </button>
                                 </div>}
+
+                                <Modal show={showDelete} onHide={handleCloseDelete}>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>Remover Produto</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>Deseja mesmo remover "{product.nome}"</Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="secondary" onClick={handleCloseDelete}>
+                                            Cancelar
+                                        </Button>
+                                        <Button variant="danger" onClick={async() => 
+                                            await api.removeProductById(product._id).then(window.location.href = "http://127.0.0.1:5173/catalogue")
+                                            }>
+                                            Remover
+                                        </Button>
+                                    </Modal.Footer>
+                                </Modal>
+
 
                                 {showButton()}
 
@@ -230,44 +295,44 @@ function DetalhesPage() {
                 </div>
             }
 
-                <Modal
-                    show={show}
-                    onHide={() => setShow(false)}
-                    dialogClassName="modal-90w"
-                    aria-labelledby="example-custom-modal-styling-title"
-                >
-                    <Modal.Header closeButton>
-                        <Modal.Title id="example-custom-modal-styling-title">
-                            <h2>Feedbacks dos Clientes</h2>
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <h5 className="mb-4">Lista de Pedidos:</h5>
-                        {product.feedback
+            <Modal
+                show={show}
+                onHide={() => setShow(false)}
+                dialogClassName="modal-90w"
+                aria-labelledby="example-custom-modal-styling-title"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-custom-modal-styling-title">
+                        <h2>Feedbacks dos Clientes</h2>
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <h5 className="mb-4">Lista de Pedidos:</h5>
+                    {product.feedback
                         ?
                         product.feedback.map(item => {
                             const data = new Date(item.dataAdicao);
-                            const dataFormated = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
-                        return(
-                            <div className="container-fluid mb-5" id="modal">
-                            <p><strong>Resposta da Pergunta 1: {item.feedback.resposta1}</strong></p>
+                            const dataFormated = ((data.getDate())) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
+                            return (
+                                <div className="container-fluid mb-5" id="modal">
+                                    {/* <p><strong>Resposta da Pergunta 1: {item.feedback.resposta1}</strong></p>
                             <p><strong>Resposta da Pergunta 2: {item.feedback.resposta2}</strong></p>    
-                            <p><strong>Resposta da Pergunta 3: {item.feedback.resposta3}</strong></p>        
-                            <p><strong>Data do pedido: {dataFormated}</strong></p>
-                            </div>
+                            <p><strong>Resposta da Pergunta 3: {item.feedback.resposta3}</strong></p>         */}
+                                    <p><strong>Data do pedido: {dataFormated}</strong></p>
+                                </div>
                             )
-                        }):
+                        }) :
                         <p></p>
-                        }
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Fechar
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
+                    }
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Fechar
+                    </Button>
+                </Modal.Footer>
+            </Modal>
 
-            <Footer/>
+            <Footer />
         </div >
     );
 }

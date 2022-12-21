@@ -34,15 +34,15 @@ function CartPage() {
     }
 
     const getValorTotal = () => {
-        if(user.cartItens){
+        if (user.cartItens) {
             const somaTemp = user.cartItens.map((item) => item.product.preco * item.productQtd);
             let soma = 0;
-            for(var i = 0; i < somaTemp.length; i++) {
+            for (var i = 0; i < somaTemp.length; i++) {
                 soma += somaTemp[i];
             }
             return soma;
         }
-  
+
     }
 
     const valorTotal = getValorTotal() + parseFloat(shippingValue);
@@ -82,7 +82,7 @@ function CartPage() {
         e.preventDefault();
         setShow(true);
 
-        if (user.cartItens.length == 0 ) {
+        if (user.cartItens.length == 0) {
             alert("Não há itens no carrinho!! Adicione itens para realizar o pedido!")
             setShow(false);
         }
@@ -91,13 +91,13 @@ function CartPage() {
 
     const token = localStorage.getItem("authToken");
 
-    const getUser = async(token)  => {
+    const getUser = async (token) => {
         await api.getUserbyToken(token).then((response) => setUser(response.user));
     }
 
     useEffect(() => {
         getUser(token);
-    },[user.cartItens])
+    }, [user.cartItens])
 
     return (
         <html lang="pt-br">
@@ -178,43 +178,45 @@ function CartPage() {
                     <Modal.Body>
                         <h5>Itens</h5>
                         {user.cartItens ? user.cartItens.map((item) => {
-                            return(
-                                <div style={{display: "flex"}}>
-                                <p>{item.product.nome}</p>
-                                <p style={{marginLeft: "20px", opacity: "0.5"}}>x {item.productQtd}</p>
+                            return (
+                                <div style={{ display: "flex" }}>
+                                    <p>{item.product.nome}</p>
+                                    <p style={{ marginLeft: "20px", opacity: "0.5" }}>x {item.productQtd}</p>
                                 </div>
                             )
-                        }): <p>Não há itens</p>}
+                        }) : <p>Não há itens</p>}
                         <h5>Cep</h5>
                         <p>{cepInput}</p>
                         <h5>Valor Total</h5>
                         <p>R$ {valorTotal.toFixed(2)}</p>
                         <h5>Cidade</h5>
                         <p>
-                        <input type={"text"} 
-                        value={cidade}
-                        onChange={e => setCidade(e.target.value)}
-                        style={{border: "none"}}
-                        />
+                            <input type={"text"}
+                                value={cidade}
+                                onChange={e => setCidade(e.target.value)}
+                                style={{ border: "none" }}
+                            />
                         </p>
                         <h5>Bairro</h5>
                         <p>
-                        <input type={"text"} 
-                        value={bairro}
-                        onChange={e => setBairro(e.target.value)}
-                        style={{border: "none"}}
-                        />
+                            <input type={"text"}
+                                value={bairro}
+                                onChange={e => setBairro(e.target.value)}
+                                style={{ border: "none" }}
+                            />
                         </p>
                         <h5>Rua</h5>
                         <p>
-                        <input type={"text"} 
-                        value={rua}
-                        onChange={e => setRua(e.target.value)}
-                        style={{border: "none"}}
-                        />
+                            <input type={"text"}
+                                value={rua}
+                                onChange={e => setRua(e.target.value)}
+                                style={{ border: "none" }}
+                            />
                         </p>
-    
-                        
+                        <h5>Forma de Pagamento</h5>
+                        <p>Pix - {document.getElementById("installmentOptions").options[document.getElementById("installmentOptions").selectedIndex].value}</p>
+
+
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleClose}>

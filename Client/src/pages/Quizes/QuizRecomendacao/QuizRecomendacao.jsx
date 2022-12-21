@@ -35,6 +35,7 @@ function QuizRecomendacao() {
         'D' : 1
      }
 
+
     function getResposta(){
         let somatorio = 0;
         for(let i =0;i<listaDeRespostasR.length;i++){
@@ -45,13 +46,13 @@ function QuizRecomendacao() {
 
     function showLink(somatorio){
         if(somatorio <=10){
-            return "/detail639523ea6de9939aec0d1df2"
+            return window.location.href = "http://127.0.0.1:5173/detail639523ea6de9939aec0d1df2";
         }else if(somatorio <= 20){
-            return "/detail639523fa6de9939aec0d1df4"
+            return window.location.href = "http://127.0.0.1:5173/detail639523fa6de9939aec0d1df4";
         }else if(somatorio <= 30 ){
-            return "/detail63965dbfd479867fa205b206"
+            return window.location.href = "http://127.0.0.1:5173/detail63965dbfd479867fa205b206";
         }else{
-            return"/detail639523bf6de9939aec0d1dee"
+            return window.location.href = "http://127.0.0.1:5173/detail639523bf6de9939aec0d1dee";
         }
     }
 
@@ -64,8 +65,8 @@ function QuizRecomendacao() {
         } else if (perguntas.indexOf(questao) == 2) {
             return (<>
                 <BotaoAnteriorQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) - 1])} />
-                <Link to={showLink(getResposta)}>
-                    <BotaoEnviarQuiz funcao={getResposta}/>
+                <Link>
+                    <BotaoEnviarQuiz funcao={() => showLink(getResposta())}/>
                 </Link>
             </>)
         } else {

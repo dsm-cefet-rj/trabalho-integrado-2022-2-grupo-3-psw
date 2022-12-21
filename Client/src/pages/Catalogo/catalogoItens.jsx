@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { RiShoppingCart2Line } from "react-icons/ri";
+import { RiShoppingCart2Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useApi } from "../../Hooks/useApi";
 
@@ -35,9 +36,26 @@ function CatalogoItens({ itens }) {
         }
     }
 
-    const finId = (id) => {
+    const finIdFavorite = (id) => {
         for (let i = 0; i < ids.length; i++) {
             if (id == ids[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    const idsCarrinho = []
+
+    if (user.cartItens) {
+        for (let i = 0; i < user.cartItens.length; i++) {
+            idsCarrinho.push(user.cartItens[i].product._id);
+        }
+    }
+
+    const finIdCart = (id) => {
+        for (let i = 0; i < idsCarrinho.length; i++) {
+            if (id == idsCarrinho[i]) {
                 return true;
             }
         }
@@ -55,21 +73,58 @@ function CatalogoItens({ itens }) {
                     <div className="col-md-3 col-sm-6 col-12 mt-3">
                         <div className="product-inner-box position-relative">
                             <div className="iconsProduct position-absolute">
-                                {!finId(item._id)
+                                {!finIdFavorite(item._id)
                                     ?
                                     <a className="text-decoration-none"><AiOutlineHeart size={20}
-                                        onClick={() => favorite(user.id, item._id).then(alert(`${item.nome} adicionado a lista de desejos!`))}
-                                    /></a>
+                                        onClick={() => {
+                                            if (token) {
+                                                favorite(user.id, item._id).then(alert(`${item.nome} adicionado a lista de desejos!`))
+                                            }
+                                            else {
+                                                alert("Usuário não está logado!");
+                                            }
+
+                                        }
+                                        }
+                                    />
+                                    </a>
                                     :
                                     <a className="text-decoration-none"><AiFillHeart size={20}
-                                        onClick={() => favorite(user.id, item._id).then(alert(`${item.nome} removido da lista de desejos!`))}
-                                    /></a>
+                                        onClick={() => {
+                                            if (token) {
+                                                favorite(user.id, item._id).then(alert(`${item.nome} removido da lista de desejos!`))
+                                            } else {
+                                                alert("Usuário não está logado!");
+                                            }
+                                        }
+                                        }
+                                    />
+                                    </a>
                                 }
 
-                                <a className="text-decoration-none" onClick={() => {
-                                    cart(user.id, item._id).then(alert(`${item.nome} adicionado ao carrinho!`))
-                                }}>
-                                    <AiOutlineShoppingCart size={20} /></a>
+                                {!finIdCart(item._id)
+                                    ?
+                                    <a className="text-decoration-none" onClick={() => {
+                                        if (token) {
+                                            cart(user.id, item._id).then(alert(`${item.nome} adicionado ao carrinho!`))
+                                        } else {
+                                            alert("Usuário não está logado!");
+                                        }
+                                    }}>
+                                        <RiShoppingCart2Line size={20} />
+                                    </a>
+                                    :
+                                    <a className="text-decoration-none" onClick={() => {
+                                        if (token) {
+                                            cart(user.id, item._id).then(alert(`${item.nome} removido do carrinho!`))
+                                        } else {
+                                            alert("Usuário não está logado!");
+                                        }
+                                    }}>
+                                        <RiShoppingCart2Fill size={20} />
+                                    </a>
+                                }
+
                             </div>
                             <Link to={"/detail" + item._id} className="text-decoration-none" style={{ color: "inherit" }}>
                                 <img src={`src/img${item.imagens.imagem1}`} className="img-fluid" />
