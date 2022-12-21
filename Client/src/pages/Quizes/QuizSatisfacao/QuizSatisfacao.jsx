@@ -45,7 +45,9 @@ function QuizSatisfacao() {
                 <>
                     <BotaoAnteriorQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) - 1])} />
                     <Link>
-                        <BotaoEnviarQuiz funcao={async () => { console.log('oii'); await api.addFeedback(id, listaDeRespostas) }} />
+                        <BotaoEnviarQuiz funcao={async () => {
+                            await api.addFeedback(id, listaDeRespostas).then(console.log("mandei"))
+                            }}/>
                     </Link>
                 </>)
         } else {

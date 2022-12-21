@@ -165,6 +165,9 @@ function Catalogo() {
                             <button className="btn btn-primary" onClick={() => {
                                 getFilteredProducts("Coco");
                             }}>Coco</button>
+                             <button className="btn btn-primary" onClick={() => {
+                                getFilteredProducts("Porradao");
+                            }}>Porradão</button>
                         </div>
                     </div>
                     <div className="col-10">

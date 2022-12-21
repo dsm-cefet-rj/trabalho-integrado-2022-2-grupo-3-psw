@@ -3,7 +3,7 @@ import "./styleBotaoEnviar.css";
 import { Link } from "react-router-dom";
 import useQuiz from "../../../Estados/useQuiz";
 
-function BotaoEnviarQuiz(props) {
+function BotaoEnviarQuiz({funcao}) {
 
     const setEstadoAtual = useQuiz(state => state.setEstadoAtual);
     const estadoAtual = useQuiz(state => state.estadoAtual);
@@ -35,10 +35,14 @@ function BotaoEnviarQuiz(props) {
         <div>
             <div className="container" id="botaoEnviar">
                 <Link to={"/catalogue"}>
-                    <button disabled={!getResposta()} id="enviar" onClick={() => {setResposta(); {props.funcao} }}>
+                    <button disabled={!getResposta()} id="enviar" onClick={() => {
+                        setResposta();
+                        funcao();
+                         }}>
                         <p>Enviar</p>
                     </button>
                 </Link>
+
             </div>
         </div >)
 }
