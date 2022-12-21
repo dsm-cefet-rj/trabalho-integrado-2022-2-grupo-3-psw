@@ -14,7 +14,7 @@ import ReactLoading from 'react-loading';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-import quizS from "../Quizes/QuizSatisfacao/quizS";
+import quizSatis from "../Quizes/QuizSatisfacao/quizSatis";
 
 function DetalhesPage() {
     const [show, setShow] = useState(false);
@@ -24,8 +24,8 @@ function DetalhesPage() {
     // resposta3: quizS.questoes.q3.opcoesSatisfacao.resposta3,
     //  }
 
-    //  const traduzResposta = (resposta, n) => {
-    //     const traducao = quizS[n-1].questoes.q1.opcoesSatisfacao + resposta
+    //  const traduzResposta = (questao, resposta) => {
+    //     const traducao = quizSatis.questoes[questao].opcoesSatisfacao[resposta];
     //     return traducao;
     //  }
 
