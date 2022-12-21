@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { QuizR } from "./QuizR";
 import NavbarComp from "../../../components/NavbarComp";
 import ImportaBootstrap from "../../../components/ImportsBootStrap";
@@ -25,19 +25,21 @@ function QuizRecomendacao() {
 
     function showButton() {
         if (perguntas.indexOf(questao) == 0) {
-            return (<BotaoProximoQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) + 1])} />)
+            return (<div style={{display:'flex', justifyContent:'flex-end'}}>
+                <BotaoProximoQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) + 1])} />
+            </div>)
         } else if (perguntas.indexOf(questao) == 2) {
             return (<>
-                    <BotaoAnteriorQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) - 1])} />
-                    <Link to={'/user'}>
-                        <BotaoEnviarQuiz />
-                    </Link>
-                </>)
+                <BotaoAnteriorQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) - 1])} />
+                <Link to={'/user'}>
+                    <BotaoEnviarQuiz />
+                </Link>
+            </>)
         } else {
-            return (<>
+            return (<div className="actionButtons">
                 <BotaoAnteriorQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) - 1])} />
                 <BotaoProximoQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) + 1])} />
-            </>)
+            </div>)
         }
     }
     return (

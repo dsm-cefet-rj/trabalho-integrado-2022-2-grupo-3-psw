@@ -27,7 +27,6 @@ function BotaoAnteriorQuiz({ funcao }) {
     return (
         <div>
             <div className="row">
-                <div className="col-6 d-flex justify-content-start">
                     <a className="text-decoration-none">
                         <button id="prev" onClick={() => {
                             funcao();
@@ -39,7 +38,6 @@ function BotaoAnteriorQuiz({ funcao }) {
                             <p>Anterior</p>
                         </button>
                     </a>
-                </div>
             </div>
         </div>)
 }

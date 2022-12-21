@@ -23,8 +23,6 @@ function BotaoProximoQuiz({funcao}) {
     return (
         <div>
             <div className="row">
-                <div class="col-6 d-flex justify-content-center"></div>
-                <div className="col-6 d-flex justify-content-end" >
                     <a className="text-decoration-none">
                         <button disabled={!getResposta()} id="next" onClick={() => {
                             funcao()
@@ -33,7 +31,6 @@ function BotaoProximoQuiz({funcao}) {
                             <i><BsFillArrowRightCircleFill/></i>
                         </button>
                     </a>
-                </div>
             </div>
         </div>)
 }

@@ -37,3 +37,9 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.actionButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

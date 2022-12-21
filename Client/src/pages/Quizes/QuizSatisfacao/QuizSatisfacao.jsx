@@ -43,7 +43,9 @@ function QuizSatisfacao() {
 
     function showButton() {
         if (perguntas.indexOf(questao) == 0) {
-            return (<BotaoProximoQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) + 1])} />)
+            return (<div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <BotaoProximoQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) + 1])} />
+            </div>)
         } else if (perguntas.indexOf(questao) == 2) {
             return (
                 <>
@@ -55,10 +57,12 @@ function QuizSatisfacao() {
                     </Link>
                 </>)
         } else {
-            return (<>
+            return (
+                <div className="actionButtons">
                 <BotaoAnteriorQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) - 1])} />
                 <BotaoProximoQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) + 1])} />
-            </>)
+            </div>
+            )
         }
     }
 
