@@ -12,6 +12,8 @@ import smile from "../../../img/smile.png";
 import ImportaBootstrap from "../../../components/ImportsBootStrap";
 import { Link } from "react-router-dom";
 import "./style.css";
+import useQuiz from "../../../Estados/useQuiz";
+import { useApi } from "../../../Hooks/useApi";
 
 function QuizSatisfacao() {
 
@@ -65,6 +67,7 @@ function QuizSatisfacao() {
             </body>
         </>
     );
+
 }
 
 export default QuizSatisfacao;

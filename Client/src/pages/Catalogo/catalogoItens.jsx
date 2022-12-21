@@ -80,7 +80,7 @@ function CatalogoItens({ itens }) {
                                 <h3>{item.nome}</h3>
                             </div>
                             <div className="product-price">
-                                <span>R${item.preco}</span>
+                                <span>R${item.preco.toFixed(2)}</span>
                             </div>
                         </div>
                     </div>

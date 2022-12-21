@@ -67,5 +67,9 @@ export const useApi = () => ({
     },
     removeProductById: async(idProduct) => {
         const response = await api.delete("products/" + idProduct);
+    },
+    addFeedback: async(idProduct) =>{
+        const response = await api.patch('products/' + idProduct);
+        return response.data;
     }
 })

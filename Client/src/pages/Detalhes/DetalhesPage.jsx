@@ -7,9 +7,6 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { IoIosHeart } from "react-icons/io";
 import BasicExample from "./Informacoes";
 import { Link, useNavigate, Navigate, useParams } from "react-router-dom";
-import useWishList from "../../Estados/useWishList";
-
-import useCartItem from "../../Estados/useItemStore";
 
 import { useApi } from "../../Hooks/useApi";
 import ReactLoading from 'react-loading';
@@ -26,7 +23,6 @@ function DetalhesPage() {
     const navigate = useNavigate();
     const [user, setUser] = useState({});
 
-
     const token = localStorage.getItem("authToken");
 
     const addToCart = async (userId, productId) => {
@@ -41,7 +37,6 @@ function DetalhesPage() {
     const getUser = async (token) => {
         await api.getUserbyToken(token).then((response) => setUser(response.user));
     }
-
 
     const sendToSatisfaction = () => {
         navigate("/visualizar");
@@ -59,26 +54,30 @@ function DetalhesPage() {
         getUser(token);
     }, [user.favorites])
 
-
-    const finId = (productId) => {
-        if (user.favorites) {
-            user.favorites.map(item => {
-                if (item.product._id == productId) {
-                    setFavorite(true);
-                } else {
-                    setFavorite(false);
-                }
-            })
+    if (user.favorites) {
+        for (let i = 0; i < user.favorites.length; i++) {
+            ids.push(user.favorites[i].product._id);
         }
     }
 
-    function showButton(){
-        if(user.email == "admin@gmail.com"){
-            return(<div className="buyButton" >
-            <button className="buy" onClick={sendToSatisfaction}>
-                <p>Satisfação do Cliente</p>
-            </button>
-        </div>);
+    const finId = (id) => {
+        for (let i = 0; i < ids.length; i++) {
+            if (id == ids[i]) {
+                return setFavorite(true);
+            }
+            else {
+                setFavorite(false);
+            }
+        }
+    }
+
+    function showButton() {
+        if (user.email == "admin@gmail.com") {
+            return (<div className="buyButton" >
+                <button className="buy" onClick={sendToSatisfaction}>
+                    <p>Satisfação do Cliente</p>
+                </button>
+            </div>);
         }
     }
 
@@ -133,8 +132,8 @@ function DetalhesPage() {
                                 <div id="text">
                                     <h2>{product.nome}</h2>
                                     <p id="simpleText">{product.descricao}</p>
-                                    <p id="preco">R${product.preco}</p>
-                                    <h3 id="precoNovo">R${product.preco}</h3>
+                                    <p id="preco">R${product.preco.toFixed(2)}</p>
+                                    <h3 id="precoNovo">R${product.preco.toFixed(2)}</h3>
                                 </div>
 
                                 <div id="color">
@@ -198,7 +197,7 @@ function DetalhesPage() {
                                 </div>}
 
                                 {showButton()}
-                                
+
                                 <hr></hr>
                                 <div id="details">
                                     <BasicExample medidas={product.detalhes.medidas} material={product.detalhes.material} fabricante={product.detalhes.fabricante} ></BasicExample>

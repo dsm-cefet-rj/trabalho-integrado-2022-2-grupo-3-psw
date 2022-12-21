@@ -13,7 +13,7 @@ function LoginInputs() {
     const [validPassword, setValidPassword] = useState(false);
    
     const setUser = useUser(state => state.setUser);
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         const result = pswRGX.test(password);

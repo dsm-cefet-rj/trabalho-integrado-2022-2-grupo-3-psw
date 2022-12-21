@@ -159,17 +159,6 @@ const AddProduct = () => {
                                 autoFocus
                             />
                         </Form.Group>
-
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label>Imagem</Form.Label>
-                            <Form.Control
-                                type="file"
-                                placeholder="Carregue uma foto"
-                                id="fotoProduto"
-                                autoFocus
-                            />
-                        </Form.Group> 
-
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
