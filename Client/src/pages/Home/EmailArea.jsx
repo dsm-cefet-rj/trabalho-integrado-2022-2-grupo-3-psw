@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef  } from "react";
 import emailImagem from "../../img/Emails-amico.svg";
 
 import {AiOutlineFacebook} from "react-icons/ai";
@@ -6,11 +6,27 @@ import {AiOutlineTwitter} from "react-icons/ai";
 import {AiOutlineLinkedin} from "react-icons/ai";
 import {AiOutlineInstagram} from "react-icons/ai";
 
+import emailjs from '@emailjs/browser';
+
 import "./styles.css";
+
+const serviceID = "gmailMessage"
 
 function EmailArea(){
   const [email, setEmail] = useState("");
-  console.log(email);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('gmailMessage', 'template_ce3ovc8', form.current, 'fpCEnXcgXA41910VW')
+      .then((result) => {
+          alert("Nós te enviamios um e-mail!");
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
     return (
         <div className="container pt-2 pb-2" id="contato">
@@ -21,11 +37,11 @@ function EmailArea(){
               <div className="col-md-6 col-sm-6" id="areaEmail">
                 <h2 className="text-center" id="tituloContato">Fique por dentro das novidades</h2>
                 <h4 className="mb-4 text-center" id="subtituloContato">Receba mensalmente alertas de promoções e ofertas!</h4>
-                <form>
+                <form ref={form} onSubmit={sendEmail}>
                   <div className="mb-2">
                     <label for="email" className="sr-only">Email</label>
-                    <input type="email" className="form-control w100" id="emailInput" placeholder="Seu email..." 
-                    onChange={(e) => setEmail(e.target.value)}
+                    <input type="email" name="email" className="form-control w100" id="emailInput" placeholder="Seu email..." 
+                    onChange={(e) => setEmail(e.target.value) }
                     />
                   </div>
                   <div>

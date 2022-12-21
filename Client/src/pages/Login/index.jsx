@@ -4,9 +4,15 @@ import logo from "../../img/DeepSleepLogo.png";
 import ImportaBootstrap from "../../components/ImportsBootStrap";
 import LoginFooter from "./LoginFooter";
 import LoginInputs from "./LoginInputs";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function LoginPage () {
+    const navigate = useNavigate();
+
+    const sendToHomePage = () => {
+      navigate("/");
+    }
+
     return (
       <html lang="pt-br">
         <ImportaBootstrap/>
@@ -18,17 +24,11 @@ function LoginPage () {
                <div className="container" id="loginBox">
                   <div className="row" id="loginForm">
                       <img src={logo} className="col-12 img-fluid" style={{width: "35vw"}} alt="Logo Deep"/>
-                      <div className="col-4 mx-5 my-4" style={{width: "91px"}}>
-                        <Link to={"/login"}> 
-                        <button className="btn btn-primary" style={{width: "91px"}}>Login</button>
-                        </Link>
-                      </div>
-                      <div className="col-4 mx-5 my-4" style={{width: "91px"}}>
-                        <Link to={"/register"}>
-                        <button className="btn btn-primary" style={{width: "91px"}}>Registrar</button>
-                        </Link>
-                      </div>
                       <LoginInputs/>
+                      <div className="col-12 container" style={{ width: "23vw", padding: "0" }}>
+                        <button onClick={sendToHomePage}
+                        className="btn btn-danger" id="noLoginButton">Continuar Sem Login</button>
+                      </div>
                 </div>
               </div>
             </div>

@@ -104,9 +104,10 @@ div > h5 {
     vertical-align: middle;
 }
 
-input[type="radio"] {
-    width: 24px;;
-    height: 30px;
+#paymentMethod {
+    height: 25px;
+    width: 25px;
+    margin-top: 22px;
 }
 
 #installmentOptions

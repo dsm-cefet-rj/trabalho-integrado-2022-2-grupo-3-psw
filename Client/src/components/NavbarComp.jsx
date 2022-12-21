@@ -13,12 +13,25 @@ import { MdAccountCircle } from "react-icons/md";
 import { MdShoppingCart } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
-import useCartItem from "../Estados/useItemStore"
+import { useEffect, useState } from 'react';
+import { useApi } from '../Hooks/useApi';
 
 function NavbarComp() {
 
-    const cartItem = useCartItem(state => state.quantityCartItens);
-    console.log(cartItem);
+    const [user, setUser] = useState({});
+
+    const api = useApi();
+    
+    const token = localStorage.getItem("authToken");
+
+    const getUser = async(token)  => {
+        await api.getUserbyToken(token).then((response) => setUser(response.user));
+    }
+    
+    useEffect(() => {
+        getUser(token);
+    },[user.cartItens])
+
 
     return (
         <Navbar style={{ backgroundColor: "#1052A8" }} fixed="top" expand="lg">
@@ -50,14 +63,15 @@ function NavbarComp() {
                         </Nav.Link>
                         <Nav.Link style={{ color: "#fff" }}>
                             <Link className="text-decoration-none" style={{ color: "inherit" }} to={"/cart"}>
-                                {cartItem == 0 
+                                {user.cartItens ? user.cartItens.length == 0 
                                 ?
                                 <MdShoppingCart size={25} />
                                 :
                                 <div>
-                                    <MdShoppingCart size={25} /><Badge bg="danger">{cartItem}</Badge>
+                                    <MdShoppingCart size={25} /><Badge bg="danger">{user.cartItens.length}</Badge>
                                 </div>
-                                }
+                                : <MdShoppingCart size={25}/> }
+                                
 
                             </Link>
                         </Nav.Link>

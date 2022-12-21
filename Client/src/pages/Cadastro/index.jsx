@@ -17,24 +17,14 @@ function RegisterPage () {
             <div className="container-fluid" id="loginScreen">
                <div className="container" id="loginBox">
                   <div className="row" id="loginForm">
-                      <img src={logo} className="col-12 img-fluid" style={{width: "34vw"}} alt="Logo Deep"/>
-                      <div className="col-4 mx-5 my-4" style={{width: "91px"}}>
-                        <Link to={"/login"}> 
-                        <button className="btn btn-primary" style={{width: "91px"}}>Login</button>
-                        </Link>
-                      </div>
-                      <div className="col-4 mx-5 my-4" style={{width: "91px"}}>
-                        <Link to={"/register"}> 
-                        <button className="btn btn-primary" style={{width: "91px"}}>Registrar</button>
-                        </Link>
-                      </div>
+                      <img src={logo} className="col-12 img-fluid" style={{width: "25vw"}} alt="Logo Deep"/>
                       <RegisterInputs/>
                 </div>
               </div>
             </div>
 
           </main>
-      <RegisterFooter/>
+          <RegisterFooter/>
 
        </body> 
       

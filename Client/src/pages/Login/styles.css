@@ -48,7 +48,7 @@
 #loginBox {
    background-color: rgba(53, 52, 52, 0.397);
    width: 40vw;
-   height: 95vh;
+   height: 85vh;
 }
 
 #loginForm{
@@ -85,7 +85,7 @@
     color:rgba(255, 255, 255, 0.582);
     border-bottom-color: rgba(248, 237, 237, 0.445);
     border-bottom-style: solid;
-    width: 28vw;
+    width: 22vw;
     height: 40px;
 }
 
@@ -94,8 +94,29 @@
     justify-content: center;
 }
 
+.btnEye {
+    outline: none;
+    border: none;
+    width: 40px;
+    background: none;
+    color:rgba(255, 255, 255, 0.582);
+    margin-left: -40px;
+}
+
+.btnEye:hover {
+    background-color: rgba(248, 237, 237, 0.082);
+}
+
+#registerText > p {
+    color:rgba(255, 255, 255, 0.582);
+}
+
 /* Botão de Confirmação */
 
 #confirmButton {
     width: 23vw;
+}
+
+#noLoginButton {
+    width: 10vw;
 }

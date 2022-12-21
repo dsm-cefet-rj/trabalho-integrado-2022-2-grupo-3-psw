@@ -1,34 +1,38 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./styles.css";
 import ItemCounter from "./ItemCounter";
-import useCartItem from "../../Estados/useItemStore";
-import useOrderItem from "../../Estados/useOrderPrice";
-// import { itens } from "./Itens";
+import { useApi } from "../../Hooks/useApi";
 
+function CartItens ({}) {
+    const [user, setUser] = useState({});
 
-function CartItens ({props}) {
-    const createCartList = useCartItem(state => state.cartItens);
-    // const [valorPedido, setValorPedido] = useState("");
-    const addValue = useOrderItem(state => state.addOrderItemValue);
+    const api = useApi();
 
-    // const addItens = useCartItem(state => 
-    //     state.addCartItem 
-    // )
+    const token = localStorage.getItem("authToken");
+
+    const getUser = async(token)  => {
+        await api.getUserbyToken(token).then((response) => setUser(response.user));
+    }
+
+    useEffect(() => {
+        getUser(token);
+    },[user.cartItens])
 
     return (
         <>
-        {createCartList.map((item) => {
-            // addValue(item.preco);
+        {user.cartItens ? user.cartItens.map((item) => {
             return (
                 <div className="row">
                     <div className="col-5 my-5 mx-3">
-                        <img src={`src/img${item.fotos.foto1}`} className="img-fluid"/>
-                            <h3 className="mt-2">{item.nome}</h3>
-                        <ItemCounter valorItem={item.preco} itemId={item.id}/>
+                        <img src={`src/img${item.product.imagens.imagem1}`} className="img-fluid"/>
+                            <h3 className="mt-2">{item.product.nome}</h3>
+                        <ItemCounter item={item}/>
                     </div>
                 </div>
             )
-        })}
+        })
+        : <h3>Nada no carrinho!</h3>
+        }
         </>
     );
 }

@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.row{
+    margin:0;
+}
+#next {
+    display: flex;
+    background-color: #ffffff;
+    border: none;
+
+    margin-top: 20px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+#next i {
+    color: #1646EE;
+    margin: 4px;
+    margin-left:9px;
+    font-size: 30px;
+}
+
+#next p {
+    font-family: 'GFS Neohellenic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 30px;
+    /* identical to box height */
+
+    text-align: center;
+    margin-top:15px;
+    color: #1830A8;
+}
