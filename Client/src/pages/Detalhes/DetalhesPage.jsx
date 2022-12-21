@@ -11,13 +11,34 @@ import { Link, useNavigate, Navigate, useParams } from "react-router-dom";
 import { useApi } from "../../Hooks/useApi";
 import ReactLoading from 'react-loading';
 
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+
+import quizS from "../Quizes/QuizSatisfacao/quizS";
 
 function DetalhesPage() {
+    const [show, setShow] = useState(false);
+    
+    // const formatted = {
+        // resposta2: quizS.questoes.q2.opcoesSatisfacao.resposta2,
+        // resposta3: quizS.questoes.q3.opcoesSatisfacao.resposta3,
+    //  }
+     
+    //  const traduzResposta = (resposta) => {
+    //     const superResposta = product.feedback.feedback.resposta1
+    //     const traducao = "quizS.questoes.q1.opcoesSatisfacao." + superResposta
+    //     return traducao;
+    //  }
+
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const { id } = useParams();
     const api = useApi();
     const [favorite, setFavorite] = useState(false);
     const [product, setProduct] = useState({});
+    
     const ids = [];
 
     const navigate = useNavigate();
@@ -36,10 +57,6 @@ function DetalhesPage() {
 
     const getUser = async (token) => {
         await api.getUserbyToken(token).then((response) => setUser(response.user));
-    }
-
-    const sendToSatisfaction = () => {
-        navigate("/visualizar");
     }
 
     const getProduct = async (id) => {
@@ -74,7 +91,7 @@ function DetalhesPage() {
     function showButton() {
         if (user.email == "admin@gmail.com") {
             return (<div className="buyButton" >
-                <button className="buy" onClick={sendToSatisfaction}>
+                <button className="buy" onClick={handleShow}>
                     <p>Satisfação do Cliente</p>
                 </button>
             </div>);
@@ -213,8 +230,44 @@ function DetalhesPage() {
                 </div>
             }
 
-            <Footer>
-            </Footer>
+                <Modal
+                    show={show}
+                    onHide={() => setShow(false)}
+                    dialogClassName="modal-90w"
+                    aria-labelledby="example-custom-modal-styling-title"
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="example-custom-modal-styling-title">
+                            <h2>Feedbacks dos Clientes</h2>
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <h5 className="mb-4">Lista de Pedidos:</h5>
+                        {product.feedback
+                        ?
+                        product.feedback.map(item => {
+                            const data = new Date(item.dataAdicao);
+                            const dataFormated = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
+                        return(
+                            <div className="container-fluid mb-5" id="modal">
+                            <p><strong>Resposta da Pergunta 1: {item.feedback.resposta1}</strong></p>
+                            <p><strong>Resposta da Pergunta 2: {item.feedback.resposta2}</strong></p>    
+                            <p><strong>Resposta da Pergunta 3: {item.feedback.resposta3}</strong></p>        
+                            <p><strong>Data do pedido: {dataFormated}</strong></p>
+                            </div>
+                            )
+                        }):
+                        <p></p>
+                        }
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Fechar
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+
+            <Footer/>
         </div >
     );
 }

@@ -1,4 +1,4 @@
-const QuizS = [
+export const quizS = [
     {
         "questoes": {
             "q1": {
@@ -32,4 +32,4 @@ const QuizS = [
     },
 ]
 
-export default QuizS;
+export default quizS;
