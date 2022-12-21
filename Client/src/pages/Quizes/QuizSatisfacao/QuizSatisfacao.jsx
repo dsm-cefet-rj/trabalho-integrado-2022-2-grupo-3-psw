@@ -10,7 +10,7 @@ import Footer from "../../../components/Footer";
 import "./style.css";
 import smile from "../../../img/smile.png";
 import ImportaBootstrap from "../../../components/ImportsBootStrap";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import "./style.css";
 import useQuiz from "../../../Estados/useQuiz";
 import { useApi } from "../../../Hooks/useApi";
@@ -24,6 +24,8 @@ function QuizSatisfacao() {
     const perguntas = Object.values(QuizS[0].questoes);
     const [questao, setQuestao] = useState(perguntas[0]);
 
+    const navigate = useNavigate();
+
     const resposta1 = useQuiz(state => state.resposta1);
     const resposta2 = useQuiz(state => state.resposta2);
     const resposta3 = useQuiz(state => state.resposta3);
@@ -33,6 +35,10 @@ function QuizSatisfacao() {
         resposta2,
         resposta3
     };
+
+    const goTouser = () => {
+         Navigate("/");
+    }
 
 
     function showButton() {
@@ -44,8 +50,8 @@ function QuizSatisfacao() {
                     <BotaoAnteriorQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) - 1])} />
                     <Link>
                         <BotaoEnviarQuiz funcao={async () => {
-                            await api.addFeedback(id, listaDeRespostas).then(console.log("mandei"))
-                            }}/>
+                            await api.addFeedback(id, listaDeRespostas).then(alert("Feedback enviado com sucesso!")).then(window.location.href = "http://127.0.0.1:5173/user");
+                        }} />
                     </Link>
                 </>)
         } else {
