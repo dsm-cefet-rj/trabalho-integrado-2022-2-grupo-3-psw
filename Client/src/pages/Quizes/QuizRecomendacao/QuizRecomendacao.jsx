@@ -14,18 +14,24 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import useQuiz from "../../../Estados/useQuiz";
 
-
 function QuizRecomendacao() {
     const perguntas = Object.values(QuizR[0].questoes);
     const [questao, setQuestao] = useState(perguntas[0]);
 
-  
+    const resposta1 = useQuiz(state => state.resposta1);
+    const resposta2 = useQuiz(state => state.resposta2);
+    const resposta3 = useQuiz(state => state.resposta3);
+
+    function getProduto(){
+        listaDeRespostas = [resposta1, resposta2, resposta3];
+        
+    }
 
     function showButton() {
         if (perguntas.indexOf(questao) == 0) {
             return (<BotaoProximoQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) + 1])} />)
         } else if (perguntas.indexOf(questao) == 2) {
-            return (<Link to={'/user'}>
+            return (<Link>
                 <BotaoEnviarQuiz />
             </Link>)
         } else {

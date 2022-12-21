@@ -29,16 +29,13 @@ function OpcoesQuiz(props) {
                             onClick={() => {
                                 switch (estadoAtual){
                                     case 1:
-                                        setResposta1(props.opcoes.A);
+                                        setResposta1('A');
                                         break;
                                     case 2:
-                                        setResposta2(props.opcoes.A);
+                                        setResposta2('A');
                                         break;
                                     case 3:
-                                        setResposta3(props.opcoes.A);
-                                        break;
-                                    default:
-                                        console.log("Indice maior que a pergunta");
+                                        setResposta3('A');
                                         break;
                                 }
                             }}
@@ -49,16 +46,13 @@ function OpcoesQuiz(props) {
                             onClick={() => {
                                 switch (estadoAtual){
                                     case 1:
-                                        setResposta1(props.opcoes.B);
+                                        setResposta1('B');
                                         break;
                                     case 2:
-                                        setResposta2(props.opcoes.B);
+                                        setResposta2('B');
                                         break;
                                     case 3:
-                                        setResposta3(props.opcoes.B);
-                                        break;
-                                    default:
-                                        console.log("Indice maior que a pergunta");
+                                        setResposta3('B');
                                         break;
                                 }
                             }}
@@ -71,16 +65,13 @@ function OpcoesQuiz(props) {
                             onClick={() => {
                                 switch (estadoAtual){
                                     case 1:
-                                        setResposta1(props.opcoes.C);
+                                        setResposta1('C');
                                         break;
                                     case 2:
-                                        setResposta2(props.opcoes.C);
+                                        setResposta2('C');
                                         break;
                                     case 3:
-                                        setResposta3(props.opcoes.C);
-                                        break;
-                                    default:
-                                        console.log("Indice maior que a pergunta");
+                                        setResposta3('C');
                                         break;
                                 }
                             }}
@@ -91,16 +82,13 @@ function OpcoesQuiz(props) {
                             onClick={() => {
                                 switch (estadoAtual){
                                     case 1:
-                                        setResposta1(props.opcoes.D);
+                                        setResposta1('D');
                                         break;
                                     case 2:
-                                        setResposta2(props.opcoes.D);
+                                        setResposta2('D');
                                         break;
                                     case 3:
-                                        setResposta3(props.opcoes.D);
-                                        break;
-                                    default:
-                                        console.log("Indice maior que a pergunta");
+                                        setResposta3('D');
                                         break;
                                 }
                             }}

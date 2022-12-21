@@ -21,7 +21,7 @@ function QuizSatisfacao() {
     function showButton() {
         if (perguntas.indexOf(questao) == 0) {
             return (<BotaoProximoQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) + 1])} />)
-        } else if (perguntas.indexOf(questao) == 4) {
+        } else if (perguntas.indexOf(questao) == 2) {
             return (<Link to={'/user'}>
                 <BotaoEnviarQuiz />
             </Link>)
@@ -51,7 +51,7 @@ function QuizSatisfacao() {
                     <Perguntas pergunta={questao.perguntaSatisfacao} />
                     <OpcoesQuiz opcoes={questao.opcoesSatisfacao} />
 
-                    {showButton()}
+                    {showButton()}''
 
                     <div className="container" id="image">
                         <img src={smile} />

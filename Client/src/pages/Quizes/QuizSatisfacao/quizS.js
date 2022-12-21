@@ -28,24 +28,6 @@ const QuizS = [
                     "D": "Desconheço outro produto"
                 }
             },
-            "q4": {
-                "perguntaSatisfacao": "Como avalia a velocidade de entrega do produto?",
-                "opcoesSatisfacao": {
-                    "A": "Muito boa",
-                    "B": "Boa",
-                    "C": "Poderia ser melhor",
-                    "D": "Péssima"
-                }
-            },
-            "q5": {
-                "perguntaSatisfacao": "Como avalia o fornecedor?",
-                "opcoesSatisfacao": {
-                    "A": "Muito bom",
-                    "B": "Bom",
-                    "C": "Poderia ser melhor",
-                    "D": "Péssimo"
-                }
-            }
         }
     },
 ]
