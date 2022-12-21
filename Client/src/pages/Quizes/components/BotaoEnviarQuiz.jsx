@@ -1,6 +1,6 @@
 import React from "react";
 import "./styleBotaoEnviar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useQuiz from "../../../Estados/useQuiz";
 
 function BotaoEnviarQuiz({funcao}) {
@@ -14,8 +14,6 @@ function BotaoEnviarQuiz({funcao}) {
     const setResposta1 = useQuiz(state => state.setResposta1);
     const setResposta2 = useQuiz(state => state.setResposta2);
     const setResposta3 = useQuiz(state => state.setResposta3);
-
-    const navigate = useNavigate();
 
 
     function getResposta() {
@@ -33,12 +31,11 @@ function BotaoEnviarQuiz({funcao}) {
         setResposta3('');
     }
 
-
     return (
         <div>
             <div className="container" id="botaoEnviar">
-                <Link>
-                    <button disabled={resposta3 == "" && resposta1 != "" && resposta2 != ""} id="enviar" onClick={() => {
+                <Link to={"/catalogue"}>
+                    <button disabled={!getResposta()} id="enviar" onClick={() => {
                         setResposta();
                         funcao();
                          }}>
