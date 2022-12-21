@@ -89,7 +89,6 @@ function CartPage() {
     }
 
 
-
     const token = localStorage.getItem("authToken");
 
     const getUser = async(token)  => {

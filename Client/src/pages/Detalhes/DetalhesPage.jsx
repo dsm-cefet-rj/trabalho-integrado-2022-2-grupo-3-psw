@@ -19,13 +19,8 @@ function DetalhesPage() {
 
     const { id } = useParams();
     const api = useApi();
-    const additem = useCartItem(state => state.addCartItem);
     const [favorite, setFavorite] = useState(false);
     const [product, setProduct] = useState({});
-
-    const addWishList = useWishList(state => state.addWishListItem);
-    const removeWishList = useWishList(state => state.removeWishListItem);
-    const itensOnWishList = useWishList(state => state.wishList);
     const ids = [];
 
     const navigate = useNavigate();
@@ -39,7 +34,8 @@ function DetalhesPage() {
     }
 
     const toFavorites = async (userId, productId) => {
-        await api.favoriteActions(userId, productId)
+        await api.favoriteActions(userId, productId);
+        console.log(ids)
     }
 
     const getUser = async (token) => {
@@ -59,22 +55,20 @@ function DetalhesPage() {
 
     useEffect(() => {
         getProduct(id);
-        finId(product.id);
+        finId(product._id);
         getUser(token);
-        getUser(token);
-    }, [product.id])
+    }, [user.favorites])
 
-    for (let i = 0; i < itensOnWishList.length; i++) {
-        ids.push(itensOnWishList[i].id);
-    }
-    const finId = (id) => {
-        for (let i = 0; i < ids.length; i++) {
-            if (id == ids[i]) {
-                return setFavorite(true);
-            }
-            else {
-                setFavorite(false);
-            }
+
+    const finId = (productId) => {
+        if (user.favorites) {
+            user.favorites.map(item => {
+                if (item.product._id == productId) {
+                    setFavorite(true);
+                } else {
+                    setFavorite(false);
+                }
+            })
         }
     }
 
@@ -179,7 +173,6 @@ function DetalhesPage() {
                                         <button className="buy" onClick={() => {
                                             if (token) {
                                                 toFavorites(user.id, product._id);
-                                                setFavorite(true);
                                                 alert("Adicionado a lista de desejos!")
                                             }
                                             else {
@@ -191,7 +184,6 @@ function DetalhesPage() {
                                         :
                                         <button className="buy" onClick={() => {
                                             toFavorites(user.id, product._id);
-                                            setFavorite(false)
                                             alert("Retirado da lista de desejos!")
                                         }}>
                                             <p>Retirar dos favoritos     <IoIosHeart size={25} ></IoIosHeart></p>
