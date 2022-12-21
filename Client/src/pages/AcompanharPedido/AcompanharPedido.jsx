@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "./style.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NavbarComp from "../../components/NavbarComp";
 import Footer from "../../components/Footer";
 import ImportaBootstrap from "../../components/ImportsBootStrap";
@@ -14,6 +14,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 function AcompanharPedido() {
+    const navigate = useNavigate(); 
     const [user, setUser] = useState({});
 
     const api = useApi();
@@ -29,7 +30,10 @@ function AcompanharPedido() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    
+    const toFeedBack = () => {
+        navigate("/quizSI");
+    }
+
     useEffect(() => {
         getUser(token);
     },[])
@@ -83,16 +87,6 @@ function AcompanharPedido() {
                                 <p className="subtitulo" id="conteudo-entregue">Pedido Entregue</p>
                             </div>
                         </div>
-                        <div className="container">
-                            <a class="text-decoration-none">
-                                <Link to={"/quizSI"}>
-                                    <button id="quiz">
-                                        <p>Quiz Satisfação</p>
-                                    </button>
-                                </Link>
-                            </a>
-
-                        </div>
 
                     </div>
                 </div>
@@ -122,6 +116,8 @@ function AcompanharPedido() {
                             <p><strong>Quantidade do item: {item.productQtd}</strong></p>
                             <p><strong>Valor total: R${(item.productQtd*item.product.preco).toFixed(2)}</strong></p>
                             <p><strong>Data do pedido: {dataFormated}</strong></p>
+                            <button onClick={toFeedBack}
+                            className="btn btn-primary mb-3">Avaliar Produto</button>
                             </div>
                             )
                         }):

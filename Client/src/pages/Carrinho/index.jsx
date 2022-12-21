@@ -82,7 +82,7 @@ function CartPage() {
         e.preventDefault();
         setShow(true);
 
-        if (user.cartItens.length == 0) {
+        if (user.cartItens.length == 0 ) {
             alert("Não há itens no carrinho!! Adicione itens para realizar o pedido!")
             setShow(false);
         }

@@ -23,7 +23,7 @@ const getUsers = async () => await User.find();
 
 const addToCart = async (userId, product) => await User.findOneAndUpdate(
     { _id: userId, "cartItens.product._id": { $nin: [product._id] } },
-    { $push: { cartItens: { product, productQtd: 0} } }
+    { $push: { cartItens: { product, productQtd: 1} } }
 )
 
 const removeFromCart = async (userId, product) => await User.findOneAndUpdate(
@@ -46,7 +46,7 @@ const decreaseItemQuantity = async (userId, productId) => {
     const user = await User.findById(userId);
     const product = user.cartItens.filter(product => product.product._id.equals(productId));
     const product_qtd = product[0].productQtd;
-    if (product_qtd == 0 ){
+    if (product_qtd == 1 ){
         return
     }
 
