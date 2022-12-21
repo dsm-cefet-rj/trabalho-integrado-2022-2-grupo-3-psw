@@ -22,6 +22,39 @@ function QuizRecomendacao() {
     const resposta2 = useQuiz(state => state.resposta2);
     const resposta3 = useQuiz(state => state.resposta3);
 
+    let listaDeRespostasR = [
+        resposta1,
+        resposta2,
+        resposta3
+    ]
+
+    const formatted = {
+        'A' : 10,
+        'B' : 50,
+        'C' : 5,
+        'D' : 1
+     }
+
+    function getResposta(){
+        let somatorio = 0;
+        for(let i =0;i<listaDeRespostasR.length;i++){
+            somatorio += formatted[listaDeRespostasR[i]];
+        }
+        return somatorio;
+    }
+
+    function showLink(somatorio){
+        if(somatorio <=10){
+            return "/detail639523ea6de9939aec0d1df2"
+        }else if(somatorio <= 20){
+            return "/detail639523fa6de9939aec0d1df4"
+        }else if(somatorio <= 30 ){
+            return "/detail63965dbfd479867fa205b206"
+        }else{
+            return"/detail639523bf6de9939aec0d1dee"
+        }
+    }
+
 
     function showButton() {
         if (perguntas.indexOf(questao) == 0) {
@@ -31,8 +64,8 @@ function QuizRecomendacao() {
         } else if (perguntas.indexOf(questao) == 2) {
             return (<>
                 <BotaoAnteriorQuiz funcao={() => setQuestao(perguntas[perguntas.indexOf(questao) - 1])} />
-                <Link to={'/user'}>
-                    <BotaoEnviarQuiz />
+                <Link to={showLink(getResposta)}>
+                    <BotaoEnviarQuiz funcao={getResposta}/>
                 </Link>
             </>)
         } else {
