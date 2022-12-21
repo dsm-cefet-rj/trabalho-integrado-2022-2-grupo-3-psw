@@ -20,13 +20,12 @@ function DetalhesPage() {
     const [show, setShow] = useState(false);
 
     // const formatted = {
-    // resposta2: quizS.questoes.q2.opcoesSatisfacao.resposta2,
+        // resposta2: quizS.questoes.q2.opcoesSatisfacao. + resposta2
     // resposta3: quizS.questoes.q3.opcoesSatisfacao.resposta3,
     //  }
 
-    //  const traduzResposta = (resposta) => {
-    //     const superResposta = product.feedback.feedback.resposta1
-    //     const traducao = "quizS.questoes.q1.opcoesSatisfacao." + superResposta
+    //  const traduzResposta = (resposta, n) => {
+    //     const traducao = quizS[n-1].questoes.q1.opcoesSatisfacao + resposta
     //     return traducao;
     //  }
 
@@ -315,9 +314,9 @@ function DetalhesPage() {
                             const dataFormated = ((data.getDate())) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
                             return (
                                 <div className="container-fluid mb-5" id="modal">
-                                    {/* <p><strong>Resposta da Pergunta 1: {item.feedback.resposta1}</strong></p>
-                            <p><strong>Resposta da Pergunta 2: {item.feedback.resposta2}</strong></p>    
-                            <p><strong>Resposta da Pergunta 3: {item.feedback.resposta3}</strong></p>         */}
+                                    <p><strong>Resposta da Pergunta 1: {item.feedback.resposta1}</strong></p>
+                                    <p><strong>Resposta da Pergunta 2: {item.feedback.resposta2}</strong></p>    
+                                    <p><strong>Resposta da Pergunta 3: {item.feedback.resposta3}</strong></p>        
                                     <p><strong>Data do pedido: {dataFormated}</strong></p>
                                 </div>
                             )
