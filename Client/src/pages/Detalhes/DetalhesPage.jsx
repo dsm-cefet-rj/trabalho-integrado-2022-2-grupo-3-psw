@@ -132,8 +132,8 @@ function DetalhesPage() {
                                 <div id="text">
                                     <h2>{product.nome}</h2>
                                     <p id="simpleText">{product.descricao}</p>
-                                    <p id="preco">R${product.preco}</p>
-                                    <h3 id="precoNovo">R${product.preco}</h3>
+                                    <p id="preco">R${product.preco.toFixed(2)}</p>
+                                    <h3 id="precoNovo">R${product.preco.toFixed(2)}</h3>
                                 </div>
 
                                 <div id="color">
