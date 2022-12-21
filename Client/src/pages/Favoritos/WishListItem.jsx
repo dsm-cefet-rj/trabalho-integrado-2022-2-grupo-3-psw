@@ -37,7 +37,6 @@ function WishListItem() {
             {user.favorites
                 ?
                     user.favorites.map((item) => {
-                        console.log(item)
                         return (
                             <div className="row">
                                 <div className="col-8 my-5 mx-5">

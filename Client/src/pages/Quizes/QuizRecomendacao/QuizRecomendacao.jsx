@@ -12,11 +12,14 @@ import BotaoAnteriorQuiz from "../components/BotaoAnteriorQuiz";
 import Footer from "../../../components/Footer";
 import { Link } from "react-router-dom";
 import "./style.css";
+import useQuiz from "../../../Estados/useQuiz";
 
 
 function QuizRecomendacao() {
     const perguntas = Object.values(QuizR[0].questoes);
     const [questao, setQuestao] = useState(perguntas[0]);
+
+  
 
     function showButton() {
         if (perguntas.indexOf(questao) == 0) {

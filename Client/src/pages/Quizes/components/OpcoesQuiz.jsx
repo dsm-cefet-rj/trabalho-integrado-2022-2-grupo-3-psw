@@ -2,15 +2,22 @@ import React from "react";
 import "./styleOpcoesQuiz.css";
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import { useState } from "react";
 import useQuiz from "../../../Estados/useQuiz";
 
 
 function OpcoesQuiz(props) {
 
-    const res = useQuiz(state => state.resposta);
-    const res2 = useQuiz(state => state.setResposta);
-    console.log(res);
+    const resposta1 = useQuiz(state => state.resposta1);
+    const setResposta1 = useQuiz(state => state.setResposta1);
+    const resposta2 = useQuiz(state => state.resposta2);
+    const setResposta2 = useQuiz(state => state.setResposta2);
+    const resposta3 = useQuiz(state => state.resposta3);
+    const setResposta3 = useQuiz(state => state.setResposta3);
+
+    const estadoAtual = useQuiz(state => state.estadoAtual);
+
+    console.log("Resposta 1: " + resposta1 + "\n" + "Resposta 2: " + resposta2 + "\n" + "Resposta 3: " + resposta3);
+    console.log(estadoAtual);
 
     return (
         <div>
@@ -19,24 +26,84 @@ function OpcoesQuiz(props) {
                     <div className="row">
                         <div className="col-6">
                             <ToggleButton id="tbg-radio-1" value={1} className="option"
-                            onClick={() => res2(props.opcoes.A)}
+                            onClick={() => {
+                                switch (estadoAtual){
+                                    case 1:
+                                        setResposta1(props.opcoes.A);
+                                        break;
+                                    case 2:
+                                        setResposta2(props.opcoes.A);
+                                        break;
+                                    case 3:
+                                        setResposta3(props.opcoes.A);
+                                        break;
+                                    default:
+                                        console.log("Indice maior que a pergunta");
+                                        break;
+                                }
+                            }}
                             >
                                 {props.opcoes.A}
                             </ToggleButton>
                             <ToggleButton id="tbg-radio-2" value={2} className="option"
-                            onClick={() => res2(props.opcoes.B)}
+                            onClick={() => {
+                                switch (estadoAtual){
+                                    case 1:
+                                        setResposta1(props.opcoes.B);
+                                        break;
+                                    case 2:
+                                        setResposta2(props.opcoes.B);
+                                        break;
+                                    case 3:
+                                        setResposta3(props.opcoes.B);
+                                        break;
+                                    default:
+                                        console.log("Indice maior que a pergunta");
+                                        break;
+                                }
+                            }}
                             >
                                 {props.opcoes.B}
                             </ToggleButton>
                         </div>
                         <div className="col-6">
                             <ToggleButton id="tbg-radio-3" value={3} className="option"
-                            onClick={() => res2(props.opcoes.C)}
+                            onClick={() => {
+                                switch (estadoAtual){
+                                    case 1:
+                                        setResposta1(props.opcoes.C);
+                                        break;
+                                    case 2:
+                                        setResposta2(props.opcoes.C);
+                                        break;
+                                    case 3:
+                                        setResposta3(props.opcoes.C);
+                                        break;
+                                    default:
+                                        console.log("Indice maior que a pergunta");
+                                        break;
+                                }
+                            }}
                             >
                                 {props.opcoes.C}
                             </ToggleButton>
                             <ToggleButton id="tbg-radio-4" value={4} className="option"
-                            onClick={() => res2(props.opcoes.D)}
+                            onClick={() => {
+                                switch (estadoAtual){
+                                    case 1:
+                                        setResposta1(props.opcoes.D);
+                                        break;
+                                    case 2:
+                                        setResposta2(props.opcoes.D);
+                                        break;
+                                    case 3:
+                                        setResposta3(props.opcoes.D);
+                                        break;
+                                    default:
+                                        console.log("Indice maior que a pergunta");
+                                        break;
+                                }
+                            }}
                             >
                                 {props.opcoes.D}
                             </ToggleButton>
