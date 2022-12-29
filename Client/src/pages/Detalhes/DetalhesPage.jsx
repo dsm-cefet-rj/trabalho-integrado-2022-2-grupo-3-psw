@@ -15,6 +15,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 import quizSatis from "../Quizes/QuizSatisfacao/quizSatis";
+import quizS from "../Quizes/QuizSatisfacao/quizS";
 
 function DetalhesPage() {
     const [show, setShow] = useState(false);
@@ -314,9 +315,12 @@ function DetalhesPage() {
                             const dataFormated = ((data.getDate())) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
                             return (
                                 <div className="container-fluid mb-5" id="modal">
-                                    <p><strong>Resposta da Pergunta 1: {item.feedback.resposta1}</strong></p>
-                                    <p><strong>Resposta da Pergunta 2: {item.feedback.resposta2}</strong></p>    
-                                    <p><strong>Resposta da Pergunta 3: {item.feedback.resposta3}</strong></p>        
+                                    <p><strong>{quizS[0].questoes.q1.perguntaSatisfacao}</strong></p>
+                                    <p>Resposta: {quizSatis[0].questoes.resposta1.opcoesSatisfacao[item.feedback.resposta1]}</p>
+                                    <p><strong>{quizS[0].questoes.q2.perguntaSatisfacao}</strong></p>
+                                    <p>Resposta: {quizSatis[0].questoes.resposta2.opcoesSatisfacao[item.feedback.resposta2]}</p> 
+                                    <p><strong>{quizS[0].questoes.q3.perguntaSatisfacao}</strong></p>   
+                                    <p>Resposta: {quizSatis[0].questoes.resposta3.opcoesSatisfacao[item.feedback.resposta3]}</p>        
                                     <p><strong>Data do pedido: {dataFormated}</strong></p>
                                 </div>
                             )

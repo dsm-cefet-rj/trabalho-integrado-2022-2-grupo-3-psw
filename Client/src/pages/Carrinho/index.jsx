@@ -24,6 +24,7 @@ function CartPage() {
     const [cepInput, setCepInput] = useState("");
     const [shippingValue, setShippingValue] = useState(0);
     const [show, setShow] = useState(false);
+    const [option, setOption] = useState("");
 
     const removeFromCart = async (userId, productId) => {
         await api.addOrRemoveCartItem(userId, productId)
@@ -97,6 +98,7 @@ function CartPage() {
 
     useEffect(() => {
         getUser(token);
+        setOption(document.getElementById("installmentOptions").options[document.getElementById("installmentOptions").selectedIndex].value);
     }, [user.cartItens])
 
     return (
@@ -214,7 +216,7 @@ function CartPage() {
                             />
                         </p>
                         <h5>Forma de Pagamento</h5>
-                        <p>Pix - {document.getElementById("installmentOptions").options[document.getElementById("installmentOptions").selectedIndex].value}</p>
+                        <p>Pix - {option}</p>
 
 
                     </Modal.Body>
